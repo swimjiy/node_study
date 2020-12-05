@@ -1,0 +1,384 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2장 알아두어야 할 자바스크립트 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="reading_note_3.html" />
+    
+    
+    <link rel="prev" href="reading_note_1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">1주차</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="reading_note_1.html">
+            
+                <a href="reading_note_1.html">
+            
+                    
+                    1장 노드 시작하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="reading_note_2.html">
+            
+                <a href="reading_note_2.html">
+            
+                    
+                    2장 알아두어야 할 자바스크립트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="reading_note_3.html">
+            
+                <a href="reading_note_3.html">
+            
+                    
+                    3장 노드 기능
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2장 알아두어야 할 자바스크립트</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="2&#xC7A5;-&#xC54C;&#xC544;&#xB450;&#xC5B4;&#xC57C;-&#xD560;-&#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;-&#x1F680;">2&#xC7A5; &#xC54C;&#xC544;&#xB450;&#xC5B4;&#xC57C; &#xD560; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#x1F680;</h1>
+<h3 id="21-es2015">2.1 ES2015+</h3>
+<h4 id="211-const-let">2.1.1 const, let</h4>
+<p>const, let : &#xC774;&#xC804; var&#xC640; &#xC2A4;&#xCF54;&#xD504; &#xC885;&#xB958;&#xAC00; &#xB2E4;&#xB984;. var&#xB294; &#xD568;&#xC218; &#xC2A4;&#xCF54;&#xD504;&#xB97C; &#xAC00;&#xC9C0;&#xBBC0;&#xB85C; &#xBE14;&#xB85D;&#xACFC; &#xAD00;&#xACC4;&#xC5C6;&#xC774; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC788;&#xC9C0;&#xB9CC;, const&#xC640; let&#xC740; &#xBE14;&#xB85D; &#xC2A4;&#xCF54;&#xD504;&#xB77C; &#xBE14;&#xB85D; &#xBC16;&#xC5D0;&#xC11C;&#xB294; &#xBCC0;&#xC218;&#xC5D0; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC5C6;&#xB2E4;.</p>
+<p>&#xBE14;&#xB85D;&#xC758; &#xBC94;&#xC704;&#xB294; if, while, for, function &#xB4F1;&#xC5D0;&#xC11C; &#xBCFC; &#xC218; &#xC788;&#xB294; &#xC911;&#xAD04;&#xD638;. </p>
+<p>&#xBE14;&#xB85D; &#xC2A4;&#xCF54;&#xD504;&#xB97C; &#xC0AC;&#xC6A9;&#xD568;&#xC73C;&#xB85C;&#xC11C; &#xD638;&#xC774;&#xC2A4;&#xD305; &#xBB38;&#xC81C; &#xD574;&#xACB0;.</p>
+<h4 id="212-&#xD15C;&#xD50C;&#xB9BF;-&#xBB38;&#xC790;&#xC5F4;">2.1.2 &#xD15C;&#xD50C;&#xB9BF; &#xBB38;&#xC790;&#xC5F4;</h4>
+<p>&#xBC31;&#xD2F1;(`)&#xC73C;&#xB85C; &#xAC10;&#xC2F8;&#xB294; &#xBB38;&#xC790;&#xC5F4;. &#xBB38;&#xC790;&#xC5F4; &#xC548;&#xC5D0; &#xBCC0;&#xC218;&#xB97C; &#xB123;&#xC744; &#xC218; &#xC788;&#xB2E4;.</p>
+<h4 id="213-&#xAC1D;&#xCCB4;-&#xB9AC;&#xD130;&#xB7F4;">2.1.3 &#xAC1D;&#xCCB4; &#xB9AC;&#xD130;&#xB7F4;</h4>
+<ul>
+<li>&#xAC1D;&#xCCB4;&#xC758; &#xBA54;&#xC11C;&#xB4DC;&#xC5D0; &#xD568;&#xC218;&#xB97C; &#xC5F0;&#xACB0;&#xD560; &#xB54C; &#xCF5C;&#xB860;(:)&#xACFC; function&#xC744; &#xBD99;&#xC774;&#xC9C0; &#xC54A;&#xC544;&#xB3C4; &#xB41C;&#xB2E4;.</li>
+<li>sayNode: sayNode &#xCC98;&#xB7FC; &#xC18D;&#xC131;&#xBA85;&#xACFC; &#xBCC0;&#xC218;&#xBA85;&#xC774; &#xB3D9;&#xC77C;&#xD55C; &#xACBD;&#xC6B0;&#xC5D0;&#xB294; &#xD55C; &#xBC88;&#xB9CC; &#xC368;&#xB3C4; &#xB418;&#xAC8C; &#xBCC0;&#xACBD;.</li>
+<li>&#xAC1D;&#xCCB4;&#xC758; &#xC18D;&#xC131;&#xBA85;&#xC744; &#xB3D9;&#xC801;&#xC73C;&#xB85C; &#xC0DD;&#xC131;&#xD560; &#xC218; &#xC788;&#xB2E4;.</li>
+</ul>
+<h4 id="214-&#xD654;&#xC0B4;&#xD45C;-&#xD568;&#xC218;">2.1.4 &#xD654;&#xC0B4;&#xD45C; &#xD568;&#xC218;</h4>
+<p>function &#xC120;&#xC5B8; &#xB300;&#xC2E0; &#x21D2; &#xAE30;&#xD638;&#xB97C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</p>
+<p>&#xB0B4;&#xBD80;&#xC5D0; return&#xBB38; &#xBC16;&#xC5D0; &#xC5C6;&#xB294; &#xACBD;&#xC6B0; return&#xBB38;&#xC744; &#xC904;&#xC77C; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>&#xB9E4;&#xAC1C; &#xBCC0;&#xC218;&#xAC00; &#xD55C; &#xAC1C;&#xBA74; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xB97C; &#xC18C;&#xAD04;&#xD638;&#xB85C; &#xBB36;&#xC5B4;&#xC8FC;&#xC9C0; &#xC54A;&#xC544;&#xB3C4; &#xB41C;&#xB2E4;.</p>
+<p>this&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xACBD;&#xC6B0; &#xC0C1;&#xC704; &#xC2A4;&#xCF54;&#xD504;&#xC758; this&#xB97C; &#xADF8;&#xB300;&#xB85C; &#xBB3C;&#xB824;&#xBC1B;&#xC744; &#xC218; &#xC788;&#xB2E4;.</p>
+<h4 id="215-&#xAD6C;&#xC870;&#xBD84;&#xD574;-&#xD560;&#xB2F9;">2.1.5 &#xAD6C;&#xC870;&#xBD84;&#xD574; &#xD560;&#xB2F9;</h4>
+<p>&#xAC1D;&#xCCB4;&#xC640; &#xBC30;&#xC5F4;&#xB85C;&#xBD80;&#xD130; &#xC18D;&#xC131;&#xC774;&#xB098; &#xC694;&#xC18C;&#xB97C; &#xC27D;&#xAC8C; &#xAEBC;&#xB0BC; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>&#xD2B9;&#xD788; &#xB178;&#xB4DC;&#xC5D0;&#xC11C;&#xB294; &#xBAA8;&#xB4C8; &#xC2DC;&#xC2A4;&#xD15C;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xBBC0;&#xB85C; &#xC790;&#xC8FC; &#xC0AC;&#xC6A9;.</p>
+<h4 id="216-&#xD074;&#xB798;&#xC2A4;">2.1.6 &#xD074;&#xB798;&#xC2A4;</h4>
+<p>&#xD074;&#xB798;&#xC2A4; &#xAE30;&#xBC18;&#xC73C;&#xB85C; &#xB3D9;&#xC791;&#xD558;&#xB294; &#xB2E4;&#xB978; &#xC5B8;&#xC5B4;&#xB4E4;&#xACFC; &#xB2EC;&#xB9AC; &#xC5EC;&#xC804;&#xD788; &#xD504;&#xB85C;&#xD1A0;&#xD0C0;&#xC785; &#xAE30;&#xBC18;&#xC73C;&#xB85C; &#xB3D9;&#xC791;&#xD558;&#xC9C0;&#xB9CC; &#xD074;&#xB798;&#xC2A4;&#xCC98;&#xB7FC; &#xBCF4;&#xC774;&#xAC8C;.</p>
+<p>extends &#xB97C; &#xC774;&#xC6A9;&#xD558;&#xBA74;&#xC11C; &#xC0C1;&#xC18D;&#xBC1B;&#xAE30; &#xC704;&#xD55C; &#xCF54;&#xB4DC;&#xAC00; &#xAC04;&#xB7B5;&#xD574;&#xC9D0;.</p>
+<h4 id="217-&#xD504;&#xB85C;&#xBBF8;&#xC2A4;">2.1.7 &#xD504;&#xB85C;&#xBBF8;&#xC2A4;</h4>
+<p>API&#xB4E4;&#xC774; &#xCF5C;&#xBC31; &#xB300;&#xC2E0; &#xD504;&#xB85C;&#xBBF8;&#xC2A4; &#xAE30;&#xBC18;&#xC73C;&#xB85C; &#xC7AC;&#xAD6C;&#xC131;&#xB418;&#xBA70;, &#xCF5C;&#xBC31; &#xC9C0;&#xC625; &#xD604;&#xC0C1;&#xC744; &#xADF9;&#xBCF5;&#xD568;.</p>
+<p>&#xD504;&#xB85C;&#xBBF8;&#xC2A4; &#xAC1D;&#xCCB4;&#xB97C; &#xC0DD;&#xC131;&#xD558;&#xACE0;, then&#xC774;&#xB098; catch&#xB97C; &#xD1B5;&#xD574; &#xACB0;&#xAD0F;&#xAC12;&#xC744; &#xBC1B;&#xB294;&#xB2E4;.</p>
+<h4 id="218-async-await">2.1.8 async, await</h4>
+<p>&#xB178;&#xB4DC; 7.6,  ES2017&#xC5D0; &#xCD94;&#xAC00;&#xB41C; &#xAE30;&#xB2A5;. </p>
+<p>then&#xACFC; catch&#xAC00; &#xACC4;&#xC18D; &#xBC18;&#xBCF5;&#xB418;&#xB294; &#xD504;&#xB85C;&#xBBF8;&#xC2A4;&#xB97C; &#xD55C; &#xBC88; &#xB354; &#xAE54;&#xB054;&#xD558;&#xAC8C; &#xC904;&#xC77C; &#xC218; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// promise</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">findAndSaveUser</span>(<span class="hljs-params">Users</span>) </span>{
+    Users.findOne({})
+        .then((user) =&gt; {
+            user.name = <span class="hljs-string">&apos;zero&apos;</span>;
+            <span class="hljs-keyword">return</span> user.save();
+        })
+        .then((user) =&gt; {
+            <span class="hljs-keyword">return</span> Users.findOne({ gender: <span class="hljs-string">&apos;m&apos;</span> });
+        })
+        .then((user) =&gt; {
+            <span class="hljs-comment">// &#xC0DD;&#xB7B5;</span>
+        })
+        .catch(err =&gt; {
+            <span class="hljs-built_in">console</span>.error(err);
+        });
+}
+
+<span class="hljs-comment">// async await</span>
+<span class="hljs-keyword">const</span> findAndSaveUser = <span class="hljs-keyword">async</span> (Users) =&gt; {
+    <span class="hljs-keyword">try</span> {
+        <span class="hljs-keyword">let</span> user = <span class="hljs-keyword">await</span> Users.findOne({});
+        user.name = <span class="hljs-string">&apos;zero&apos;</span>;
+        user = <span class="hljs-keyword">await</span> user.save(); <span class="hljs-comment">// &#xC774;&#xC804; &#xD504;&#xB85C;&#xBBF8;&#xC2A4;&#xAC00; resolve&#xB420; &#xB54C;&#xAE4C;&#xC9C0; &#xAE30;&#xB2E4;&#xB9B0; &#xB4A4; &#xC2E4;&#xD589;&#xD55C;&#xB2E4;.</span>
+        user = <span class="hljs-keyword">await</span> Users.findOne({ gender: <span class="hljs-string">&apos;m&apos;</span> });
+        <span class="hljs-comment">// &#xC0DD;&#xB7B5;</span>
+    } <span class="hljs-keyword">catch</span> (err) {
+        <span class="hljs-built_in">console</span>.error(err);
+    }
+}
+</code></pre>
+<h3 id="22-&#xD504;&#xB7F0;&#xD2B8;&#xC5D4;&#xB4DC;-&#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;">2.2 &#xD504;&#xB7F0;&#xD2B8;&#xC5D4;&#xB4DC; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;</h3>
+<h4 id="221-ajax">2.2.1 AJAX</h4>
+<p>&#xBE44;&#xB3D9;&#xAE30;&#xC801; &#xC6F9; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xAC1C;&#xBC1C;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAE30;&#xBC95;.</p>
+<p>&#xD398;&#xC774;&#xC9C0; &#xC774;&#xB3D9; &#xC5C6;&#xC774; &#xC11C;&#xBC84;&#xC5D0; &#xC694;&#xCCAD;&#xC744; &#xBCF4;&#xB0B4;&#xACE0; &#xC751;&#xB2F5;&#xC744; &#xBC1B;&#xB294; &#xAE30;&#xC220;.</p>
+<p>&#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xC5D0;&#xC11C; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; XMLHttpRequest &#xAC1D;&#xCCB4;&#xB97C; &#xC81C;&#xACF5;&#xD558;&#xC9C0;&#xB9CC; &#xC11C;&#xBC84;&#xC5D0;&#xC11C;&#xB294; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC5C6;&#xC73C;&#xBBC0;&#xB85C; jQuery&#xB098; axios &#xAC19;&#xC740; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB97C; &#xC774;&#xC6A9;&#xD55C;&#xB2E4;. </p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// promise</span>
+axios.get(<span class="hljs-string">&apos;https://www.zerocho.com/api/get&apos;</span>)
+    .then((result) =&gt; {
+        <span class="hljs-built_in">console</span>.log(result);
+        <span class="hljs-built_in">console</span>.log(result.data); <span class="hljs-comment">// {}</span>
+    })
+    .catch((err) =&gt; {
+        <span class="hljs-built_in">console</span>.error(err);
+    });
+
+<span class="hljs-comment">// async, await</span>
+(<span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">try</span> {
+        <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> axios.get(<span class="hljs-string">&apos;https://www.zerocho.com/api/get&apos;</span>);
+        <span class="hljs-built_in">console</span>.log(result);
+        <span class="hljs-built_in">console</span>.log(result.data); <span class="hljs-comment">// {}</span>
+    } <span class="hljs-keyword">catch</span> (err) {
+        <span class="hljs-built_in">console</span>.error(err);
+    };
+})();
+</code></pre>
+<h4 id="222-formdata">2.2.2 FormData</h4>
+<p>HTML form &#xD0DC;&#xADF8;&#xC758; &#xB370;&#xC774;&#xD130;&#xB97C; &#xB3D9;&#xC801;&#xC73C;&#xB85C; &#xC81C;&#xC5B4;&#xD560; &#xC218; &#xC788;&#xB294; &#xAE30;&#xB2A5;. &#xC8FC;&#xB85C; AJAX&#xC640; &#xD568;&#xAED8; &#xC0AC;&#xC6A9;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// async, await</span>
+(<span class="hljs-keyword">async</span> () =&gt; {
+    <span class="hljs-keyword">try</span> {
+        <span class="hljs-keyword">const</span> formData = <span class="hljs-keyword">new</span> FormData();
+        formData.append(<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;zerocho&apos;</span>);
+        formData.append(<span class="hljs-string">&apos;birth&apos;</span>, <span class="hljs-number">1994</span>);
+        <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> axios.post(<span class="hljs-string">&apos;https://www.zerocho.com/api/get&apos;</span>, formData);
+        <span class="hljs-built_in">console</span>.log(result);
+        <span class="hljs-built_in">console</span>.log(result.data); <span class="hljs-comment">// {}</span>
+    } <span class="hljs-keyword">catch</span> (err) {
+        <span class="hljs-built_in">console</span>.error(err);
+    };
+})();
+</code></pre>
+<h4 id="223-encodeuricomponent-decodeuricomponent">2.2.3 encodeURIComponent, decodeURIComponent</h4>
+<p>&#xC8FC;&#xC18C;&#xC5D0; &#xD55C;&#xAE00;&#xC774; &#xB4E4;&#xC5B4;&#xAC00;&#xB294; &#xACBD;&#xC6B0; &#xC0AC;&#xC6A9;. &#xD55C;&#xAE00; &#xBD80;&#xBD84;&#xB9CC; encodeURIComponent &#xBA54;&#xC11C;&#xB4DC;&#xB85C; &#xAC10;&#xC2FC;&#xB2E4;.</p>
+<p>&#xBC1B;&#xB294; &#xCABD;&#xC5D0;&#xC11C;&#xB294; decodeURIComponent&#xB97C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</p>
+<h4 id="224-&#xB370;&#xC774;&#xD130;-&#xC18D;&#xC131;&#xACFC;-dataset">2.2.4 &#xB370;&#xC774;&#xD130; &#xC18D;&#xC131;&#xACFC; dataset</h4>
+<p>&#xB370;&#xC774;&#xD130; &#xC18D;&#xC131; : HTML&#xACFC; &#xAD00;&#xB828;&#xB41C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC800;&#xC7A5;&#xD558;&#xB294; &#xACF5;&#xC2DD;&#xC801;&#xC778; &#xBC29;&#xBC95;. </p>
+<p>&#xC7A5;&#xC810; : &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB85C; &#xC27D;&#xAC8C; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>&#xBC18;&#xB300;&#xB85C; dataset&#xC5D0; &#xB370;&#xC774;&#xD130;&#xB97C; &#xB123;&#xC5B4;&#xB3C4; HTML&#xD0DC;&#xADF8;&#xC5D0; &#xBC18;&#xC601;&#xB41C;&#xB2E4;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2장 알아두어야 할 자바스크립트","level":"2.2","depth":1,"next":{"title":"3장 노드 기능","level":"2.3","depth":1,"path":"1th/reading_note_3.md","ref":"1th/reading_note_3.md","articles":[]},"previous":{"title":"1장 노드 시작하기","level":"2.1","depth":1,"path":"1th/reading_note_1.md","ref":"1th/reading_note_1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"1th/reading_note_2.md","mtime":"2020-12-05T04:34:35.888Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-05T05:03:01.329Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+

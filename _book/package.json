@@ -1,0 +1,19 @@
+{
+  "name": "node_study",
+  "version": "1.0.0",
+  "description": "Reading note of node study",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swimjiy/node_study.git"
+  },
+  "author": "swimjiy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swimjiy/node_study/issues"
+  },
+  "homepage": "https://github.com/swimjiy/node_study#readme"
+}
