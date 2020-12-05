@@ -151,7 +151,7 @@ HTML form 태그의 데이터를 동적으로 제어할 수 있는 기능. 주�
 		formData.append('birth', 1994);
 		const result = await axios.post('https://www.zerocho.com/api/get', formData);
 		console.log(result);
-		console.log(result.data); // {}
+		console.log(result.data);
 	} catch (err) {
 		console.error(err);
 	};
