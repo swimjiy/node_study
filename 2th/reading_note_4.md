@@ -147,77 +147,77 @@ const fs = require('fs').promises;
 const users = {}; // 데이터 저장용
 
 http.createServer(async (req, res) => {
-  try {
-    if (req.method === 'GET') {
-      if (req.url === '/') {
-        const data = await fs.readFile('./restFront.html');
-        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+	try {
+		console.log(req.method, req.url);
+		if (req.method === 'GET') {
+			if (req.url === '/') {
+				const data = await fs.readFile('./restFront.html');
+				res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+				return res.end(data);
+			} else if (req.url === '/about') {
+				const data = await fs.readFile('./about.html');
+				res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+				return res.end(data);
+			} else if (req.url === '/users') {
+				res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
+				return res.end(JSON.stringify(users));
+			}
+			// 주소가 /도 /about도 /users도 아니면
+			try {
+				const data = await fs.readFile(`.${req.url}`);
         return res.end(data);
-      } else if (req.url === '/about') {
-        const data = await fs.readFile('./about.html');
-        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-        return res.end(data);
-      } else if (req.url === '/users') {
-        res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
-        return res.end(JSON.stringify(users));
-      }
-      // /도 /about도 /users도 아니면
-      try {
-        const data = await fs.readFile(`.${req.url}`);
-        return res.end(data);
-      } catch (err) {
-        // 주소에 해당하는 라우트를 못 찾았다는 404 Not Found error 발생
-      }
-    } else if (req.method === 'POST') {
-      if (req.url === '/user') {
-        let body = '';
-        // 요청의 body를 stream 형식으로 받음
-        req.on('data', (data) => {
-          body += data;
-        });
-        // 요청의 body를 다 받은 후 실행됨
-        return req.on('end', () => {
-          console.log('POST 본문(Body):', body);
-          const { name } = JSON.parse(body);
-          const id = Date.now();
-          users[id] = name;
-          res.writeHead(201, { 'Content-Type': 'text/plain; charset=utf-8' });
-          res.end('ok');
-        });
-      }
-    } else if (req.method === 'PUT') {
-      if (req.url.startsWith('/user/')) {
-        const key = req.url.split('/')[2];
-        let body = '';
-        req.on('data', (data) => {
-          body += data;
-        });
-        return req.on('end', () => {
-          console.log('PUT 본문(Body):', body);
-          users[key] = JSON.parse(body).name;
-          res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
-          return res.end('ok');
-        });
-      }
-    } else if (req.method === 'DELETE') {
-      if (req.url.startsWith('/user/')) {
-        const key = req.url.split('/')[2];
-        delete users[key];
-        res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
-        return res.end('ok');
-      }
-    }
-    res.writeHead(404);
-    return res.end('NOT FOUND');
-  } catch (err) {
-    console.error(err);
+			} catch (err) {
+				// 주소에 해당하는 라우트를 못 찾았다는 404 Not Found error 발생
+			}
+		} else if (req.method === 'POST') {
+			if (req.url === '/user') {
+				let body = '';
+				// 요청의 body를 stream형식으로 받음
+				req.on('data', (data) => {
+					body += data;
+				});
+				// 요청의 body를 받은 후 실행됨.
+				return req.on('end', () => {
+					console.log('POST 본문(Body):', body);
+					const { name } = JSON.parse(body);
+					const id = Date.now();
+					users[id] = name;
+					res.writeHead(201);
+					res.end('등록 성공');
+				})
+			}
+		} else if (req.method === 'PUT') {
+			if (req.url.startsWith('/user/')) {
+				const key = req.url.split('/')[2];
+				let body = '';
+				req.on('data', (data) => {
+					body += data;
+				});
+				return req.on('end', () => {
+					console.log('PUT 본문(Body):', body);
+					users[key] = JSON.parse(body).name;
+					return res.end(JSON.stringify(users));
+				})
+			}
+		} else if (req.method === 'DELETE') {
+			if (req.url.startsWith('/user/')) {
+				const key = req.url.split('/')[2];
+				delete users[key];
+				return res.end(JSON.stringify(users));
+			}
+		}
+		res.writeHead(404);
+		return res.end('NOT FOUND');
+	} catch (err) {
+		console.error(err);
     res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
     res.end(err.message);
-  }
+	}
 })
-  .listen(8082, () => {
-    console.log('8082번 포트에서 서버 대기 중입니다');
-  });
+	.listen(8082, () => {
+		console.log('8082번 포트에서 서버 대기 중입니다');
+	});
+
 
 ```
 
@@ -231,16 +231,286 @@ http.createServer(async (req, res) => {
 
 
 
+#### Network 탭으로 확인하기
+
+- Name: 요청 주소
+- Method: 요청 메서드
+- Status: HTTP 응답 코드
+- Protocol: 통신 프로토콜
+- Type: 요청의 종류. `xhr` 는 AJAX 요청
+
+![Network 탭](./example/4.2/img2.png)
+
+
+
+> **NOTE: 헤더와 본문**
+>
+> - General: 공통된 헤더
+> - Response Headers: 응답의 헤더
+> - Request Headers: 요청의 헤더
+> - Request Payload: 응답의 본문
+
+![Network 탭](./example/4.2/img1.png)
+
+
+
+
+
 ### 4.3 쿠키와 세션 이해하기
+
+로그인을 구현하려면 쿠키와 세션을 이해해야 한다.
+
+서버로부터 쿠키가 오면 웹 브라우저는 쿠키를 저장해두었다가 다음에 요청할 때마다 쿠키를 동봉해서 보낸다. 서버는 요청에 들어 있는 쿠키를 읽어서 사용자가 누구인지 파악한다.
+
+쿠키 : 이용자 정보를 담고 있는 키-값의 쌍. 유효기간이 있다. 요청의 헤더(Cookie)에 담겨 전송되고, 브라우저는 응답의 헤더(Set-Cookie)에 따라 쿠키를 전송한다.
+
+
+
+#### 쿠키 브라우저에 전송하기
+
+```javascript
+const http = require('http');
+
+http.createServer((req, res) => {
+	console.log(req.url, req.headers.cookie);
+	res.writeHead(200, { 'Set-Cookie' : 'mycookie=test' });
+	res.end('Hello Cookie');
+})
+	.listen(8083, () => {
+		console.log('8083번 포트에서 서버 대기 중입니다!');
+	})
+
+```
+
+
+
+#### 쿠키로 유저 식별하기
+
+```javascript
+const http = require('http');
+const fs = require('fs').promises;
+const url = require('url');
+const qs = require('querystring');
+
+// 쿠키를 쉽게 사용하기 위해 객체 형식으로 변환
+const parseCookies = (cookie = '') =>
+  cookie
+    .split(';')
+    .map(v => v.split('='))
+    .reduce((acc, [k, v]) => {
+      acc[k.trim()] = decodeURIComponent(v);
+      return acc;
+    }, {});
+
+http.createServer(async (req, res) => {
+  const cookies = parseCookies(req.headers.cookie);
+  // 주소가 /login으로 시작하는 경우
+  if (req.url.startsWith('/login')) {
+    const { query } = url.parse(req.url);
+    const { name } = qs.parse(query);
+    const expires = new Date();
+    // 쿠키 유효 시간을 현재시간 + 5분으로 설정
+    expires.setMinutes(expires.getMinutes() + 5);
+    res.writeHead(302, {
+      Location: '/',
+      'Set-Cookie': `name=${encodeURIComponent(name)}; Expires=${expires.toGMTString()}; HttpOnly; Path=/`,
+    });
+    res.end();
+  // name이라는 쿠키가 있는 경우
+  } else if (cookies.name) {
+    res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
+    res.end(`${cookies.name}님 안녕하세요`);
+  } else {
+    try {
+      const data = await fs.readFile('./cookie2.html');
+      res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+      res.end(data);
+    } catch (err) {
+      res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
+      res.end(err.message);
+    }
+  }
+})
+  .listen(8084, () => {
+    console.log('8084번 포트에서 서버 대기 중입니다!');
+  });
+
+```
+
+
+
+#### Set-Cookie 옵션
+
+| 옵션명          | 설명                                                         |
+| --------------- | ------------------------------------------------------------ |
+| 쿠키명=쿠키값   | 기본적인 쿠키의 값. `mycookie=test`                          |
+| Expires=날짜    | 만료 기한. 기본값은 클라이언트가 종료될 때까지               |
+| Max-age=초      | `Expires` 와 달리 초를 입력할 수 있다. `Expires` 보다 우선.  |
+| Domain=도메인명 | 쿠키가 전송될 도메인을 특정할 수 있다. 기본값은 현재 도메인. |
+| Path=URL        | 쿠키가 전송될 URL을 특정할 수 있다. 기본값은 '/'이며 이 경우 모든 URL에서 쿠키를 전송할 수 있다. |
+| Secure          | HTTPS일 때만 쿠키 전송                                       |
+| HttpOnly        | 설정 시 자바스크립트에서 쿠키에 접근할 수 없음. 쿠키 조작 방지용. |
+
+
+
+#### 세션
+
+서버에 사용자 정보를 저장하고 클라이언트와는 세션 아이디로만 소통하는 방식.
+
+세션 아이디는 꼭 쿠키를 사용하지 않아도 되지만 제일 간단하여 많이 사용됨.
+
+세션쿠키 : 세션을 위해 사용하는 쿠키
+
+세션을 저장하기 위해 레디스(Redis)나 맴캐시드(Memcached)같은 데이터베이스에 넣어둔다.
+
+
+
+#### 세션 쿠키와 일반 쿠키 비교
+
+```javascript
+// Cookie
+res.writeHead(302, {
+      Location: '/',
+      'Set-Cookie': `name=${encodeURIComponent(name)}; Expires=${expires.toGMTString()}; HttpOnly; Path=/`,
+    });
+
+// Session Cookie
+const session = {};
+...
+const uniqueInt = Date.now();
+    session[uniqueInt] = {
+      name,
+      expires,
+    };
+...
+res.writeHead(302, {
+      Location: '/',
+      'Set-Cookie': `session=${uniqueInt}; Expires=${expires.toGMTString()}; HttpOnly; Path=/`,
+    });
+```
+
+
 
 
 
 ### 4.4 https와 http2
 
+#### https 모듈
+
+웹 서버에 SSL 암호화를 추가하는 모듈. 주로 로그인이나 결제가 필요한 창에서 적용한다.
+
+인증 기관에서 인증서를 구입해야 하며, Let's Encrypt같은 기관에서 무료로 발급해주기도 한다.
+
+##### https 모듈 코드
+
+```javascript
+const https = require('https');
+const fs = require('fs');
+
+// createServer가 인증서 옵션 객체를 추가 인수로 받는다.
+https.createServer({
+  cert: fs.readFileSync('도메인 인증서 경로'),
+  key: fs.readFileSync('도메인 비밀키 경로'),
+  ca: [
+    fs.readFileSync('상위 인증서 경로'),
+    fs.readFileSync('상위 인증서 경로'),
+  ],
+}, (req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+  res.write('<h1>Hello Node!</h1>');
+  res.end('<p>Hello Server!</p>');
+})
+
+// https이므로 443포트를 사용
+  .listen(443, () => {
+    console.log('443번 포트에서 서버 대기 중입니다!');
+  });
+
+```
+
+
+
+#### http2 모듈
+
+SSL 암호화와 더불어 최신 HTTP 프로토콜인 http/2를 사용할 수 있다.
+
+http/2를 사용하면 http/1.1보다 효율적으로 요청을 보내므로 웹의 속도를 개선할 수 있다.
+
+##### http2 모듈 코드
+
+```javascript
+const http2 = require('http2');
+const fs = require('fs');
+
+http2.createSecureServer({
+  cert: fs.readFileSync('도메인 인증서 경로'),
+  key: fs.readFileSync('도메인 비밀키 경로'),
+  ca: [
+    fs.readFileSync('상위 인증서 경로'),
+    fs.readFileSync('상위 인증서 경로'),
+  ],
+}, (req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+  res.write('<h1>Hello Node!</h1>');
+  res.end('<p>Hello Server!</p>');
+})
+  .listen(443, () => {
+    console.log('443번 포트에서 서버 대기 중입니다!');
+  });
+```
+
+
+
 
 
 ### 4.5 cluster
 
+#### cluster 모듈
+
+싱글 프로세스로 동작하는 노드가 CPU 코어를 모두 사용할 수 있게 하는 모듈.
+
+요청이 많이 들어왔을 때 병렬로 실행된 서버의 개수만큼 요청이 분산되게 할 수 있으므로 서버의 부담을 줄일 수 있다.
 
 
-### 4.6 함께 보면 좋은 자료
+
+##### cluster 모듈 코드
+
+```javascript
+const cluster = require('cluster');
+const http = require('http');
+const numCPUs = require('os').cpus().length;
+
+if (cluster.isMaster) {
+	console.log(`마스터 프로세스 아이디: ${process.pid}`);
+	// CPU 개수만큼 워커를 생산
+	for (let i = 0; i < numCPUs; i++) {
+		cluster.fork();
+	}
+	// 워커가 종료됐을 때
+	cluster.on('exit', (worker, code, signal) => {
+		console.log(`${worker.process.pid}번 워커가 종료되었습니다.`);
+		console.log('code', code, 'signal', signal);
+	})
+} else {
+	// 워커들이 포트에서 대기
+  http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+    res.write('<h1>Hello Node!</h1>');
+    res.end('<p>Hello Cluster!</p>');
+    setTimeout(() => { // 워커 존재를 확인하기 위해 1초마다 강제 종료
+      process.exit(1);
+    }, 1000);
+  }).listen(8086);
+
+  console.log(`${process.pid}번 워커 실행`);
+}
+
+```
+
+
+
+#### 클러스터링
+
+클러스터링을 적용하면 예기치 못한 에러로 서버가 종료되는 현상을 방지할 수 있다.
+
+직접 cluster 모듈로 클러스터링을 구현할 수 있지만 실무에서는 pm2등의 모듈을 사용한다.
