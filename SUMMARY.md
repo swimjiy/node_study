@@ -10,4 +10,11 @@
 * [2장 알아두어야 할 자바스크립트](1th/reading_note_2.md)
 * [3장 노드 기능](1th/reading_note_3.md)
 
+### 2주차
+
+* [4장 http 모듈로 서버 만들기](2th/reading_note_4.md)
+* [5장 패키지 매니저](2th/reading_note_5.md)
+* [6장 익스프레스 웹 서버 만들기](2th/reading_note_6.md)
+
+
 
