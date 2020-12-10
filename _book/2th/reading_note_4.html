@@ -1,0 +1,764 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>4장 http 모듈로 서버 만들기 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="reading_note_5.html" />
+    
+    
+    <link rel="prev" href="../1th/reading_note_3.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">1주차</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../1th/reading_note_1.html">
+            
+                <a href="../1th/reading_note_1.html">
+            
+                    
+                    1장 노드 시작하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../1th/reading_note_2.html">
+            
+                <a href="../1th/reading_note_2.html">
+            
+                    
+                    2장 알아두어야 할 자바스크립트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../1th/reading_note_3.html">
+            
+                <a href="../1th/reading_note_3.html">
+            
+                    
+                    3장 노드 기능
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">2주차</li>
+        
+        
+    
+        <li class="chapter active" data-level="3.1" data-path="reading_note_4.html">
+            
+                <a href="reading_note_4.html">
+            
+                    
+                    4장 http 모듈로 서버 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="reading_note_5.html">
+            
+                <a href="reading_note_5.html">
+            
+                    
+                    5장 패키지 매니저
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="reading_note_6.html">
+            
+                <a href="reading_note_6.html">
+            
+                    
+                    6장 익스프레스 웹 서버 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >4장 http 모듈로 서버 만들기</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="4&#xC7A5;-http-&#xBAA8;&#xB4C8;&#xB85C;-&#xC11C;&#xBC84;-&#xB9CC;&#xB4E4;&#xAE30;-&#x1F680;">4&#xC7A5; http &#xBAA8;&#xB4C8;&#xB85C; &#xC11C;&#xBC84; &#xB9CC;&#xB4E4;&#xAE30; &#x1F680;</h1>
+<h3 id="41-&#xC694;&#xCCAD;&#xACFC;-&#xC751;&#xB2F5;-&#xC774;&#xD574;&#xD558;&#xAE30;">4.1 &#xC694;&#xCCAD;&#xACFC; &#xC751;&#xB2F5; &#xC774;&#xD574;&#xD558;&#xAE30;</h3>
+<p>&#xC11C;&#xBC84;&#xB294; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xAC00; &#xC788;&#xAE30;&#xC5D0; &#xB3D9;&#xC791;&#xD55C;&#xB2E4;. &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xB85C;&#xBD80;&#xD130; &#xC694;&#xCCAD;(request)&#xC744; &#xBC1B;&#xC73C;&#xBA74;, &#xC77D;&#xACE0; &#xCC98;&#xB9AC;&#xD55C; &#xB4A4; &#xC751;&#xB2F5;(response)&#xC744; &#xBCF4;&#xB0B8;&#xB2E4;.</p>
+<p>&#xC694;&#xCCAD;&#xC774; &#xC654;&#xC744; &#xB54C; &#xC5B4;&#xB5A4; &#xC791;&#xC5C5;&#xC744; &#xC218;&#xD589;&#xD560; &#xC9C0; &#xC774;&#xBCA4;&#xD2B8; &#xB9AC;&#xC2A4;&#xB108;&#xB97C; &#xBBF8;&#xB9AC; &#xB4F1;&#xB85D;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<blockquote>
+<p><strong>NOTE: localhost&#xC640; &#xD3EC;&#xD2B8;&#xB780;?</strong></p>
+<p>localhost&#xB294; &#xD604;&#xC7AC; &#xCEF4;&#xD4E8;&#xD130;&#xC758; &#xB0B4;&#xBD80; &#xC8FC;&#xC18C;&#xB97C; &#xAC00;&#xB9AC;&#xD0A8;&#xB2E4;. IP&#xB85C;&#xB294; 127.0.0.1.</p>
+<p>&#xD3EC;&#xD2B8;&#xB294; &#xC11C;&#xBC84; &#xB0B4;&#xC5D0;&#xC11C; &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xB97C; &#xAD6C;&#xBD84;&#xD558;&#xB294; &#xBC88;&#xD638;&#xB2E4;. </p>
+<p>&#xC720;&#xBA85;&#xD55C; &#xD3EC;&#xD2B8; &#xBC88;&#xD638; : 21(FTP), 80(HTTP), 443(HTTPS), 3306(MYSQL)</p>
+<p>&#xB9AC;&#xB205;&#xC2A4;&#xC640; &#xB9E5;&#xC5D0;&#xC11C;&#xB294; 1024&#xBC88; &#xC774;&#xD558;&#xC758; &#xD3EC;&#xD2B8;&#xC5D0; &#xC5F0;&#xACB0;&#xD560; &#xB54C; &#xAD00;&#xB9AC;&#xC790; &#xAD8C;&#xD55C;&#xC774; &#xD544;&#xC694;&#xD558;&#xBBC0;&#xB85C; &#xBA85;&#xB839;&#xC5B4; &#xC55E;&#xC5D0; sudo&#xB97C; &#xBD99;&#xC5EC;&#xC57C; &#xD55C;&#xB2E4;.</p>
+</blockquote>
+<h4 id="&#xAE30;&#xBCF8;-&#xC0AC;&#xC6A9;-&#xBC29;&#xBC95;">&#xAE30;&#xBCF8; &#xC0AC;&#xC6A9; &#xBC29;&#xBC95;</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>);
+
+<span class="hljs-comment">// &#xBC29;&#xBC95; 1 (listen &#xBA54;&#xC11C;&#xB4DC;&#xC5D0; &#xCF5C;&#xBC31; &#xD568;&#xC218;)</span>
+http.createServer((req, res) =&gt; { <span class="hljs-comment">// param: &#xC694;&#xCCAD;&#xC5D0; &#xB300;&#xD55C; &#xCF5C;&#xBC31; &#xD568;&#xC218;</span>
+    res.writeHead(<span class="hljs-number">200</span>, { <span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;text/html; charset=uft-8&apos;</span> });
+  <span class="hljs-comment">// writeHead: &#xC751;&#xB2F5;&#xC5D0; &#xB300;&#xD55C; &#xC815;&#xBCF4;(&#xD5E4;&#xB354;)&#xB97C; &#xAE30;&#xB85D;&#xD558;&#xB294; &#xBA54;&#xC11C;&#xB4DC;</span>
+
+    res.write(<span class="hljs-string">&apos;&lt;h1&gt;Hello Node!&lt;/h1&gt;&apos;</span>);
+  <span class="hljs-comment">// write: &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xB85C; &#xBCF4;&#xB0BC; &#xB370;&#xC774;&#xD130;(body)&#xB97C; &#xAE30;&#xB85D;&#xD558;&#xB294; &#xBA54;&#xC11C;&#xB4DC;</span>
+
+    res.end(<span class="hljs-string">&apos;&lt;p&gt;Hello Server!&lt;/p&gt;&apos;</span>)
+  <span class="hljs-comment">// end: &#xC751;&#xB2F5;&#xC744; &#xC885;&#xB8CC;&#xD558;&#xB294; &#xBA54;&#xC11C;&#xB4DC;</span>
+})
+    .listen(<span class="hljs-number">8080</span>, () =&gt; {
+  <span class="hljs-comment">// listen: &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xC5D0; &#xACF5;&#xAC1C;&#xD55C; &#xD3EC;&#xD2B8; &#xBC88;&#xD638; &#xBC0F; &#xC5F0;&#xACB0; &#xC644;&#xB8CC; &#xD6C4; &#xC2E4;&#xD589;&#xB420; &#xCF5C;&#xBC31; &#xD568;&#xC218;</span>
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;8080&#xBC88; &#xD3EC;&#xD2B8;&#xC5D0;&#xC11C; &#xC11C;&#xBC84; &#xB300;&#xAE30; &#xC911;&#xC785;&#xB2C8;&#xB2E4;!&apos;</span>);
+    })
+
+<span class="hljs-comment">// &#xBC29;&#xBC95; 2 (listening &#xC774;&#xBCA4;&#xD2B8; &#xB9AC;&#xC2A4;&#xB108;)</span>
+<span class="hljs-keyword">const</span> server = http.createServer((req, res) =&gt; {
+    res.writeHead(<span class="hljs-number">200</span>, { <span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;text/html; charset=uft-8&apos;</span> });
+    res.write(<span class="hljs-string">&apos;&lt;h1&gt;Hello Node!&lt;/h1&gt;&apos;</span>);
+    res.end(<span class="hljs-string">&apos;&lt;p&gt;Hello Server!&lt;/p&gt;&apos;</span>)
+})
+server.listen(<span class="hljs-number">8080</span>);
+server.on(<span class="hljs-string">&apos;listening&apos;</span>, () =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;8080&#xBC88; &#xD3EC;&#xD2B8;&#xC5D0;&#xC11C; &#xC11C;&#xBC84; &#xB300;&#xAE30; &#xC911;&#xC785;&#xB2C8;&#xB2E4;!&apos;</span>);
+})
+server.on(<span class="hljs-string">&apos;error&apos;</span>, (err) =&gt; {
+    <span class="hljs-built_in">console</span>.error(err);
+})
+</code></pre>
+<h4 id="html-&#xD30C;&#xC77C;&#xC744;-fs-&#xBAA8;&#xB4C8;&#xB85C;-&#xC77D;&#xC5B4;&#xC624;&#xAE30;">HTML &#xD30C;&#xC77C;&#xC744; fs &#xBAA8;&#xB4C8;&#xB85C; &#xC77D;&#xC5B4;&#xC624;&#xAE30;</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>);
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>).promises;
+
+http.createServer(<span class="hljs-keyword">async</span> (req, res) =&gt; {
+    <span class="hljs-keyword">try</span> {
+        <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> fs.readFile(<span class="hljs-string">&apos;./server2.html&apos;</span>);
+    <span class="hljs-comment">// fs&#xB85C; HTML &#xD30C;&#xC77C;&#xC744; &#xC77D;&#xACE0;, &#xBC84;&#xD37C;&#xB97C; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xC5D0; &#xBCF4;&#xB0B8;&#xB2E4;.</span>
+        res.writeHead(<span class="hljs-number">200</span>, { <span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;text/html; charset=uft-8&apos;</span> });
+        res.end(data);
+    } <span class="hljs-keyword">catch</span> (err) {
+        <span class="hljs-built_in">console</span>.log(err);
+        res.writeHead(<span class="hljs-number">500</span>, { <span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;plain; charset=uft-8&apos;</span> });
+        res.end(err.message);
+    } 
+})
+.listen(<span class="hljs-number">8081</span>, () =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;8081&#xBC88; &#xD3EC;&#xD2B8;&#xC5D0;&#xC11C; &#xC11C;&#xBC84; &#xB300;&#xAE30; &#xC911;&#xC785;&#xB2C8;&#xB2E4;!&apos;</span>);
+})
+</code></pre>
+<blockquote>
+<p><strong>NOTE: HTTP &#xC0C1;&#xD0DC; &#xCF54;&#xB4DC;</strong></p>
+<p>&#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xB294; &#xC11C;&#xBC84;&#xC5D0;&#xC11C; &#xBCF4;&#xB0B4;&#xC8FC;&#xB294; &#xC0C1;&#xD0DC; &#xCF54;&#xB4DC;&#xB97C; &#xBCF4;&#xACE0; &#xC694;&#xCCAD;&#xC774; &#xC131;&#xACF5;&#xD588;&#xB294;&#xC9C0; &#xC2E4;&#xD328;&#xD588;&#xB294;&#xC9C0; &#xD310;&#xB2E8;&#xD55C;&#xB2E4;.</p>
+<ul>
+<li>2XX : &#xC131;&#xACF5;&#xC744; &#xC54C;&#xB9AC;&#xB294; &#xC0C1;&#xD0DC; &#xCF54;&#xB4DC;. 200(&#xC131;&#xACF5;), 201(&#xC791;&#xC131;&#xB428;)</li>
+<li>3XX : &#xB9AC;&#xB2E4;&#xC774;&#xB809;&#xC158;(&#xB2E4;&#xB978; &#xD398;&#xC774;&#xC9C0;&#xB85C; &#xC774;&#xB3D9;)&#xC744; &#xC54C;&#xB9AC;&#xB294; &#xC0C1;&#xD0DC; &#xCF54;&#xB4DC;. 301(&#xC601;&#xAD6C; &#xC774;&#xB3D9;), 302(&#xC784;&#xC2DC; &#xC774;&#xB3D9;), 304(&#xC218;&#xC815;&#xB418;&#xC9C0; &#xC54A;&#xC74C;)</li>
+<li>4XX : &#xC694;&#xCCAD; &#xC624;&#xB958;. 400(&#xC798;&#xBABB;&#xB41C; &#xC694;&#xCCAD;), 401(&#xAD8C;&#xD55C; &#xC5C6;&#xC74C;), 403(&#xAE08;&#xC9C0;&#xB428;), 404(&#xCC3E;&#xC744; &#xC218; &#xC5C6;&#xC74C;)</li>
+<li>5XX : &#xC11C;&#xBC84; &#xC624;&#xB958;. writeHead&#xB85C; &#xC9C1;&#xC811; &#xBCF4;&#xB0B4;&#xB294; &#xACBD;&#xC6B0;&#xB294; &#xAC70;&#xC758; &#xC5C6;&#xACE0;, &#xC608;&#xAE30;&#xCE58; &#xBABB;&#xD55C; &#xC5D0;&#xB7EC; &#xBC1C;&#xC0DD; &#xC2DC; &#xC11C;&#xBC84;&#xAC00; &#xC54C;&#xC544;&#xC11C; &#xBCF4;&#xB0B8;&#xB2E4;. 500(&#xB0B4;&#xBD80; &#xC11C;&#xBC84; &#xC624;&#xB958;), 502(&#xBD88;&#xB7C9; &#xAC8C;&#xC774;&#xD2B8;&#xC6E8;&#xC774;), 503(&#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC5C6;&#xC74C;)</li>
+</ul>
+</blockquote>
+<h3 id="42-rest&#xC640;-&#xB77C;&#xC6B0;&#xD305;-&#xC0AC;&#xC6A9;&#xD558;&#xAE30;">4.2 REST&#xC640; &#xB77C;&#xC6B0;&#xD305; &#xC0AC;&#xC6A9;&#xD558;&#xAE30;</h3>
+<p>&#xC11C;&#xBC84;&#xC5D0; &#xC694;&#xCCAD;&#xC744; &#xBCF4;&#xB0BC; &#xB54C; &#xC8FC;&#xC18C;&#xB97C; &#xD1B5;&#xD574; &#xC694;&#xCCAD;&#xC758; &#xB0B4;&#xC6A9;&#xC744; &#xD45C;&#xD604;&#xD55C;&#xB2E4;. &#xADF8;&#xB7EC;&#xBBC0;&#xB85C; &#xC11C;&#xBC84;&#xAC00; &#xC774;&#xD574;&#xD558;&#xAE30; &#xC26C;&#xC6B4; &#xC8FC;&#xC18C;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xB2E4; = REST</p>
+<h4 id="rest&#xB780;">REST&#xB780;</h4>
+<p>REpresentational State Transfer&#xC758; &#xC904;&#xC784;&#xB9D0;.</p>
+<p>&#xC11C;&#xBC84;&#xC758; &#xC790;&#xC6D0;&#xC744; &#xC815;&#xC758;&#xD558;&#xACE0; &#xC790;&#xC6D0;&#xC5D0; &#xB300;&#xD55C; &#xC8FC;&#xC18C;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xB294; &#xBC29;&#xBC95; &#xB610;&#xB294; &#xC57D;&#xC18D;.</p>
+<p>&#xC8FC;&#xC18C;&#xC758; &#xC758;&#xBBF8;&#xB97C; &#xBA85;&#xD655;&#xD788; &#xC804;&#xB2EC;&#xD558;&#xAE30; &#xC704;&#xD574; &#xBA85;&#xC0AC;&#xB85C; &#xAD6C;&#xC131;&#xB41C;&#xB2E4;. (<code>/user</code>, <code>/post</code>)</p>
+<h4 id="http-&#xC694;&#xCCAD;-&#xBA54;&#xC11C;&#xB4DC;">HTTP &#xC694;&#xCCAD; &#xBA54;&#xC11C;&#xB4DC;</h4>
+<p>&#xC8FC;&#xC18C; &#xC678;&#xC5D0; HTTP &#xC694;&#xCCAD; &#xBA54;&#xC11C;&#xB4DC;&#xB97C; &#xC0AC;&#xC6A9;.</p>
+<table>
+<thead>
+<tr>
+<th>HTTP &#xC694;&#xCCAD; &#xBA54;&#xC11C;&#xB4DC; &#xC885;&#xB958;</th>
+<th>&#xC124;&#xBA85;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td>&#xC11C;&#xBC84; &#xC790;&#xC6D0;&#xC744; &#xAC00;&#xC838;&#xC624;&#xACE0;&#xC790; &#xD560; &#xB54C; &#xC0AC;&#xC6A9;.<br>&#xC694;&#xCCAD;&#xC758; &#xBCF8;&#xBB38;&#xC5D0; &#xB370;&#xC774;&#xD130;&#xB97C; &#xB123;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.<br>&#xB370;&#xC774;&#xD130;&#xB97C; &#xC11C;&#xBC84;&#xB85C; &#xBCF4;&#xB0B4;&#xC57C; &#xD55C;&#xB2E4;&#xBA74; &#xCFFC;&#xB9AC;&#xC2A4;&#xD2B8;&#xB9C1;&#xC744; &#xC0AC;&#xC6A9;.</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td>&#xC11C;&#xBC84;&#xC5D0; &#xC790;&#xC6D0;&#xC744; &#xC0C8;&#xB85C; &#xB4F1;&#xB85D;&#xD558;&#xACE0;&#xC790; &#xD560; &#xB54C; &#xC0AC;&#xC6A9;<br>&#xC694;&#xCCAD;&#xC758; &#xBCF8;&#xBB38;&#xC5D0; &#xC0C8;&#xB85C; &#xB4F1;&#xB85D;&#xD55C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xB123;&#xC5B4; &#xBCF4;&#xB0C4;.</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td>&#xC11C;&#xBC84;&#xC758; &#xC790;&#xC6D0;&#xC744; &#xC694;&#xCCAD;&#xC5D0; &#xB4E4;&#xC5B4; &#xC788;&#xB294; &#xC790;&#xC6D0;&#xC73C;&#xB85C; &#xCE58;&#xD658;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;.<br>&#xC694;&#xCCAD;&#xC758; &#xBCF8;&#xBB38;&#xC5D0; &#xCE58;&#xD658;&#xD560; &#xB370;&#xC774;&#xD130;&#xB97C; &#xB123;&#xC5B4; &#xBCF4;&#xB0C4;.</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td>&#xC11C;&#xBC84; &#xC790;&#xC6D0;&#xC758; &#xC77C;&#xBD80;&#xB9CC; &#xC218;&#xC815;&#xD558;&#xACE0;&#xC790; &#xD560; &#xB54C; &#xC0AC;&#xC6A9;<br>&#xC694;&#xCCAD;&#xC758; &#xBCF8;&#xBB38;&#xC5D0; &#xC77C;&#xBD80; &#xC218;&#xC815;&#xD560; &#xB370;&#xC774;&#xD130;&#xB97C; &#xB123;&#xC5B4; &#xBCF4;&#xB0C4;.</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td>&#xC11C;&#xBC84;&#xC758; &#xC790;&#xC6D0;&#xC744; &#xC0AD;&#xC81C;&#xD558;&#xACE0;&#xC790; &#xD560; &#xB54C; &#xC0AC;&#xC6A9;.<br>&#xC694;&#xCCAD;&#xC758; &#xBCF8;&#xBB38;&#xC5D0; &#xB370;&#xC774;&#xD130;&#xB97C; &#xB123;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</td>
+</tr>
+<tr>
+<td><code>OPTIONS</code></td>
+<td>&#xC694;&#xCCAD;&#xC744; &#xD558;&#xAE30; &#xC804;&#xC5D0; &#xD1B5;&#xC2E0; &#xC635;&#xC158;&#xC744; &#xC124;&#xBA85;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC0AC;&#xC6A9;.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="rest&#xC758;-&#xC7A5;&#xC810;">REST&#xC758; &#xC7A5;&#xC810;</h4>
+<ul>
+<li>&#xC8FC;&#xC18C;&#xC640; &#xBA54;&#xC11C;&#xB4DC;&#xB9CC; &#xBCF4;&#xACE0; &#xC694;&#xCCAD;&#xC758; &#xB0B4;&#xC6A9;&#xC744; &#xC54C;&#xC544;&#xBCFC; &#xC218; &#xC788;&#xB2E4;.</li>
+<li>GET&#xC758; &#xACBD;&#xC6B0; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xC5D0;&#xC11C; &#xCE90;&#xC2F1;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xC5EC; &#xC131;&#xB2A5; &#xD5A5;&#xC0C1;&#xB3C4; &#xAE30;&#xB300;.</li>
+<li>&#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xAC00; &#xB204;&#xAD6C;&#xB4E0; &#xC0C1;&#xAD00; &#xC5C6;&#xC774; &#xAC19;&#xC740; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xC11C;&#xBC84;&#xC640; &#xC18C;&#xD1B5;&#xD560; &#xC218; &#xC788;&#xB2E4;. </li>
+<li>&#xC11C;&#xBC84;&#xC640; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xAC00; &#xBD84;&#xB9AC;&#xB418;&#xC5B4; &#xC788;&#xC73C;&#xBBC0;&#xB85C; &#xCD94;&#xD6C4; &#xC11C;&#xBC84;&#xB97C; &#xD655;&#xC7A5;&#xD560; &#xB54C; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xC5D0; &#xAD6C;&#xC560;&#xBC1B;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</li>
+</ul>
+<h4 id="restful&#xD55C;-&#xC6F9;-&#xC11C;&#xBC84;-&#xB9CC;&#xB4E4;&#xAE30;">RESTful&#xD55C; &#xC6F9; &#xC11C;&#xBC84; &#xB9CC;&#xB4E4;&#xAE30;</h4>
+<blockquote>
+<p>RESTful : REST&#xB97C; &#xB530;&#xB974;&#xB294; &#xC11C;&#xBC84;&#xB97C; &#xC77C;&#xCEEB;&#xB294; &#xB9D0;</p>
+</blockquote>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>);
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>).promises;
+
+<span class="hljs-keyword">const</span> users = {}; <span class="hljs-comment">// &#xB370;&#xC774;&#xD130; &#xC800;&#xC7A5;&#xC6A9;</span>
+
+http.createServer(<span class="hljs-keyword">async</span> (req, res) =&gt; {
+    <span class="hljs-keyword">try</span> {
+        <span class="hljs-built_in">console</span>.log(req.method, req.url);
+        <span class="hljs-keyword">if</span> (req.method === <span class="hljs-string">&apos;GET&apos;</span>) {
+            <span class="hljs-keyword">if</span> (req.url === <span class="hljs-string">&apos;/&apos;</span>) {
+                <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> fs.readFile(<span class="hljs-string">&apos;./restFront.html&apos;</span>);
+                res.writeHead(<span class="hljs-number">200</span>, { <span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;text/html; charset=utf-8&apos;</span> });
+                <span class="hljs-keyword">return</span> res.end(data);
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (req.url === <span class="hljs-string">&apos;/about&apos;</span>) {
+                <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> fs.readFile(<span class="hljs-string">&apos;./about.html&apos;</span>);
+                res.writeHead(<span class="hljs-number">200</span>, { <span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;text/html; charset=utf-8&apos;</span> });
+                <span class="hljs-keyword">return</span> res.end(data);
+            } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (req.url === <span class="hljs-string">&apos;/users&apos;</span>) {
+                res.writeHead(<span class="hljs-number">200</span>, { <span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;text/plain; charset=utf-8&apos;</span> });
+                <span class="hljs-keyword">return</span> res.end(<span class="hljs-built_in">JSON</span>.stringify(users));
+            }
+            <span class="hljs-comment">// &#xC8FC;&#xC18C;&#xAC00; /&#xB3C4; /about&#xB3C4; /users&#xB3C4; &#xC544;&#xB2C8;&#xBA74;</span>
+            <span class="hljs-keyword">try</span> {
+                <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> fs.readFile(<span class="hljs-string">`.<span class="hljs-subst">${req.url}</span>`</span>);
+        <span class="hljs-keyword">return</span> res.end(data);
+            } <span class="hljs-keyword">catch</span> (err) {
+                <span class="hljs-comment">// &#xC8FC;&#xC18C;&#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xB77C;&#xC6B0;&#xD2B8;&#xB97C; &#xBABB; &#xCC3E;&#xC558;&#xB2E4;&#xB294; 404 Not Found error &#xBC1C;&#xC0DD;</span>
+            }
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (req.method === <span class="hljs-string">&apos;POST&apos;</span>) {
+            <span class="hljs-keyword">if</span> (req.url === <span class="hljs-string">&apos;/user&apos;</span>) {
+                <span class="hljs-keyword">let</span> body = <span class="hljs-string">&apos;&apos;</span>;
+                <span class="hljs-comment">// &#xC694;&#xCCAD;&#xC758; body&#xB97C; stream&#xD615;&#xC2DD;&#xC73C;&#xB85C; &#xBC1B;&#xC74C;</span>
+                req.on(<span class="hljs-string">&apos;data&apos;</span>, (data) =&gt; {
+                    body += data;
+                });
+                <span class="hljs-comment">// &#xC694;&#xCCAD;&#xC758; body&#xB97C; &#xBC1B;&#xC740; &#xD6C4; &#xC2E4;&#xD589;&#xB428;.</span>
+                <span class="hljs-keyword">return</span> req.on(<span class="hljs-string">&apos;end&apos;</span>, () =&gt; {
+                    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;POST &#xBCF8;&#xBB38;(Body):&apos;</span>, body);
+                    <span class="hljs-keyword">const</span> { name } = <span class="hljs-built_in">JSON</span>.parse(body);
+                    <span class="hljs-keyword">const</span> id = <span class="hljs-built_in">Date</span>.now();
+                    users[id] = name;
+                    res.writeHead(<span class="hljs-number">201</span>);
+                    res.end(<span class="hljs-string">&apos;&#xB4F1;&#xB85D; &#xC131;&#xACF5;&apos;</span>);
+                })
+            }
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (req.method === <span class="hljs-string">&apos;PUT&apos;</span>) {
+            <span class="hljs-keyword">if</span> (req.url.startsWith(<span class="hljs-string">&apos;/user/&apos;</span>)) {
+                <span class="hljs-keyword">const</span> key = req.url.split(<span class="hljs-string">&apos;/&apos;</span>)[<span class="hljs-number">2</span>];
+                <span class="hljs-keyword">let</span> body = <span class="hljs-string">&apos;&apos;</span>;
+                req.on(<span class="hljs-string">&apos;data&apos;</span>, (data) =&gt; {
+                    body += data;
+                });
+                <span class="hljs-keyword">return</span> req.on(<span class="hljs-string">&apos;end&apos;</span>, () =&gt; {
+                    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;PUT &#xBCF8;&#xBB38;(Body):&apos;</span>, body);
+                    users[key] = <span class="hljs-built_in">JSON</span>.parse(body).name;
+                    <span class="hljs-keyword">return</span> res.end(<span class="hljs-built_in">JSON</span>.stringify(users));
+                })
+            }
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (req.method === <span class="hljs-string">&apos;DELETE&apos;</span>) {
+            <span class="hljs-keyword">if</span> (req.url.startsWith(<span class="hljs-string">&apos;/user/&apos;</span>)) {
+                <span class="hljs-keyword">const</span> key = req.url.split(<span class="hljs-string">&apos;/&apos;</span>)[<span class="hljs-number">2</span>];
+                <span class="hljs-keyword">delete</span> users[key];
+                <span class="hljs-keyword">return</span> res.end(<span class="hljs-built_in">JSON</span>.stringify(users));
+            }
+        }
+        res.writeHead(<span class="hljs-number">404</span>);
+        <span class="hljs-keyword">return</span> res.end(<span class="hljs-string">&apos;NOT FOUND&apos;</span>);
+    } <span class="hljs-keyword">catch</span> (err) {
+        <span class="hljs-built_in">console</span>.error(err);
+    res.writeHead(<span class="hljs-number">500</span>, { <span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;text/plain; charset=utf-8&apos;</span> });
+    res.end(err.message);
+    }
+})
+    .listen(<span class="hljs-number">8082</span>, () =&gt; {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;8082&#xBC88; &#xD3EC;&#xD2B8;&#xC5D0;&#xC11C; &#xC11C;&#xBC84; &#xB300;&#xAE30; &#xC911;&#xC785;&#xB2C8;&#xB2E4;&apos;</span>);
+    });
+</code></pre>
+<blockquote>
+<p><strong>NOTE: res.end &#xC55E;&#xC5D0; return&#xC744; &#xBD99;&#xC774;&#xB294; &#xC774;&#xC720;</strong></p>
+<p>&#xB178;&#xB4DC;&#xB3C4; &#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xBB38;&#xBC95;&#xC744; &#xB530;&#xB974;&#xBBC0;&#xB85C; return&#xC744; &#xBD99;&#xC774;&#xC9C0; &#xC54A;&#xB294; &#xD55C; &#xD568;&#xC218;&#xAC00; &#xC885;&#xB8CC;&#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</p>
+<p>return&#xC744; &#xBD99;&#xC774;&#xC9C0; &#xC54A;&#xC544;&#xC11C; res.end &#xAC19;&#xC740; &#xBA54;&#xC11C;&#xB4DC;&#xAC00; &#xC5EC;&#xB7EC; &#xBC88; &#xC2E4;&#xD589;&#xB41C;&#xB2E4;&#xBA74; &#xC5D0;&#xB7EC; &#xBC1C;&#xC0DD;.</p>
+</blockquote>
+<h4 id="network-&#xD0ED;&#xC73C;&#xB85C;-&#xD655;&#xC778;&#xD558;&#xAE30;">Network &#xD0ED;&#xC73C;&#xB85C; &#xD655;&#xC778;&#xD558;&#xAE30;</h4>
+<ul>
+<li>Name: &#xC694;&#xCCAD; &#xC8FC;&#xC18C;</li>
+<li>Method: &#xC694;&#xCCAD; &#xBA54;&#xC11C;&#xB4DC;</li>
+<li>Status: HTTP &#xC751;&#xB2F5; &#xCF54;&#xB4DC;</li>
+<li>Protocol: &#xD1B5;&#xC2E0; &#xD504;&#xB85C;&#xD1A0;&#xCF5C;</li>
+<li>Type: &#xC694;&#xCCAD;&#xC758; &#xC885;&#xB958;. <code>xhr</code> &#xB294; AJAX &#xC694;&#xCCAD;</li>
+</ul>
+<p><img src="example/4.2/img2.png" alt="Network &#xD0ED;"></p>
+<blockquote>
+<p><strong>NOTE: &#xD5E4;&#xB354;&#xC640; &#xBCF8;&#xBB38;</strong></p>
+<ul>
+<li>General: &#xACF5;&#xD1B5;&#xB41C; &#xD5E4;&#xB354;</li>
+<li>Response Headers: &#xC751;&#xB2F5;&#xC758; &#xD5E4;&#xB354;</li>
+<li>Request Headers: &#xC694;&#xCCAD;&#xC758; &#xD5E4;&#xB354;</li>
+<li>Request Payload: &#xC751;&#xB2F5;&#xC758; &#xBCF8;&#xBB38;</li>
+</ul>
+</blockquote>
+<p><img src="example/4.2/img1.png" alt="Network &#xD0ED;"></p>
+<h3 id="43-&#xCFE0;&#xD0A4;&#xC640;-&#xC138;&#xC158;-&#xC774;&#xD574;&#xD558;&#xAE30;">4.3 &#xCFE0;&#xD0A4;&#xC640; &#xC138;&#xC158; &#xC774;&#xD574;&#xD558;&#xAE30;</h3>
+<p>&#xB85C;&#xADF8;&#xC778;&#xC744; &#xAD6C;&#xD604;&#xD558;&#xB824;&#xBA74; &#xCFE0;&#xD0A4;&#xC640; &#xC138;&#xC158;&#xC744; &#xC774;&#xD574;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<p>&#xC11C;&#xBC84;&#xB85C;&#xBD80;&#xD130; &#xCFE0;&#xD0A4;&#xAC00; &#xC624;&#xBA74; &#xC6F9; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xB294; &#xCFE0;&#xD0A4;&#xB97C; &#xC800;&#xC7A5;&#xD574;&#xB450;&#xC5C8;&#xB2E4;&#xAC00; &#xB2E4;&#xC74C;&#xC5D0; &#xC694;&#xCCAD;&#xD560; &#xB54C;&#xB9C8;&#xB2E4; &#xCFE0;&#xD0A4;&#xB97C; &#xB3D9;&#xBD09;&#xD574;&#xC11C; &#xBCF4;&#xB0B8;&#xB2E4;. &#xC11C;&#xBC84;&#xB294; &#xC694;&#xCCAD;&#xC5D0; &#xB4E4;&#xC5B4; &#xC788;&#xB294; &#xCFE0;&#xD0A4;&#xB97C; &#xC77D;&#xC5B4;&#xC11C; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xB204;&#xAD6C;&#xC778;&#xC9C0; &#xD30C;&#xC545;&#xD55C;&#xB2E4;.</p>
+<p>&#xCFE0;&#xD0A4; : &#xC774;&#xC6A9;&#xC790; &#xC815;&#xBCF4;&#xB97C; &#xB2F4;&#xACE0; &#xC788;&#xB294; &#xD0A4;-&#xAC12;&#xC758; &#xC30D;. &#xC720;&#xD6A8;&#xAE30;&#xAC04;&#xC774; &#xC788;&#xB2E4;. &#xC694;&#xCCAD;&#xC758; &#xD5E4;&#xB354;(Cookie)&#xC5D0; &#xB2F4;&#xACA8; &#xC804;&#xC1A1;&#xB418;&#xACE0;, &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xB294; &#xC751;&#xB2F5;&#xC758; &#xD5E4;&#xB354;(Set-Cookie)&#xC5D0; &#xB530;&#xB77C; &#xCFE0;&#xD0A4;&#xB97C; &#xC804;&#xC1A1;&#xD55C;&#xB2E4;.</p>
+<h4 id="&#xCFE0;&#xD0A4;-&#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xC5D0;-&#xC804;&#xC1A1;&#xD558;&#xAE30;">&#xCFE0;&#xD0A4; &#xBE0C;&#xB77C;&#xC6B0;&#xC800;&#xC5D0; &#xC804;&#xC1A1;&#xD558;&#xAE30;</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>);
+
+http.createServer((req, res) =&gt; {
+    <span class="hljs-built_in">console</span>.log(req.url, req.headers.cookie);
+    res.writeHead(<span class="hljs-number">200</span>, { <span class="hljs-string">&apos;Set-Cookie&apos;</span> : <span class="hljs-string">&apos;mycookie=test&apos;</span> });
+    res.end(<span class="hljs-string">&apos;Hello Cookie&apos;</span>);
+})
+    .listen(<span class="hljs-number">8083</span>, () =&gt; {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;8083&#xBC88; &#xD3EC;&#xD2B8;&#xC5D0;&#xC11C; &#xC11C;&#xBC84; &#xB300;&#xAE30; &#xC911;&#xC785;&#xB2C8;&#xB2E4;!&apos;</span>);
+    })
+</code></pre>
+<h4 id="&#xCFE0;&#xD0A4;&#xB85C;-&#xC720;&#xC800;-&#xC2DD;&#xBCC4;&#xD558;&#xAE30;">&#xCFE0;&#xD0A4;&#xB85C; &#xC720;&#xC800; &#xC2DD;&#xBCC4;&#xD558;&#xAE30;</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>);
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>).promises;
+<span class="hljs-keyword">const</span> url = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;url&apos;</span>);
+<span class="hljs-keyword">const</span> qs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;querystring&apos;</span>);
+
+<span class="hljs-comment">// &#xCFE0;&#xD0A4;&#xB97C; &#xC27D;&#xAC8C; &#xC0AC;&#xC6A9;&#xD558;&#xAE30; &#xC704;&#xD574; &#xAC1D;&#xCCB4; &#xD615;&#xC2DD;&#xC73C;&#xB85C; &#xBCC0;&#xD658;</span>
+<span class="hljs-keyword">const</span> parseCookies = (cookie = <span class="hljs-string">&apos;&apos;</span>) =&gt;
+  cookie
+    .split(<span class="hljs-string">&apos;;&apos;</span>)
+    .map(v =&gt; v.split(<span class="hljs-string">&apos;=&apos;</span>))
+    .reduce((acc, [k, v]) =&gt; {
+      acc[k.trim()] = <span class="hljs-built_in">decodeURIComponent</span>(v);
+      <span class="hljs-keyword">return</span> acc;
+    }, {});
+
+http.createServer(<span class="hljs-keyword">async</span> (req, res) =&gt; {
+  <span class="hljs-keyword">const</span> cookies = parseCookies(req.headers.cookie);
+  <span class="hljs-comment">// &#xC8FC;&#xC18C;&#xAC00; /login&#xC73C;&#xB85C; &#xC2DC;&#xC791;&#xD558;&#xB294; &#xACBD;&#xC6B0;</span>
+  <span class="hljs-keyword">if</span> (req.url.startsWith(<span class="hljs-string">&apos;/login&apos;</span>)) {
+    <span class="hljs-keyword">const</span> { query } = url.parse(req.url);
+    <span class="hljs-keyword">const</span> { name } = qs.parse(query);
+    <span class="hljs-keyword">const</span> expires = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+    <span class="hljs-comment">// &#xCFE0;&#xD0A4; &#xC720;&#xD6A8; &#xC2DC;&#xAC04;&#xC744; &#xD604;&#xC7AC;&#xC2DC;&#xAC04; + 5&#xBD84;&#xC73C;&#xB85C; &#xC124;&#xC815;</span>
+    expires.setMinutes(expires.getMinutes() + <span class="hljs-number">5</span>);
+    res.writeHead(<span class="hljs-number">302</span>, {
+      Location: <span class="hljs-string">&apos;/&apos;</span>,
+      <span class="hljs-string">&apos;Set-Cookie&apos;</span>: <span class="hljs-string">`name=<span class="hljs-subst">${encodeURIComponent(name)}</span>; Expires=<span class="hljs-subst">${expires.toGMTString()}</span>; HttpOnly; Path=/`</span>,
+    });
+    res.end();
+  <span class="hljs-comment">// name&#xC774;&#xB77C;&#xB294; &#xCFE0;&#xD0A4;&#xAC00; &#xC788;&#xB294; &#xACBD;&#xC6B0;</span>
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (cookies.name) {
+    res.writeHead(<span class="hljs-number">200</span>, { <span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;text/plain; charset=utf-8&apos;</span> });
+    res.end(<span class="hljs-string">`<span class="hljs-subst">${cookies.name}</span>&#xB2D8; &#xC548;&#xB155;&#xD558;&#xC138;&#xC694;`</span>);
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">try</span> {
+      <span class="hljs-keyword">const</span> data = <span class="hljs-keyword">await</span> fs.readFile(<span class="hljs-string">&apos;./cookie2.html&apos;</span>);
+      res.writeHead(<span class="hljs-number">200</span>, { <span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;text/html; charset=utf-8&apos;</span> });
+      res.end(data);
+    } <span class="hljs-keyword">catch</span> (err) {
+      res.writeHead(<span class="hljs-number">500</span>, { <span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;text/plain; charset=utf-8&apos;</span> });
+      res.end(err.message);
+    }
+  }
+})
+  .listen(<span class="hljs-number">8084</span>, () =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;8084&#xBC88; &#xD3EC;&#xD2B8;&#xC5D0;&#xC11C; &#xC11C;&#xBC84; &#xB300;&#xAE30; &#xC911;&#xC785;&#xB2C8;&#xB2E4;!&apos;</span>);
+  });
+</code></pre>
+<h4 id="set-cookie-&#xC635;&#xC158;">Set-Cookie &#xC635;&#xC158;</h4>
+<table>
+<thead>
+<tr>
+<th>&#xC635;&#xC158;&#xBA85;</th>
+<th>&#xC124;&#xBA85;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#xCFE0;&#xD0A4;&#xBA85;=&#xCFE0;&#xD0A4;&#xAC12;</td>
+<td>&#xAE30;&#xBCF8;&#xC801;&#xC778; &#xCFE0;&#xD0A4;&#xC758; &#xAC12;. <code>mycookie=test</code></td>
+</tr>
+<tr>
+<td>Expires=&#xB0A0;&#xC9DC;</td>
+<td>&#xB9CC;&#xB8CC; &#xAE30;&#xD55C;. &#xAE30;&#xBCF8;&#xAC12;&#xC740; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xAC00; &#xC885;&#xB8CC;&#xB420; &#xB54C;&#xAE4C;&#xC9C0;</td>
+</tr>
+<tr>
+<td>Max-age=&#xCD08;</td>
+<td><code>Expires</code> &#xC640; &#xB2EC;&#xB9AC; &#xCD08;&#xB97C; &#xC785;&#xB825;&#xD560; &#xC218; &#xC788;&#xB2E4;. <code>Expires</code> &#xBCF4;&#xB2E4; &#xC6B0;&#xC120;.</td>
+</tr>
+<tr>
+<td>Domain=&#xB3C4;&#xBA54;&#xC778;&#xBA85;</td>
+<td>&#xCFE0;&#xD0A4;&#xAC00; &#xC804;&#xC1A1;&#xB420; &#xB3C4;&#xBA54;&#xC778;&#xC744; &#xD2B9;&#xC815;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xAE30;&#xBCF8;&#xAC12;&#xC740; &#xD604;&#xC7AC; &#xB3C4;&#xBA54;&#xC778;.</td>
+</tr>
+<tr>
+<td>Path=URL</td>
+<td>&#xCFE0;&#xD0A4;&#xAC00; &#xC804;&#xC1A1;&#xB420; URL&#xC744; &#xD2B9;&#xC815;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xAE30;&#xBCF8;&#xAC12;&#xC740; &apos;/&apos;&#xC774;&#xBA70; &#xC774; &#xACBD;&#xC6B0; &#xBAA8;&#xB4E0; URL&#xC5D0;&#xC11C; &#xCFE0;&#xD0A4;&#xB97C; &#xC804;&#xC1A1;&#xD560; &#xC218; &#xC788;&#xB2E4;.</td>
+</tr>
+<tr>
+<td>Secure</td>
+<td>HTTPS&#xC77C; &#xB54C;&#xB9CC; &#xCFE0;&#xD0A4; &#xC804;&#xC1A1;</td>
+</tr>
+<tr>
+<td>HttpOnly</td>
+<td>&#xC124;&#xC815; &#xC2DC; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC5D0;&#xC11C; &#xCFE0;&#xD0A4;&#xC5D0; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC5C6;&#xC74C;. &#xCFE0;&#xD0A4; &#xC870;&#xC791; &#xBC29;&#xC9C0;&#xC6A9;.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#xC138;&#xC158;">&#xC138;&#xC158;</h4>
+<p>&#xC11C;&#xBC84;&#xC5D0; &#xC0AC;&#xC6A9;&#xC790; &#xC815;&#xBCF4;&#xB97C; &#xC800;&#xC7A5;&#xD558;&#xACE0; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xC640;&#xB294; &#xC138;&#xC158; &#xC544;&#xC774;&#xB514;&#xB85C;&#xB9CC; &#xC18C;&#xD1B5;&#xD558;&#xB294; &#xBC29;&#xC2DD;.</p>
+<p>&#xC138;&#xC158; &#xC544;&#xC774;&#xB514;&#xB294; &#xAF2D; &#xCFE0;&#xD0A4;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0; &#xC54A;&#xC544;&#xB3C4; &#xB418;&#xC9C0;&#xB9CC; &#xC81C;&#xC77C; &#xAC04;&#xB2E8;&#xD558;&#xC5EC; &#xB9CE;&#xC774; &#xC0AC;&#xC6A9;&#xB428;.</p>
+<p>&#xC138;&#xC158;&#xCFE0;&#xD0A4; : &#xC138;&#xC158;&#xC744; &#xC704;&#xD574; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xCFE0;&#xD0A4;</p>
+<p>&#xC138;&#xC158;&#xC744; &#xC800;&#xC7A5;&#xD558;&#xAE30; &#xC704;&#xD574; &#xB808;&#xB514;&#xC2A4;(Redis)&#xB098; &#xB9F4;&#xCE90;&#xC2DC;&#xB4DC;(Memcached)&#xAC19;&#xC740; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC5D0; &#xB123;&#xC5B4;&#xB454;&#xB2E4;.</p>
+<h4 id="&#xC138;&#xC158;-&#xCFE0;&#xD0A4;&#xC640;-&#xC77C;&#xBC18;-&#xCFE0;&#xD0A4;-&#xBE44;&#xAD50;">&#xC138;&#xC158; &#xCFE0;&#xD0A4;&#xC640; &#xC77C;&#xBC18; &#xCFE0;&#xD0A4; &#xBE44;&#xAD50;</h4>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Cookie</span>
+res.writeHead(<span class="hljs-number">302</span>, {
+      Location: <span class="hljs-string">&apos;/&apos;</span>,
+      <span class="hljs-string">&apos;Set-Cookie&apos;</span>: <span class="hljs-string">`name=<span class="hljs-subst">${encodeURIComponent(name)}</span>; Expires=<span class="hljs-subst">${expires.toGMTString()}</span>; HttpOnly; Path=/`</span>,
+    });
+
+<span class="hljs-comment">// Session Cookie</span>
+<span class="hljs-keyword">const</span> session = {};
+...
+const uniqueInt = <span class="hljs-built_in">Date</span>.now();
+    session[uniqueInt] = {
+      name,
+      expires,
+    };
+...
+res.writeHead(<span class="hljs-number">302</span>, {
+      Location: <span class="hljs-string">&apos;/&apos;</span>,
+      <span class="hljs-string">&apos;Set-Cookie&apos;</span>: <span class="hljs-string">`session=<span class="hljs-subst">${uniqueInt}</span>; Expires=<span class="hljs-subst">${expires.toGMTString()}</span>; HttpOnly; Path=/`</span>,
+    });
+</code></pre>
+<h3 id="44-https&#xC640;-http2">4.4 https&#xC640; http2</h3>
+<h4 id="https-&#xBAA8;&#xB4C8;">https &#xBAA8;&#xB4C8;</h4>
+<p>&#xC6F9; &#xC11C;&#xBC84;&#xC5D0; SSL &#xC554;&#xD638;&#xD654;&#xB97C; &#xCD94;&#xAC00;&#xD558;&#xB294; &#xBAA8;&#xB4C8;. &#xC8FC;&#xB85C; &#xB85C;&#xADF8;&#xC778;&#xC774;&#xB098; &#xACB0;&#xC81C;&#xAC00; &#xD544;&#xC694;&#xD55C; &#xCC3D;&#xC5D0;&#xC11C; &#xC801;&#xC6A9;&#xD55C;&#xB2E4;.</p>
+<p>&#xC778;&#xC99D; &#xAE30;&#xAD00;&#xC5D0;&#xC11C; &#xC778;&#xC99D;&#xC11C;&#xB97C; &#xAD6C;&#xC785;&#xD574;&#xC57C; &#xD558;&#xBA70;, Let&apos;s Encrypt&#xAC19;&#xC740; &#xAE30;&#xAD00;&#xC5D0;&#xC11C; &#xBB34;&#xB8CC;&#xB85C; &#xBC1C;&#xAE09;&#xD574;&#xC8FC;&#xAE30;&#xB3C4; &#xD55C;&#xB2E4;.</p>
+<h5 id="https-&#xBAA8;&#xB4C8;-&#xCF54;&#xB4DC;">https &#xBAA8;&#xB4C8; &#xCF54;&#xB4DC;</h5>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> https = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;https&apos;</span>);
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+
+<span class="hljs-comment">// createServer&#xAC00; &#xC778;&#xC99D;&#xC11C; &#xC635;&#xC158; &#xAC1D;&#xCCB4;&#xB97C; &#xCD94;&#xAC00; &#xC778;&#xC218;&#xB85C; &#xBC1B;&#xB294;&#xB2E4;.</span>
+https.createServer({
+  cert: fs.readFileSync(<span class="hljs-string">&apos;&#xB3C4;&#xBA54;&#xC778; &#xC778;&#xC99D;&#xC11C; &#xACBD;&#xB85C;&apos;</span>),
+  key: fs.readFileSync(<span class="hljs-string">&apos;&#xB3C4;&#xBA54;&#xC778; &#xBE44;&#xBC00;&#xD0A4; &#xACBD;&#xB85C;&apos;</span>),
+  ca: [
+    fs.readFileSync(<span class="hljs-string">&apos;&#xC0C1;&#xC704; &#xC778;&#xC99D;&#xC11C; &#xACBD;&#xB85C;&apos;</span>),
+    fs.readFileSync(<span class="hljs-string">&apos;&#xC0C1;&#xC704; &#xC778;&#xC99D;&#xC11C; &#xACBD;&#xB85C;&apos;</span>),
+  ],
+}, (req, res) =&gt; {
+  res.writeHead(<span class="hljs-number">200</span>, { <span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;text/html; charset=utf-8&apos;</span> });
+  res.write(<span class="hljs-string">&apos;&lt;h1&gt;Hello Node!&lt;/h1&gt;&apos;</span>);
+  res.end(<span class="hljs-string">&apos;&lt;p&gt;Hello Server!&lt;/p&gt;&apos;</span>);
+})
+
+<span class="hljs-comment">// https&#xC774;&#xBBC0;&#xB85C; 443&#xD3EC;&#xD2B8;&#xB97C; &#xC0AC;&#xC6A9;</span>
+  .listen(<span class="hljs-number">443</span>, () =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;443&#xBC88; &#xD3EC;&#xD2B8;&#xC5D0;&#xC11C; &#xC11C;&#xBC84; &#xB300;&#xAE30; &#xC911;&#xC785;&#xB2C8;&#xB2E4;!&apos;</span>);
+  });
+</code></pre>
+<h4 id="http2-&#xBAA8;&#xB4C8;">http2 &#xBAA8;&#xB4C8;</h4>
+<p>SSL &#xC554;&#xD638;&#xD654;&#xC640; &#xB354;&#xBD88;&#xC5B4; &#xCD5C;&#xC2E0; HTTP &#xD504;&#xB85C;&#xD1A0;&#xCF5C;&#xC778; http/2&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>http/2&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; http/1.1&#xBCF4;&#xB2E4; &#xD6A8;&#xC728;&#xC801;&#xC73C;&#xB85C; &#xC694;&#xCCAD;&#xC744; &#xBCF4;&#xB0B4;&#xBBC0;&#xB85C; &#xC6F9;&#xC758; &#xC18D;&#xB3C4;&#xB97C; &#xAC1C;&#xC120;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<h5 id="http2-&#xBAA8;&#xB4C8;-&#xCF54;&#xB4DC;">http2 &#xBAA8;&#xB4C8; &#xCF54;&#xB4DC;</h5>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> http2 = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http2&apos;</span>);
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+
+http2.createSecureServer({
+  cert: fs.readFileSync(<span class="hljs-string">&apos;&#xB3C4;&#xBA54;&#xC778; &#xC778;&#xC99D;&#xC11C; &#xACBD;&#xB85C;&apos;</span>),
+  key: fs.readFileSync(<span class="hljs-string">&apos;&#xB3C4;&#xBA54;&#xC778; &#xBE44;&#xBC00;&#xD0A4; &#xACBD;&#xB85C;&apos;</span>),
+  ca: [
+    fs.readFileSync(<span class="hljs-string">&apos;&#xC0C1;&#xC704; &#xC778;&#xC99D;&#xC11C; &#xACBD;&#xB85C;&apos;</span>),
+    fs.readFileSync(<span class="hljs-string">&apos;&#xC0C1;&#xC704; &#xC778;&#xC99D;&#xC11C; &#xACBD;&#xB85C;&apos;</span>),
+  ],
+}, (req, res) =&gt; {
+  res.writeHead(<span class="hljs-number">200</span>, { <span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;text/html; charset=utf-8&apos;</span> });
+  res.write(<span class="hljs-string">&apos;&lt;h1&gt;Hello Node!&lt;/h1&gt;&apos;</span>);
+  res.end(<span class="hljs-string">&apos;&lt;p&gt;Hello Server!&lt;/p&gt;&apos;</span>);
+})
+  .listen(<span class="hljs-number">443</span>, () =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;443&#xBC88; &#xD3EC;&#xD2B8;&#xC5D0;&#xC11C; &#xC11C;&#xBC84; &#xB300;&#xAE30; &#xC911;&#xC785;&#xB2C8;&#xB2E4;!&apos;</span>);
+  });
+</code></pre>
+<h3 id="45-cluster">4.5 cluster</h3>
+<h4 id="cluster-&#xBAA8;&#xB4C8;">cluster &#xBAA8;&#xB4C8;</h4>
+<p>&#xC2F1;&#xAE00; &#xD504;&#xB85C;&#xC138;&#xC2A4;&#xB85C; &#xB3D9;&#xC791;&#xD558;&#xB294; &#xB178;&#xB4DC;&#xAC00; CPU &#xCF54;&#xC5B4;&#xB97C; &#xBAA8;&#xB450; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xAC8C; &#xD558;&#xB294; &#xBAA8;&#xB4C8;.</p>
+<p>&#xC694;&#xCCAD;&#xC774; &#xB9CE;&#xC774; &#xB4E4;&#xC5B4;&#xC654;&#xC744; &#xB54C; &#xBCD1;&#xB82C;&#xB85C; &#xC2E4;&#xD589;&#xB41C; &#xC11C;&#xBC84;&#xC758; &#xAC1C;&#xC218;&#xB9CC;&#xD07C; &#xC694;&#xCCAD;&#xC774; &#xBD84;&#xC0B0;&#xB418;&#xAC8C; &#xD560; &#xC218; &#xC788;&#xC73C;&#xBBC0;&#xB85C; &#xC11C;&#xBC84;&#xC758; &#xBD80;&#xB2F4;&#xC744; &#xC904;&#xC77C; &#xC218; &#xC788;&#xB2E4;.</p>
+<h5 id="cluster-&#xBAA8;&#xB4C8;-&#xCF54;&#xB4DC;">cluster &#xBAA8;&#xB4C8; &#xCF54;&#xB4DC;</h5>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> cluster = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;cluster&apos;</span>);
+<span class="hljs-keyword">const</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>);
+<span class="hljs-keyword">const</span> numCPUs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;os&apos;</span>).cpus().length;
+
+<span class="hljs-keyword">if</span> (cluster.isMaster) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`&#xB9C8;&#xC2A4;&#xD130; &#xD504;&#xB85C;&#xC138;&#xC2A4; &#xC544;&#xC774;&#xB514;: <span class="hljs-subst">${process.pid}</span>`</span>);
+    <span class="hljs-comment">// CPU &#xAC1C;&#xC218;&#xB9CC;&#xD07C; &#xC6CC;&#xCEE4;&#xB97C; &#xC0DD;&#xC0B0;</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; numCPUs; i++) {
+        cluster.fork();
+    }
+    <span class="hljs-comment">// &#xC6CC;&#xCEE4;&#xAC00; &#xC885;&#xB8CC;&#xB410;&#xC744; &#xB54C;</span>
+    cluster.on(<span class="hljs-string">&apos;exit&apos;</span>, (worker, code, signal) =&gt; {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${worker.process.pid}</span>&#xBC88; &#xC6CC;&#xCEE4;&#xAC00; &#xC885;&#xB8CC;&#xB418;&#xC5C8;&#xC2B5;&#xB2C8;&#xB2E4;.`</span>);
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;code&apos;</span>, code, <span class="hljs-string">&apos;signal&apos;</span>, signal);
+    })
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-comment">// &#xC6CC;&#xCEE4;&#xB4E4;&#xC774; &#xD3EC;&#xD2B8;&#xC5D0;&#xC11C; &#xB300;&#xAE30;</span>
+  http.createServer((req, res) =&gt; {
+    res.writeHead(<span class="hljs-number">200</span>, { <span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;text/html; charset=utf-8&apos;</span> });
+    res.write(<span class="hljs-string">&apos;&lt;h1&gt;Hello Node!&lt;/h1&gt;&apos;</span>);
+    res.end(<span class="hljs-string">&apos;&lt;p&gt;Hello Cluster!&lt;/p&gt;&apos;</span>);
+    setTimeout(() =&gt; { <span class="hljs-comment">// &#xC6CC;&#xCEE4; &#xC874;&#xC7AC;&#xB97C; &#xD655;&#xC778;&#xD558;&#xAE30; &#xC704;&#xD574; 1&#xCD08;&#xB9C8;&#xB2E4; &#xAC15;&#xC81C; &#xC885;&#xB8CC;</span>
+      process.exit(<span class="hljs-number">1</span>);
+    }, <span class="hljs-number">1000</span>);
+  }).listen(<span class="hljs-number">8086</span>);
+
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${process.pid}</span>&#xBC88; &#xC6CC;&#xCEE4; &#xC2E4;&#xD589;`</span>);
+}
+</code></pre>
+<h4 id="&#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;">&#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;</h4>
+<p>&#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xC744; &#xC801;&#xC6A9;&#xD558;&#xBA74; &#xC608;&#xAE30;&#xCE58; &#xBABB;&#xD55C; &#xC5D0;&#xB7EC;&#xB85C; &#xC11C;&#xBC84;&#xAC00; &#xC885;&#xB8CC;&#xB418;&#xB294; &#xD604;&#xC0C1;&#xC744; &#xBC29;&#xC9C0;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>&#xC9C1;&#xC811; cluster &#xBAA8;&#xB4C8;&#xB85C; &#xD074;&#xB7EC;&#xC2A4;&#xD130;&#xB9C1;&#xC744; &#xAD6C;&#xD604;&#xD560; &#xC218; &#xC788;&#xC9C0;&#xB9CC; &#xC2E4;&#xBB34;&#xC5D0;&#xC11C;&#xB294; pm2&#xB4F1;&#xC758; &#xBAA8;&#xB4C8;&#xC744; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"4장 http 모듈로 서버 만들기","level":"3.1","depth":1,"next":{"title":"5장 패키지 매니저","level":"3.2","depth":1,"path":"2th/reading_note_5.md","ref":"2th/reading_note_5.md","articles":[]},"previous":{"title":"3장 노드 기능","level":"2.3","depth":1,"path":"1th/reading_note_3.md","ref":"1th/reading_note_3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2th/reading_note_4.md","mtime":"2020-12-08T14:33:47.342Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-10T14:02:26.634Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+

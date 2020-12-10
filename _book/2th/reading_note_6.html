@@ -1,0 +1,831 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6장 익스프레스 웹 서버 만들기 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="reading_note_5.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">1주차</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../1th/reading_note_1.html">
+            
+                <a href="../1th/reading_note_1.html">
+            
+                    
+                    1장 노드 시작하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../1th/reading_note_2.html">
+            
+                <a href="../1th/reading_note_2.html">
+            
+                    
+                    2장 알아두어야 할 자바스크립트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../1th/reading_note_3.html">
+            
+                <a href="../1th/reading_note_3.html">
+            
+                    
+                    3장 노드 기능
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">2주차</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="reading_note_4.html">
+            
+                <a href="reading_note_4.html">
+            
+                    
+                    4장 http 모듈로 서버 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="reading_note_5.html">
+            
+                <a href="reading_note_5.html">
+            
+                    
+                    5장 패키지 매니저
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.3" data-path="reading_note_6.html">
+            
+                <a href="reading_note_6.html">
+            
+                    
+                    6장 익스프레스 웹 서버 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >6장 익스프레스 웹 서버 만들기</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="6&#xC7A5;-&#xC775;&#xC2A4;&#xD504;&#xB808;&#xC2A4;-&#xC6F9;-&#xC11C;&#xBC84;-&#xB9CC;&#xB4E4;&#xAE30;-&#x1F680;">6&#xC7A5; &#xC775;&#xC2A4;&#xD504;&#xB808;&#xC2A4; &#xC6F9; &#xC11C;&#xBC84; &#xB9CC;&#xB4E4;&#xAE30; &#x1F680;</h1>
+<blockquote>
+<p><strong>&#xC775;&#xC2A4;&#xD504;&#xB808;&#xC2A4;&#xB780;?</strong></p>
+<p>node&#xB85C; &#xC11C;&#xBC84;&#xB97C; &#xC81C;&#xC791;&#xD558;&#xB294; &#xACFC;&#xC815;&#xC5D0;&#xC11C;&#xC758; &#xBD88;&#xD3B8;&#xD568;&#xC744; &#xD574;&#xC18C;&#xD558;&#xAE30; &#xC704;&#xD574; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4; &#xC6F9; &#xC11C;&#xBC84; &#xD504;&#xB808;&#xC784;&#xC6CC;&#xD06C;.</p>
+<p>&#xBE44;&#xC2B7;&#xD55C; &#xD504;&#xB808;&#xC784;&#xC6CC;&#xD06C;&#xB85C;&#xB294; koa, hapi &#xB4F1;&#xC774; &#xC788;&#xB2E4;.</p>
+</blockquote>
+<h3 id="61-&#xC775;&#xC2A4;&#xD504;&#xB808;&#xC2A4;-&#xD504;&#xB85C;&#xC81D;&#xD2B8;-&#xC2DC;&#xC791;&#xD558;&#xAE30;">6.1 &#xC775;&#xC2A4;&#xD504;&#xB808;&#xC2A4; &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xC2DC;&#xC791;&#xD558;&#xAE30;</h3>
+<ol>
+<li><code>package.json</code> &#xC0DD;&#xC131; &#xD6C4; &#xC815;&#xBCF4; &#xC791;&#xC131;</li>
+<li><code>npm i express</code>, <code>npm i -D nodemon</code> &#xC73C;&#xB85C;. &#xD544;&#xC694;&#xD55C; &#xD328;&#xD0A4;&#xC9C0; &#xC124;&#xCE58;</li>
+<li><code>app.js</code> &#xC5D0; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xC791;&#xC131; &#xD6C4; <code>npm start</code> &#xB85C; &#xC2E4;&#xD589;.</li>
+</ol>
+<h4 id="packagejson">package.json</h4>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;learn-express&quot;</span>,
+  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;1.0.0&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&#xC775;&#xC2A4;&#xD504;&#xB808;&#xC2A4;&#xB97C; &#xBC30;&#xC6B0;&#xC790;&quot;</span>,
+  <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;app.js&quot;</span>,
+  <span class="hljs-string">&quot;dependencies&quot;</span>: {
+    <span class="hljs-string">&quot;express&quot;</span>: <span class="hljs-string">&quot;^4.17.1&quot;</span>
+  },
+  <span class="hljs-string">&quot;devDependencies&quot;</span>: {
+    <span class="hljs-string">&quot;nodemon&quot;</span>: <span class="hljs-string">&quot;^2.0.6&quot;</span>
+  },
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;start&quot;</span>: <span class="hljs-string">&quot;nodemon app&quot;</span>, <span class="hljs-comment">// app.js&#xB97C; nodemon&#xC73C;&#xB85C; &#xC2E4;&#xD589;. &#xBCC0;&#xACBD;&#xC774; &#xC0DD;&#xAE30;&#xBA74; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xC11C;&#xBC84;&#xB97C; &#xC7AC;&#xC2DC;&#xC791;&#xD55C;&#xB2E4;.</span>
+    <span class="hljs-string">&quot;test&quot;</span>: <span class="hljs-string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+  },
+  <span class="hljs-string">&quot;author&quot;</span>: <span class="hljs-string">&quot;swimjiy&quot;</span>,
+  <span class="hljs-string">&quot;license&quot;</span>: <span class="hljs-string">&quot;MIT&quot;</span>
+}
+</code></pre>
+<h4 id="appjs">app.js</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+
+<span class="hljs-keyword">const</span> app = express();
+app.set(<span class="hljs-string">&apos;port&apos;</span>, process.env.PORT || <span class="hljs-number">3000</span>);
+<span class="hljs-comment">// app.set(&#xD0A4;, &#xAC12;)&#xC73C;&#xB85C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC800;&#xC7A5;&#xD558;&#xACE0;, app.get(&#xD0A4;) &#xB85C; &#xC811;&#xADFC;.</span>
+
+app.get(<span class="hljs-string">&apos;/&apos;</span>, (req, res) =&gt; {
+    res.send(<span class="hljs-string">&apos;Hello Express&apos;</span>); <span class="hljs-comment">// == node&#xC758; res.write, res.end</span>
+
+  <span class="hljs-comment">// sendFile&#xC5D0;&#xC11C; &#xD30C;&#xC77C; &#xACBD;&#xB85C;&#xB97C; &#xC9C0;&#xC815;&#xD558;&#xC5EC; HTML &#xD615;&#xD0DC;&#xB85C; &#xC751;&#xB2F5;&#xD560; &#xC218; &#xC788;&#xB2E4;.</span>
+    res.sendFile(path.join(__dirname, <span class="hljs-string">&apos;./index.html&apos;</span>));
+})
+<span class="hljs-comment">// app.get(&#xC8FC;&#xC18C;, &#xB77C;&#xC6B0;&#xD130;)&#xB85C; &#xC8FC;&#xC18C;&#xC5D0; &#xB300;&#xD55C; GET &#xC694;&#xCCAD;&#xC774; &#xC62C; &#xB54C;&#xC758; &#xB3D9;&#xC791;&#xC744; &#xC9C0;&#xC815;.</span>
+
+app.listen(app.get(<span class="hljs-string">&apos;port&apos;</span>), () =&gt; {
+    <span class="hljs-built_in">console</span>.log(app.get(<span class="hljs-string">&apos;port&apos;</span>), <span class="hljs-string">&apos;&#xBC88; &#xD3EC;&#xD2B8;&#xC5D0;&#xC11C; &#xB300;&#xAE30; &#xC911;&apos;</span>);
+});
+</code></pre>
+<h3 id="62-&#xC790;&#xC8FC;-&#xC0AC;&#xC6A9;&#xD558;&#xB294;-&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;">6.2 &#xC790;&#xC8FC; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;</h3>
+<p>&#xC775;&#xC2A4;&#xD504;&#xB808;&#xC2A4;&#xC758; &#xD575;&#xC2EC;. &#xC694;&#xCCAD;&#xACFC; &#xC751;&#xB2F5;&#xC758; &#xC911;&#xAC04;&#xC5D0; &#xC704;&#xCE58;&#xD558;&#xC5EC; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xB77C;&#xACE0; &#xBD80;&#xB978;&#xB2E4;. (&#xB77C;&#xC6B0;&#xD130;, &#xC5D0;&#xB7EC; &#xD578;&#xB4E4;&#xB7EC; &#xB4F1;...)</p>
+<p><code>app.use(&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;)</code> &#xD615;&#xD0DC;&#xB85C; &#xC0AC;&#xC6A9;.</p>
+<p>&#xC704;&#xC5D0;&#xC11C;&#xBD80;&#xD130; &#xC544;&#xB798;&#xB85C; &#xC21C;&#xC11C;&#xB300;&#xB85C; &#xC2E4;&#xD589;&#xB418;&#xBA70;, next&#xB77C;&#xB294; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xB85C; &#xB2E4;&#xC74C; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xB85C; &#xB118;&#xC5B4;&#xAC08; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>&#xC8FC;&#xC18C;&#xB97C; &#xCCAB; &#xBC88;&#xC9F8; &#xC778;&#xC218;&#xB85C; &#xB123;&#xC5B4;&#xC8FC;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xBAA8;&#xB4E0; &#xC694;&#xCCAD;&#xC5D0;&#xC11C; &#xC2E4;&#xD589;&#xB418;&#xACE0;, &#xB123;&#xB294;&#xB2E4;&#xBA74; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xC694;&#xCCAD;&#xC5D0;&#xC11C;&#xB9CC; &#xC2E4;&#xD589;&#xB41C;&#xB2E4;.</p>
+<h5 id="&#xAE30;&#xBCF8;-&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;-&#xC0AC;&#xC6A9;-&#xBC29;&#xBC95;">&#xAE30;&#xBCF8; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4; &#xC0AC;&#xC6A9; &#xBC29;&#xBC95;</h5>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+
+<span class="hljs-keyword">const</span> app = express();
+app.set(<span class="hljs-string">&apos;port&apos;</span>, process.env.PORT || <span class="hljs-number">3000</span>);
+
+app.use((req, res, next) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#xBAA8;&#xB4E0; &#xC694;&#xCCAD;&#xC5D0; &#xB2E4; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.&apos;</span>);
+    next(); <span class="hljs-comment">// next&#xB97C; &#xD638;&#xCD9C;&#xD574;&#xC57C; &#xB2E4;&#xC74C; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xB85C; &#xB118;&#xC5B4;&#xAC08; &#xC218; &#xC788;&#xB2E4;.</span>
+})
+
+app.get(<span class="hljs-string">&apos;/&apos;</span>, (req, res, next) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;GET / &#xC694;&#xCCAD;&#xC5D0;&#xB9CC; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.&apos;</span>);
+    next();
+}, (req, res) =&gt; {
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&apos;&#xC5D0;&#xB7EC;&#xB294; &#xC5D0;&#xB7EC; &#xCC98;&#xB9AC; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xB85C; &#xAC11;&#xB2C8;&#xB2E4;.&apos;</span>);
+}) <span class="hljs-comment">// app.get &#xB77C;&#xC6B0;&#xD130;&#xC5D0; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xAC00; &#xB450; &#xAC1C; &#xC5F0;&#xACB0;&#xB428;. </span>
+
+<span class="hljs-comment">// &#xC5D0;&#xB7EC; &#xCC98;&#xB9AC; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;. &#xB124; &#xAC1C;&#xC758; &#xBCC0;&#xC218;&#xB97C; &#xAC16;&#xACE0; &#xC788;&#xC74C;.</span>
+<span class="hljs-comment">// &#xD2B9;&#xBCC4;&#xD55C; &#xACBD;&#xC6B0;&#xAC00; &#xC544;&#xB2C8;&#xBA74; &#xAC00;&#xC7A5; &#xC544;&#xB798;&#xC5D0; &#xC704;&#xCE58;&#xD558;&#xB3C4;&#xB85D; &#xD55C;&#xB2E4;.</span>
+app.use((err, req, res, next) =&gt; {
+    <span class="hljs-built_in">console</span>.log(err);
+    res.status(<span class="hljs-number">500</span>).send(err.message);
+})
+
+app.listen(app.get(<span class="hljs-string">&apos;port&apos;</span>), () =&gt; {
+    <span class="hljs-built_in">console</span>.log(app.get(<span class="hljs-string">&apos;port&apos;</span>), <span class="hljs-string">&apos;&#xBC88; &#xD3EC;&#xD2B8;&#xC5D0;&#xC11C; &#xB300;&#xAE30; &#xC911;&apos;</span>);
+});
+</code></pre>
+<h5 id="&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xAC00;-&#xC2E4;&#xD589;&#xB418;&#xB294;-&#xACBD;&#xC6B0;">&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xAC00; &#xC2E4;&#xD589;&#xB418;&#xB294; &#xACBD;&#xC6B0;</h5>
+<table>
+<thead>
+<tr>
+<th>&#xCF54;&#xB4DC;</th>
+<th>&#xC124;&#xBA85;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>app.use(&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;)</code></td>
+<td>&#xBAA8;&#xB4E0; &#xC694;&#xCCAD;&#xC5D0;&#xC11C; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4; &#xC2E4;&#xD589;</td>
+</tr>
+<tr>
+<td><code>app.use(&apos;/abc&apos;, &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;)</code></td>
+<td>abc&#xB85C; &#xC2DC;&#xC791;&#xD558;&#xB294; &#xC694;&#xCCAD;&#xC5D0;&#xC11C; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4; &#xC2E4;&#xD589;</td>
+</tr>
+<tr>
+<td><code>app.post(&apos;/abc&apos;, &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;)</code></td>
+<td>abc&#xB85C; &#xC2DC;&#xC791;&#xD558;&#xB294; POST &#xC694;&#xCCAD;&#xC5D0;&#xC11C; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4; &#xC2E4;&#xD589;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#xC2E4;&#xBB34;&#xC5D0;-&#xC0AC;&#xC6A9;&#xD558;&#xB294;-&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;-&#xC54C;&#xC544;&#xBCF4;&#xAE30;">&#xC2E4;&#xBB34;&#xC5D0; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4; &#xC54C;&#xC544;&#xBCF4;&#xAE30;</h4>
+<pre><code class="lang-bash">$ npm i morgan cookie-parser express-session dotenv
+</code></pre>
+<h4 id="dotenv">dotenv</h4>
+<p>&#xBCF4;&#xC548; &#xC0C1;&#xC758; &#xD3B8;&#xC758;&#xB97C; &#xC704;&#xD574; <code>process.env</code> &#xB97C; &#xBCC4;&#xB3C4;&#xC758; &#xD30C;&#xC77C;&#xB85C; &#xAD00;&#xB9AC;&#xD560; &#xC218; &#xC788;&#xAC8C; &#xD558;&#xB294; &#xD328;&#xD0A4;&#xC9C0;. (&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xB294; &#xC544;&#xB2D8;!)</p>
+<p><code>.env</code>  &#xD30C;&#xC77C;&#xC744; &#xC77D;&#xC5B4;&#xC11C; <code>process.env</code> &#xB85C; &#xD0A4;=&#xAC12;&#xC744; &#xCD94;&#xAC00;&#xD55C;&#xB2E4;.</p>
+<h4 id="621-morgan">6.2.1 morgan</h4>
+<p>&#xC694;&#xCCAD;&#xACFC; &#xC751;&#xB2F5;&#xC5D0; &#xB300;&#xD55C; &#xC815;&#xBCF4;&#xB97C; &#xCF58;&#xC194;&#xC5D0; &#xAE30;&#xB85D;&#xD55C;&#xB2E4;.</p>
+<h5 id="&#xC0AC;&#xC6A9;-&#xBC29;&#xBC95;">&#xC0AC;&#xC6A9; &#xBC29;&#xBC95;</h5>
+<pre><code class="lang-javascript">app.use(morgan(<span class="hljs-string">&apos;dev&apos;</span>));
+<span class="hljs-comment">// dev &#xB300;&#xC2E0; combined(&#xBC30;&#xD3EC; &#xD658;&#xACBD;&#xC5D0; &#xCD94;&#xCC9C;), common, short, tiny &#xB4F1;&#xC744; &#xB123;&#xC744; &#xC218; &#xC788;&#xB2E4;.</span>
+</code></pre>
+<h5 id="console">console</h5>
+<pre><code class="lang-bash"><span class="hljs-comment"># [HTTP &#xBA54;&#xC11C;&#xB4DC;][&#xC8FC;&#xC18C;][HTTP &#xC0C1;&#xD0DC; &#xCF54;&#xB4DC;][&#xC751;&#xB2F5; &#xC18D;&#xB3C4;] - [&#xC751;&#xB2F5; &#xBC14;&#xC774;&#xD2B8;]</span>
+GET / 304 1.253 ms - 150
+</code></pre>
+<h4 id="622-static">6.2.2 static</h4>
+<p><u><em>express&#xC5D0;&#xC11C; &#xAE30;&#xBCF8; &#xC81C;&#xACF5;.</em></u></p>
+<p>&#xC815;&#xC801;&#xC778; &#xD30C;&#xC77C;&#xB4E4;(css, js, images)&#xC744; &#xC81C;&#xACF5;&#xD558;&#xB294; &#xB77C;&#xC6B0;&#xD130; &#xC5ED;&#xD560;. </p>
+<p><code>fs.readFile</code> &#xB85C; &#xD30C;&#xC77C;&#xC744; &#xC9C1;&#xC811; &#xC77D;&#xC5B4;&#xC11C; &#xC804;&#xC1A1;&#xD560; &#xD544;&#xC694;&#xAC00; &#xC5C6;&#xC5B4;&#xC9C4;&#xB2E4;.</p>
+<p>&#xC694;&#xCCAD; &#xACBD;&#xB85C;&#xC5D0; &#xD574;&#xB2F9;&#xD558;&#xB294; &#xD30C;&#xC77C;&#xC774; &#xC5C6;&#xC73C;&#xBA74; &#xB0B4;&#xBD80;&#xC801;&#xC73C;&#xB85C; <code>next</code> &#xB97C; &#xD638;&#xCD9C;&#xD558;&#xBA70;, &#xD30C;&#xC77C;&#xC744; &#xBC1C;&#xACAC;&#xD558;&#xBA74; &#xB2E4;&#xC74C; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xB294; &#xC2E4;&#xD589;&#xB418;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</p>
+<h5 id="&#xC0AC;&#xC6A9;-&#xBC29;&#xBC95;">&#xC0AC;&#xC6A9; &#xBC29;&#xBC95;</h5>
+<pre><code class="lang-javascript">app.use(<span class="hljs-string">&apos;&#xC694;&#xCCAD; &#xACBD;&#xB85C;&apos;</span>, express.static(<span class="hljs-string">&apos;&#xC2E4;&#xC81C; &#xACBD;&#xB85C;&apos;</span>));
+
+<span class="hljs-comment">// &#xC2E4;&#xC81C; &#xC11C;&#xBC84;&#xC758; &#xD3F4;&#xB354; &#xACBD;&#xB85C;&#xB294; public&#xC774; &#xC788;&#xC9C0;&#xB9CC;, &#xC694;&#xCCAD; &#xC8FC;&#xC18C;&#xC5D0;&#xB294; public&#xC774; &#xC5C6;&#xC73C;&#xBBC0;&#xB85C; &#xBCF4;&#xC548; &#xC720;&#xC9C0;.</span>
+app.use(<span class="hljs-string">&apos;/&apos;</span>, express.static(path.join(__dirname, <span class="hljs-string">&apos;public&apos;</span>)));
+</code></pre>
+<blockquote>
+<p>&#x1F4A1; &#xADF8;&#xB7FC; &#xD30C;&#xC77C;&#xC744; &#xBC1C;&#xACAC;&#xD574;&#xC11C; &#xB2E4;&#xC74C; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xAC00; &#xC2E4;&#xD589;&#xB418;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xADF8;&#xAC78;&#xB85C; &#xCF54;&#xB4DC; &#xB05D;...? =&gt; &#xB124;. &#xB4A4;&#xC5D0; &#xAC70;&#xB294; &#xB9C9;&#xD799;&#xB2C8;&#xB2E4;. 6-2-6</p>
+</blockquote>
+<h4 id="623-body-parser">6.2.3 body-parser</h4>
+<p><u><em>express&#xC5D0;&#xC11C; &#xAE30;&#xBCF8; &#xC81C;&#xACF5;. (v 4.16.0 ~)</em></u></p>
+<p>&#xC694;&#xCCAD;&#xC758; &#xBCF8;&#xBB38;&#xC5D0; &#xC788;&#xB294; &#xB370;&#xC774;&#xD130;&#xB97C; &#xD574;&#xC11D;&#xD574;&#xC11C; <code>req.body</code> &#xAC1D;&#xCCB4;&#xB85C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC8FC;&#xB294; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;.</p>
+<p>&#xBCF4;&#xD1B5; &#xD3FC; &#xB370;&#xC774;&#xD130;&#xB098; AJAX &#xC694;&#xCCAD;&#xC758; &#xB370;&#xC774;&#xD130;&#xB97C; &#xCC98;&#xB9AC;</p>
+<p>&#xBA40;&#xD2F0;&#xD30C;&#xD2B8;(&#xC774;&#xBBF8;&#xC9C0;, &#xB3D9;&#xC601;&#xC0C1;, &#xD30C;&#xC77C;) &#xB370;&#xC774;&#xD130;&#xB294; &#xCC98;&#xB9AC;&#xD558;&#xC9C0; &#xBABB;&#xD55C;&#xB2E4;. (multer &#xBAA8;&#xB4C8; &#xC0AC;&#xC6A9;)</p>
+<h5 id="&#xC0AC;&#xC6A9;-&#xBC29;&#xBC95;">&#xC0AC;&#xC6A9; &#xBC29;&#xBC95;</h5>
+<pre><code class="lang-js">app.use(express.json());
+app.use(express.urlencoded({ extended: <span class="hljs-literal">false</span> }));
+
+<span class="hljs-comment">// Raw, Text &#xD615;&#xC2DD;&#xC758; &#xB370;&#xC774;&#xD130;&#xB97C; &#xD574;&#xC11D;&#xD560; &#xACBD;&#xC6B0; &#xC124;&#xCE58; &#xD6C4; &#xC544;&#xB798;&#xC640; &#xAC19;&#xC774; &#xCD94;&#xAC00;</span>
+<span class="hljs-keyword">const</span> bodyParser = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;body-parser&apos;</span>);
+app.use(bodyParser.raw());
+app.use(bodyParser.text());
+</code></pre>
+<h5 id="&#xC694;&#xCCAD;-&#xB370;&#xC774;&#xD130;-&#xC885;&#xB958;">&#xC694;&#xCCAD; &#xB370;&#xC774;&#xD130; &#xC885;&#xB958;</h5>
+<ul>
+<li><code>JSON</code>: JSON &#xD615;&#xC2DD;&#xC758; &#xB370;&#xC774;&#xD130; &#xC804;&#xB2EC; &#xBC29;&#xC2DD;</li>
+<li><code>URL-encoded</code>: &#xC8FC;&#xC18C; &#xD615;&#xC2DD;&#xC758; &#xB370;&#xC774;&#xD130; &#xC804;&#xB2EC; &#xBC29;&#xC2DD;.<ul>
+<li><code>extended</code> &#xC635;&#xC158;: <code>false</code> &#xBA74; &#xB178;&#xB4DC;&#xC758; querystring &#xBAA8;&#xB4C8;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xCFFC;&#xB9AC;&#xC2A4;&#xD2B8;&#xB9C1;&#xC744; &#xD574;&#xC11D;&#xD558;&#xBA70; <code>true</code> &#xBA74; qs &#xBAA8;&#xB4C8;&#xB85C; &#xD574;&#xC11D;.</li>
+<li><code>name=swimjiy&amp;book=nodejs</code> =&gt; req.body <code>{ name: &apos;swimjiy&apos;, book: &apos;nodejs&apos; }</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="624-cookie-parser">6.2.4 cookie-parser</h4>
+<p>&#xC694;&#xCCAD;&#xC5D0; &#xB3D9;&#xBD09;&#xB41C; &#xCFE0;&#xD0A4;&#xB97C; &#xD574;&#xC11D;&#xD574; req.cookies &#xAC1D;&#xCCB4;&#xB85C; &#xB9CC;&#xB4DC;&#xB294; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;.</p>
+<p><code>name=swimjiy</code> =&gt; req.cookie <code>{ name: &apos;swimjiy&apos; }</code></p>
+<h5 id="&#xC0AC;&#xC6A9;-&#xBC29;&#xBC95;">&#xC0AC;&#xC6A9; &#xBC29;&#xBC95;</h5>
+<pre><code class="lang-javascript">app.use(cookieParser(&#xBE44;&#xBC00;&#xD0A4;));
+<span class="hljs-comment">// &#xC11C;&#xBA85;&#xB41C; &#xCFE0;&#xD0A4;&#xAC00; &#xC788;&#xB294; &#xACBD;&#xC6B0;, &#xC778;&#xC218;&#xB85C; &#xC81C;&#xACF5;&#xD55C; &#xBE44;&#xBC00;&#xD0A4;&#xB97C; &#xD1B5;&#xD574; &#xD574;&#xB2F9; &#xCFE0;&#xD0A4;&#xAC00; &#xB0B4; &#xC11C;&#xBC84;&#xAC00; &#xB9CC;&#xB4E0; &#xCFE0;&#xD0A4;&#xC784;&#xC744; &#xAC80;&#xC99D;&#xD560; &#xC218; &#xC788;&#xB2E4;.</span>
+<span class="hljs-comment">// &#xC11C;&#xBA85;&#xC774; &#xBD99;&#xC740; &#xCFE0;&#xD0A4;&#xB294; .sign&#xC774; &#xB4A4;&#xC5D0; &#xBD99;&#xC73C;&#xBA70; req.signedCookies &#xAC1D;&#xCCB4;&#xC5D0; &#xC800;&#xC7A5;</span>
+</code></pre>
+<h5 id="&#xCFE0;&#xD0A4;-&#xC0DD;&#xC131;&#xC81C;&#xAC70;">&#xCFE0;&#xD0A4; &#xC0DD;&#xC131;/&#xC81C;&#xAC70;</h5>
+<pre><code class="lang-javascript">res.cookie(<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;swimjiy&apos;</span>, {
+  expires: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-built_in">Date</span>.now() + <span class="hljs-number">900000</span>),
+  httpOnly: <span class="hljs-literal">true</span>,
+  secure: <span class="hljs-literal">true</span>,
+  signd: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#xCFE0;&#xD0A4; &#xB4A4;&#xC5D0; &#xC11C;&#xBA85;&#xC774; &#xBD99;&#xB294;&#xB2E4;. &#xC11C;&#xBA85;&#xC744; &#xC704;&#xD55C; &#xBE44;&#xBC00; &#xD0A4;&#xB294; process.env.COOKIE_SECRET</span>
+});
+
+<span class="hljs-comment">// &#xCFE0;&#xD0A4;&#xB97C; &#xC9C0;&#xC6B0;&#xB7EC;&#xBA74; &#xD0A4;&#xC640; &#xAC12; &#xC678;&#xC5D0; &#xC635;&#xC158;&#xB3C4; &#xC815;&#xD655;&#xD788; &#xC77C;&#xCE58;&#xD574;&#xC57C; &#xD55C;&#xB2E4;. (expires, maxAge &#xC81C;&#xC678;)</span>
+res.clearCookie(<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;swimjiy&apos;</span>, {
+  httpOnly: <span class="hljs-literal">true</span>,
+  secure: <span class="hljs-literal">true</span>,
+})
+</code></pre>
+<h4 id="625-express-session">6.2.5 express-session</h4>
+<p>&#xC138;&#xC158; &#xAD00;&#xB9AC;&#xC6A9; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;</p>
+<p>&#xB85C;&#xADF8;&#xC778; &#xB4F1;&#xC758; &#xC774;&#xC720;&#xB85C; &#xC138;&#xC158;&#xC744; &#xAD6C;&#xD604;&#xD558;&#xAC70;&#xB098; &#xD2B9;&#xC815; &#xC0AC;&#xC6A9;&#xC790;&#xB97C; &#xC704;&#xD55C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC784;&#xC2DC;&#xC801;&#xC73C;&#xB85C; &#xC800;&#xC7A5;&#xD574;&#xB458; &#xB54C; &#xC0AC;&#xC6A9;.</p>
+<p>&#xC0AC;&#xC6A9;&#xC790;&#xBCC4;&#xB85C; req.session &#xAC1D;&#xCCB4; &#xC548;&#xC5D0; &#xC720;&#xC9C0;.</p>
+<h5 id="&#xC0AC;&#xC6A9;-&#xBC29;&#xBC95;">&#xC0AC;&#xC6A9; &#xBC29;&#xBC95;</h5>
+<pre><code class="lang-javascript">app.use(session({
+    resave: <span class="hljs-literal">false</span>, <span class="hljs-comment">// &#xC694;&#xCCAD;&#xC774; &#xC62C; &#xB54C; &#xC138;&#xC158;&#xC5D0; &#xC218;&#xC815; &#xC0AC;&#xD56D;&#xC774; &#xC0DD;&#xAE30;&#xC9C0; &#xC54A;&#xB354;&#xB77C;&#xB3C4; &#xC138;&#xC158;&#xC744; &#xB2E4;&#xC2DC; &#xC800;&#xC7A5;&#xD560; &#xC9C0; &#xC5EC;&#xBD80;.</span>
+    saveUninitialized: <span class="hljs-literal">false</span>, <span class="hljs-comment">// &#xC138;&#xC158;&#xC5D0; &#xC800;&#xC7A5;&#xD560; &#xB0B4;&#xC5ED;&#xC774; &#xC5C6;&#xC5B4;&#xB3C4; &#xCC98;&#xC74C;&#xBD80;&#xD130; &#xC138;&#xC158;&#xC744; &#xC0DD;&#xC131;&#xD560;&#xC9C0; &#xC5EC;&#xBD80;.</span>
+
+  <span class="hljs-comment">// &#xC138;&#xC158; &#xAD00;&#xB9AC; &#xC2DC; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xC5D0; &#xCFE0;&#xD0A4;&#xB97C; &#xBCF4;&#xB0B8;&#xB2E4;. = 4.3&#xC808;&#xC758; &#xC138;&#xC158; &#xCFE0;&#xD0A4;!</span>
+    secret: process.env.COOKIE_SECRET, <span class="hljs-comment">// &#xCFE0;&#xD0A4;&#xC5D0; &#xC11C;&#xBA85; &#xCD94;&#xAC00;</span>
+    cookie: { <span class="hljs-comment">// &#xC138;&#xC158; &#xCFE0;&#xD0A4; &#xC124;&#xC815;</span>
+        httpOnly: <span class="hljs-literal">true</span>, <span class="hljs-comment">// &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xC5D0;&#xC11C; &#xCFE0;&#xD0A4; &#xD655;&#xC778; &#xBD88;&#xAC00;</span>
+        secure: <span class="hljs-literal">false</span>, <span class="hljs-comment">// https &#xAC00; &#xC544;&#xB2CC; &#xD658;&#xACBD;&#xC5D0;&#xB3C4; &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;</span>
+    },
+    name: <span class="hljs-string">&apos;session-cookie&apos;</span>, <span class="hljs-comment">// &#xC138;&#xC158; &#xCFE0;&#xD0A4; &#xC774;&#xB984;</span>
+
+  <span class="hljs-comment">// + store &#xC635;&#xC158;&#xC73C;&#xB85C; &#xB808;&#xB514;&#xC2A4; &#xB4F1;&#xC758; DB&#xC5D0; &#xC138;&#xC158; &#xC800;&#xC7A5;. &#xD604;&#xC7AC;&#xB294; &#xBA54;&#xBAA8;&#xB9AC;&#xC5D0; &#xC800;&#xC7A5;.</span>
+}))
+</code></pre>
+<h5 id="&#xC138;&#xC158;-&#xBCC0;&#xACBD;-&#xBC0F;-&#xC0AD;&#xC81C;">&#xC138;&#xC158; &#xBCC0;&#xACBD; &#xBC0F; &#xC0AD;&#xC81C;</h5>
+<pre><code class="lang-javascript">req.session.name = <span class="hljs-string">&apos;swimjiy&apos;</span>; <span class="hljs-comment">// &#xC138;&#xC158; &#xB4F1;&#xB85D;</span>
+req.sessionID; <span class="hljs-comment">// &#xC138;&#xC158; &#xC544;&#xC774;&#xB514; &#xD655;&#xC778;</span>
+req.session.destroy(); <span class="hljs-comment">// &#xC138;&#xC158; &#xBAA8;&#xB450; &#xC81C;&#xAC70;</span>
+</code></pre>
+<h4 id="626-&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;-&#xD2B9;&#xC131;-&#xD65C;&#xC6A9;&#xD558;&#xAE30;">6.2.6 &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4; &#xD2B9;&#xC131; &#xD65C;&#xC6A9;&#xD558;&#xAE30;</h4>
+<h5 id="&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;-tldr">&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4; tl;dr</h5>
+<ol>
+<li>&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xB780; <code>req, res, next</code> &#xB97C; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xB85C; &#xAC00;&#xC9C0;&#xB294; &#xD568;&#xC218; (&#xC5D0;&#xB7EC; &#xCC98;&#xB9AC; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xB9CC; &#xC608;&#xC678;)&#xB85C;&#xC11C; <code>app.use</code> &#xB098; <code>app.get</code>, <code>app.post</code> &#xB4F1;&#xC73C;&#xB85C; &#xC7A5;&#xCC29;.</li>
+<li>&#xD2B9;&#xC815; &#xC8FC;&#xC18C;&#xC758; &#xC694;&#xCCAD;&#xC5D0;&#xB9CC; &#xC2E4;&#xD589;&#xB418;&#xAC8C; &#xD558;&#xB824;&#xBA74; &#xCCAB; &#xBC88;&#xC9F8; &#xC778;&#xC218;&#xB85C; &#xC8FC;&#xC18C;&#xB97C; &#xB123;&#xB294;&#xB2E4;. <code>app.use(&apos;/&apos;, (req, res, next) =&gt; {})</code></li>
+<li>&#xB3D9;&#xC2DC;&#xC5D0; &#xC5EC;&#xB7EC; &#xAC1C;&#xC758; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4; &#xC7A5;&#xCC29; &#xAC00;&#xB2A5;. <code>app.use(morgan(&apos;dev&apos;), express.json(), ...)</code></li>
+<li><p>&#xB2E4;&#xC74C; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xB85C; &#xB118;&#xC5B4;&#xAC00;&#xB824;&#xBA74; next &#xD568;&#xC218;&#xB97C; &#xD638;&#xCD9C;&#xD574;&#xC57C; &#xD55C;&#xB2E4;. &#xC544;&#xB2C8;&#xBA74; <code>res.send</code> &#xB098; <code>res.sendFile</code> &#xB4F1;&#xC758; &#xBA54;&#xC11C;&#xB4DC;&#xB85C; &#xC751;&#xB2F5;&#xC744; &#xBCF4;&#xB0B4;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-javascript">app.use((req, res, next) =&gt; {
+ <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#xBAA8;&#xB4E0; &#xC694;&#xCCAD;&#xC5D0; &#xB2E4; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.&apos;</span>);
+ next();
+});
+</code></pre>
+</li>
+</ol>
+<blockquote>
+<p>&#x1F4A1; &#xAC11;&#xC790;&#xAE30; &#xAD81;&#xAE08;&#xD55C;&#xAC74;&#xB370;, &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xAC00; req, res, next &#xB97C; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xB85C; &#xAC16;&#xACE0;, morgan&#xAC19;&#xC740; &#xAC74; &#xC800; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xB791; next()&#xAC00; &#xAC10;&#xCDB0;&#xC838;&#xC788;&#xB2E4;&#xB294; &#xAC70;&#xC796;&#xC544;. &#xADF8;&#xB7FC; &#xC2E4;&#xC81C;&#xB85C;&#xB294; &#xC5B4;&#xB5BB;&#xAC8C; &#xC0DD;&#xAE34;&#xAC70;&#xC9C0;???</p>
+</blockquote>
+<h5 id="next">next()</h5>
+<p>&#xC778;&#xC218;&#xB97C; &#xB123;&#xC73C;&#xBA74; &#xD2B9;&#xC218;&#xD55C; &#xB3D9;&#xC791;&#xC744; &#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-javascript">next(<span class="hljs-string">&apos;route&apos;</span>); <span class="hljs-comment">// &#xB2E4;&#xC74C; &#xB77C;&#xC6B0;&#xD130;&#xC758; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xB85C; &#xBC14;&#xB85C; &#xC774;&#xB3D9;&#xD558;&#xACE0;, &#xADF8; &#xC678;&#xC758; &#xC778;&#xC218;&#xB97C; &#xB123;&#xC73C;&#xBA74; &#xC5D0;&#xB7EC; &#xCC98;&#xB9AC; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xB85C; &#xC774;&#xB3D9;.</span>
+
+next(err); <span class="hljs-comment">// &#xC778;&#xC218;&#xAC00; &#xC5D0;&#xB7EC; &#xCC98;&#xB9AC; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xC758; err &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;.</span>
+(err, req, res, next) =&gt; {}
+</code></pre>
+<h5 id="&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;-&#xAC04;&#xC5D0;-&#xB370;&#xC774;&#xD130;-&#xC804;&#xB2EC;&#xD558;&#xAE30;">&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4; &#xAC04;&#xC5D0; &#xB370;&#xC774;&#xD130; &#xC804;&#xB2EC;&#xD558;&#xAE30;</h5>
+<p>&#xC694;&#xCCAD;&#xC774; &#xB05D;&#xB0A0; &#xB54C;&#xAE4C;&#xC9C0;&#xB9CC; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC720;&#xC9C0;&#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-javascript">app.use((req, res, next) =&gt; {
+  req.data = <span class="hljs-string">&apos;&#xB370;&#xC774;&#xD130; &#xB123;&#xAE30;&apos;</span>;
+  next();
+}, (req, res, next) =&gt; {
+  <span class="hljs-built_in">console</span>.log(req.data); <span class="hljs-comment">// &#xB370;&#xC774;&#xD130; &#xBC1B;&#xAE30;.</span>
+  next();
+})
+</code></pre>
+<blockquote>
+<p><strong>NOTE: app.set&#xACFC;&#xC758; &#xCC28;&#xC774;</strong></p>
+<p>app.set&#xC740; &#xC775;&#xC2A4;&#xD504;&#xB808;&#xC2A4;&#xC5D0;&#xC11C; &#xC804;&#xC5ED;&#xC801;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;&#xB418;&#xBBC0;&#xB85C; &#xC0AC;&#xC6A9;&#xC790; &#xAC1C;&#xAC1C;&#xC778;&#xC758; &#xAC12;&#xC744; &#xB123;&#xAE30;&#xC5D0;&#xB294; &#xBD80;&#xC801;&#xC808;&#xD558;&#xB2E4;.</p>
+<p>&#xC571; &#xC804;&#xCCB4;&#xC758; &#xC124;&#xC815;&#xC744; &#xACF5;&#xC720;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;.</p>
+<p>req &#xAC1D;&#xCCB4;&#xB294; &#xC694;&#xCCAD;&#xC744; &#xBCF4;&#xB0B8; &#xC0AC;&#xC6A9;&#xC790; &#xAC1C;&#xAC1C;&#xC778;&#xC5D0;&#xAC8C; &#xADC0;&#xC18D;&#xB418;&#xBBC0;&#xB85C; req &#xAC1D;&#xCCB4;&#xB97C; &#xD1B5;&#xD574; &#xAC1C;&#xC778;&#xC758; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC804;&#xB2EC;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xB2E4;.</p>
+</blockquote>
+<h5 id="&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;-&#xC548;&#xC5D0;-&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;-&#xB123;&#xAE30;">&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4; &#xC548;&#xC5D0; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4; &#xB123;&#xAE30;</h5>
+<p>&#xAE30;&#xC874; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xC758; &#xAE30;&#xB2A5;&#xC744; &#xD655;&#xC7A5;&#xD560; &#xC218; &#xC788;&#xB2E4;. (&#xBD84;&#xAE30; &#xCC98;&#xB9AC; &#xB4F1;)</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#xAE30;&#xC874; &#xBC29;&#xC2DD;</span>
+app.use(morgan(<span class="hljs-string">&apos;dev&apos;</span>));
+
+<span class="hljs-comment">// &#xC0C8; &#xBC29;&#xC2DD;</span>
+app.use((req, res, next) =&gt; {
+  morgan(<span class="hljs-string">&apos;dev&apos;</span>)(req, res, next);
+});
+</code></pre>
+<h5 id="&#xC870;&#xAC74;&#xBB38;&#xC5D0;-&#xB530;&#xB77C;-&#xB2E4;&#xB978;-&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xB97C;-&#xC801;&#xC6A9;&#xD558;&#xB294;-&#xCF54;&#xB4DC;">&#xC870;&#xAC74;&#xBB38;&#xC5D0; &#xB530;&#xB77C; &#xB2E4;&#xB978; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xB97C; &#xC801;&#xC6A9;&#xD558;&#xB294; &#xCF54;&#xB4DC;</h5>
+<pre><code class="lang-javascript">app.use((req, res, next) =&gt; {
+  <span class="hljs-keyword">if</span> (process.env.NODE_ENV === <span class="hljs-string">&apos;production&apos;</span>) {
+    morgan(<span class="hljs-string">&apos;combined&apos;</span>)(req, res, next);
+  } <span class="hljs-keyword">else</span> {
+    morgan(<span class="hljs-string">&apos;dev&apos;</span>)(req, res, next);
+  }
+});
+</code></pre>
+<blockquote>
+<p>&#x1F4A1; &#xC774;&#xAC8C;...&#xAD73;&#xC774; (req, res, next) &#xB97C; &#xC4F0;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xC548;&#xB3CC;&#xC544;&#xAC00;&#xB294;&#xAC74;&#xAC00;?? &#xC65C; &#xC800;&#xB807;&#xAC8C; &#xC4F0;&#xB294;&#xC9C0; &#xBAA8;&#xB974;&#xACA0;&#xB2E4;.</p>
+</blockquote>
+<h4 id="627-multer">6.2.7 multer</h4>
+<p>&#xC774;&#xBBF8;&#xC9C0;, &#xB3D9;&#xC601;&#xC0C1; &#xB4F1;&#xC744; &#xBE44;&#xB86F;&#xD55C; &#xC5EC;&#xB7EC; &#xAC00;&#xC9C0; &#xD30C;&#xC77C;&#xB4E4;&#xC744; &#xBA40;&#xD2F0;&#xD30C;&#xD2B8; &#xD615;&#xC2DD;&#xC73C;&#xB85C; &#xC5C5;&#xB85C;&#xB4DC;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;.</p>
+<blockquote>
+<p>&#xBA40;&#xD2F0;&#xD30C;&#xD2B8;: enctype=multipart/form-data &#xC18D;&#xC131;&#xC778; &#xD3FC;&#xC744; &#xD1B5;&#xD574; &#xC5C5;&#xB85C;&#xB4DC;&#xD558;&#xB294; &#xB370;&#xC774;&#xD130;&#xC758; &#xD615;&#xC2DD;</p>
+</blockquote>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> multer = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;multer&apos;</span>);
+
+<span class="hljs-keyword">const</span> upload = multer({
+  <span class="hljs-comment">// &#xC5B4;&#xB514;&#xC5D0;(destination) &#xC5B4;&#xB5A4; &#xC774;&#xB984;&#xC73C;&#xB85C;(filename) &#xC800;&#xC7A5;&#xD560; &#xC9C0; &#xC124;&#xC815;</span>
+    storage: multer.diskStorage({
+        destination(req, file, done) {
+            done(<span class="hljs-literal">null</span>, <span class="hljs-string">&apos;uploads/&apos;</span>); <span class="hljs-comment">// &#xCCAB; &#xBC88;&#xC9F8; &#xC778;&#xC218;&#xC5D0;&#xB294; &#xC5D0;&#xB7EC;&#xAC00; &#xC788;&#xB2E4;&#xBA74; &#xC5D0;&#xB7EC;&#xB97C; &#xB123;&#xB294;&#xB2E4;.</span>
+        },
+        filename(req, file, done) {
+            <span class="hljs-keyword">const</span> ext = path.extname(file.originalname);
+            done(<span class="hljs-literal">null</span>, path.basename(file.originalname, ext) + <span class="hljs-built_in">Date</span>.now() + ext);
+        }
+    }),
+    limits: { fileSize: <span class="hljs-number">5</span> * <span class="hljs-number">1024</span> * <span class="hljs-number">1024</span> }, <span class="hljs-comment">// &#xC5C5;&#xB85C;&#xB4DC;&#xC5D0; &#xB300;&#xD55C; &#xC81C;&#xD55C; &#xC0C1;&#xD669; &#xC124;&#xC815;. &#xD604;&#xC7AC; 5MB</span>
+});
+</code></pre>
+<p>&#xC704; &#xC124;&#xC815;&#xC744; &#xC2E4;&#xC81C;&#xB85C; &#xD65C;&#xC6A9;&#xD558;&#xAE30; &#xC704;&#xD574; &#xC11C;&#xBC84;&#xC5D0; &#xBC18;&#xB4DC;&#xC2DC; <code>uploads</code> &#xD3F4;&#xB354;&#xAC00; &#xC874;&#xC7AC;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+
+<span class="hljs-keyword">try</span> {
+    fs.readFileSync(<span class="hljs-string">&apos;uploads&apos;</span>);
+} <span class="hljs-keyword">catch</span> (error) {
+    <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;upload &#xD3F4;&#xB354;&#xAC00; &#xC5C6;&#xC5B4; uploads &#xD3F4;&#xB354;&#xB97C; &#xC0DD;&#xC131;&#xD569;&#xB2C8;&#xB2E4;.&apos;</span>);
+    fs.mkdirSync(<span class="hljs-string">&apos;uploads&apos;</span>);
+}
+</code></pre>
+<h5 id="&#xD558;&#xB098;&#xC758;-&#xD30C;&#xC77C;&#xB9CC;-&#xC5C5;&#xB85C;&#xB4DC;-&#xD558;&#xB294;-&#xACBD;&#xC6B0;">&#xD558;&#xB098;&#xC758; &#xD30C;&#xC77C;&#xB9CC; &#xC5C5;&#xB85C;&#xB4DC; &#xD558;&#xB294; &#xACBD;&#xC6B0;</h5>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- html --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/upload&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">enctype</span>=<span class="hljs-string">&quot;multipart/form-data&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;image&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;title&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>&#xC5C5;&#xB85C;&#xB4DC;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* js */</span>
+app.post(<span class="hljs-string">&apos;/upload&apos;</span>, upload.single(<span class="hljs-string">&apos;image&apos;</span>), (req, res) =&gt; {
+    <span class="hljs-built_in">console</span>.log(req.file, req.body);
+    res.send(<span class="hljs-string">&apos;ok&apos;</span>);
+});
+<span class="hljs-comment">// &#xC5C5;&#xB85C;&#xB4DC; &#xC131;&#xACF5; &#xC2DC; req.file &#xC548;&#xC5D0; &#xAC1D;&#xCCB4; &#xC0DD;&#xC131;. req.body&#xC5D0;&#xB294; &#xD30C;&#xC77C;&#xC774; &#xC544;&#xB2CC; &#xB370;&#xC774;&#xD130;&#xC778; title&#xC774; &#xB4E4;&#xC5B4; &#xC788;&#xB2E4;.</span>
+</code></pre>
+<h5 id="&#xC5EC;&#xB7EC;-&#xD30C;&#xC77C;&#xC744;-&#xC5C5;&#xB85C;&#xB4DC;-&#xD558;&#xB294;-&#xACBD;&#xC6B0;">&#xC5EC;&#xB7EC; &#xD30C;&#xC77C;&#xC744; &#xC5C5;&#xB85C;&#xB4DC; &#xD558;&#xB294; &#xACBD;&#xC6B0;</h5>
+<pre><code class="lang-html"><span class="hljs-comment">&lt;!-- html --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/upload&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">enctype</span>=<span class="hljs-string">&quot;multipart/form-data&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;many&quot;</span> <span class="hljs-attr">multiple</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;title&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span>&gt;</span>&#xC5C5;&#xB85C;&#xB4DC;<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* js */</span>
+app.post(<span class="hljs-string">&apos;/upload&apos;</span>, upload.array(<span class="hljs-string">&apos;many&apos;</span>), (req, res) =&gt; {
+    <span class="hljs-built_in">console</span>.log(req.files, req.body);
+    res.send(<span class="hljs-string">&apos;ok&apos;</span>);
+});
+<span class="hljs-comment">// &#xC5C5;&#xB85C;&#xB4DC; &#xC131;&#xACF5; &#xC2DC; req.files &#xC548;&#xC5D0; &#xAC1D;&#xCCB4; &#xBC30;&#xC5F4; &#xC0DD;&#xC131;.</span>
+</code></pre>
+<h5 id="&#xAE30;&#xD0C0;">&#xAE30;&#xD0C0;</h5>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* input&#xD0DC;&#xADF8;&#xAC00; &#xC5EC;&#xB7EC;&#xAC1C;&#xC77C; &#xB584; : field */</span>
+app.post(<span class="hljs-string">&apos;/upload&apos;</span>, upload.fields([{ name: <span class="hljs-string">&apos;image1&apos;</span> }, { name: <span class="hljs-string">&apos;image2&apos;</span> }]), (req, res) =&gt; {
+    <span class="hljs-built_in">console</span>.log(req.files, req.body);
+    res.send(<span class="hljs-string">&apos;ok&apos;</span>);
+});
+
+<span class="hljs-comment">/* &#xD30C;&#xC77C;&#xC744; &#xC5C5;&#xB85C;&#xB4DC;&#xD558;&#xC9C0; &#xC54A;&#xACE0;&#xB3C4; &#xBA40;&#xD2F0;&#xD30C;&#xD2B8; &#xD615;&#xC2DD;&#xC73C;&#xB85C; &#xC5C5;&#xB85C;&#xB4DC;&#xD560; &#xB54C; : none */</span>
+app.post(<span class="hljs-string">&apos;/upload&apos;</span>, upload.none(), (req, res) =&gt; {
+    <span class="hljs-built_in">console</span>.log(req.body); <span class="hljs-comment">// body&#xB9CC; &#xC874;&#xC7AC;</span>
+    res.send(<span class="hljs-string">&apos;ok&apos;</span>);
+});
+</code></pre>
+<h3 id="63-router-&#xAC1D;&#xCCB4;&#xB85C;-&#xB77C;&#xC6B0;&#xD305;-&#xBD84;&#xB9AC;&#xD558;&#xAE30;">6.3 Router &#xAC1D;&#xCCB4;&#xB85C; &#xB77C;&#xC6B0;&#xD305; &#xBD84;&#xB9AC;&#xD558;&#xAE30;</h3>
+<h4 id="&#xAE30;&#xBCF8;-&#xC0AC;&#xC6A9;-&#xBC29;&#xBC95;">&#xAE30;&#xBCF8; &#xC0AC;&#xC6A9; &#xBC29;&#xBC95;</h4>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* routes/index.js */</span>
+<span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">const</span> router = express.Router();
+
+<span class="hljs-comment">// GET / &#xB77C;&#xC6B0;&#xD130;</span>
+router.get(<span class="hljs-string">&apos;/&apos;</span>, (req, res) =&gt; {
+    res.send(<span class="hljs-string">&apos;Hello, Express&apos;</span>);
+})
+
+<span class="hljs-built_in">module</span>.exports = router;
+
+
+<span class="hljs-comment">/* routes/user.js : &#xC55E;&#xB4A4; &#xB3D9;&#xC77C; */</span>
+...
+<span class="hljs-comment">// GET /user &#xB77C;&#xC6B0;&#xD130;</span>
+router.get(<span class="hljs-string">&apos;/&apos;</span>, (req, res) =&gt; {
+    res.send(<span class="hljs-string">&apos;Hello, User&apos;</span>);
+})
+...
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* app.js */</span>
+<span class="hljs-keyword">const</span> indexRouter = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./routes&apos;</span>);
+<span class="hljs-keyword">const</span> userRouter = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./routes/user&apos;</span>);
+
+app.use(<span class="hljs-string">&apos;/&apos;</span>, indexRouter);
+app.use(<span class="hljs-string">&apos;/user&apos;</span>, userRouter);
+</code></pre>
+<h4 id="nextroute">next(&apos;route&apos;)</h4>
+<p>&#xB2E4;&#xC74C; &#xB77C;&#xC6B0;&#xD130;&#xB85C; &#xB118;&#xC5B4;&#xAC00;&#xB294; &#xAE30;&#xB2A5;. &#xB77C;&#xC6B0;&#xD130;&#xC5D0; &#xC5F0;&#xACB0;&#xB41C; &#xB098;&#xBA38;&#xC9C0; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xB4E4;&#xC744; &#xAC74;&#xB108;&#xB6F0;&#xACE0; &#xC2F6;&#xC744; &#xB54C;.</p>
+<pre><code class="lang-javascript">router.get(<span class="hljs-string">&apos;/&apos;</span>, (req, res, next) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;GET / &#xC694;&#xCCAD;&#xC5D0;&#xB9CC; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.&apos;</span>);
+    next(<span class="hljs-string">&apos;route&apos;</span>);
+}, (req, res, next) =&gt; {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#xC2E4;&#xD589;&#xB418;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.&apos;</span>)
+    next();
+});
+
+router.get(<span class="hljs-string">&apos;/&apos;</span>, (req, res) =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;GET / &#xC694;&#xCCAD;&#xC5D0;&#xB9CC; &#xC2E4;&#xD589;&#xB429;&#xB2C8;&#xB2E4;.&apos;</span>);
+    res.send(<span class="hljs-string">&apos;Hello, Express!&apos;</span>);
+});
+</code></pre>
+<blockquote>
+<p> &#x1F4A1;&#xADF8;&#xB7FC; &#xB098;&#xBA38;&#xC9C0; &#xC2E4;&#xD589; &#xC548;&#xB418;&#xB294; &#xC560;&#xB4E4;&#xC740; &#xC548;&#xC4F0;&#xB294;&#xAC74;&#xAC00;?</p>
+</blockquote>
+<h4 id="&#xB77C;&#xC6B0;&#xD130;-&#xD2B9;&#xC218;-&#xD328;&#xD134;-&#xB77C;&#xC6B0;&#xD2B8;-&#xB9E4;&#xAC1C;&#xBCC0;&#xC218;">&#xB77C;&#xC6B0;&#xD130; &#xD2B9;&#xC218; &#xD328;&#xD134;: &#xB77C;&#xC6B0;&#xD2B8; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;</h4>
+<p>&#xC0AC;&#xC6A9;&#xC790; &#xC9C0;&#xC815; &#xD328;&#xD134;&#xC744; &#xB123;&#xC744; &#xC218; &#xC788;&#xACE0;, <code>req.params</code> &#xC5D0;&#xC11C; &#xD655;&#xC778;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<p>&#xC640;&#xC77C;&#xD2B8;&#xCE74;&#xB4DC; &#xC5ED;&#xD560;&#xC744; &#xD558;&#xBBC0;&#xB85C; &#xC77C;&#xBC18; &#xB77C;&#xC6B0;&#xD130;&#xBCF4;&#xB2E4; &#xB4A4;&#xC5D0; &#xC704;&#xCE58;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<pre><code class="lang-javascript">router.get(<span class="hljs-string">&apos;/user/:id&apos;</span>, (req, res) =&gt; {
+    <span class="hljs-built_in">console</span>.log(req.params, req.query);
+});
+<span class="hljs-comment">// req.params.id &#xB85C; &#xD655;&#xC778; &#xAC00;&#xB2A5;.</span>
+</code></pre>
+<h3 id="64-req-res-&#xAC1D;&#xCCB4;-&#xC0B4;&#xD3B4;&#xBCF4;&#xAE30;">6.4 req, res &#xAC1D;&#xCCB4; &#xC0B4;&#xD3B4;&#xBCF4;&#xAE30;</h3>
+<p>http &#xBAA8;&#xB4C8;&#xC758; req, res &#xAC1D;&#xCCB4;&#xB97C; &#xD655;&#xC7A5;&#xD55C; &#xAC83;. &#xAE30;&#xC874; &#xBA54;&#xC11C;&#xB4DC;&#xB3C4; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xACE0; &#xCD94;&#xAC00;&#xC801;&#xC778; &#xBA54;&#xC11C;&#xB4DC;&#xB3C4; &#xC788;&#xB2E4;.</p>
+<h4 id="req-&#xAC1D;&#xCCB4;">req &#xAC1D;&#xCCB4;</h4>
+<table>
+<thead>
+<tr>
+<th>&#xBA54;&#xC11C;&#xB4DC;</th>
+<th>&#xC124;&#xBA85;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>req.app</code></td>
+<td>app&#xAC1D;&#xCCB4;&#xC5D0; &#xC811;&#xADFC;&#xD560; &#xC218; &#xC788;&#xB2E4;.<br>ex) req.app.get(&apos;port&apos;)</td>
+</tr>
+<tr>
+<td><code>req.body</code></td>
+<td>body-parser &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xAC00; &#xB9CC;&#xB4DC;&#xB294; &#xC694;&#xCCAD;&#xC758; &#xBCF8;&#xBB38;&#xC744; &#xD574;&#xC11D;&#xD55C; &#xAC1D;&#xCCB4;</td>
+</tr>
+<tr>
+<td><code>req.cookies</code></td>
+<td>cookie-parser &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xAC00; &#xB9CC;&#xB4DC;&#xB294; &#xC694;&#xCCAD;&#xC758; &#xCFE0;&#xD0A4;&#xB97C; &#xD574;&#xC11D;&#xD55C; &#xAC1D;&#xCCB4;</td>
+</tr>
+<tr>
+<td><code>req.ip</code></td>
+<td>&#xC694;&#xCCAD;&#xC758; ip &#xC8FC;&#xC18C;</td>
+</tr>
+<tr>
+<td><code>req.params</code></td>
+<td>&#xB77C;&#xC6B0;&#xD2B8; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xC5D0; &#xB300;&#xD55C; &#xC815;&#xBCF4;</td>
+</tr>
+<tr>
+<td><code>req.query</code></td>
+<td>&#xCFFC;&#xB9AC;&#xC2A4;&#xD2B8;&#xB9C1;&#xC5D0; &#xB300;&#xD55C; &#xC815;&#xBCF4;</td>
+</tr>
+<tr>
+<td><code>req.signedCookied</code></td>
+<td>&#xC11C;&#xBA85;&#xB41C; &#xCFE0;&#xD0A4;&#xC758; &#xC815;&#xBCF4;</td>
+</tr>
+<tr>
+<td><code>req.get(&#xD5E4;&#xB354; &#xC774;&#xB984;)</code></td>
+<td>&#xD5E4;&#xB354;&#xC758; &#xAC12;&#xC744; &#xAC00;&#xC838;&#xC624;&#xACE0; &#xC2F6;&#xC744; &#xB54C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xBA54;&#xC11C;&#xB4DC;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="res-&#xAC1D;&#xCCB4;">res &#xAC1D;&#xCCB4;</h4>
+<table>
+<thead>
+<tr>
+<th>&#xBA54;&#xC11C;&#xB4DC;</th>
+<th>&#xC124;&#xBA85;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>res.app</code></td>
+<td>app &#xAC1D;&#xCCB4;&#xC5D0; &#xC811;&#xADFC;</td>
+</tr>
+<tr>
+<td><code>res.cookie(&#xD0A4;, &#xAC12;, &#xC635;&#xC158;)</code></td>
+<td>&#xCFE0;&#xD0A4;&#xB97C; &#xC124;&#xC815;</td>
+</tr>
+<tr>
+<td><code>res.clearCookie(&#xD0A4;, &#xAC12;, &#xC635;&#xC158;)</code></td>
+<td>&#xCFE0;&#xD0A4;&#xB97C; &#xC81C;&#xAC70;</td>
+</tr>
+<tr>
+<td><code>res.end()</code></td>
+<td>&#xB370;&#xC774;&#xD130; &#xC5C6;&#xC774; &#xC751;&#xB2F5;</td>
+</tr>
+<tr>
+<td><code>res.json(JSON)</code></td>
+<td>JSON &#xD615;&#xC2DD;&#xC758; &#xC751;&#xB2F5;</td>
+</tr>
+<tr>
+<td><code>res.redirect(&#xC8FC;&#xC18C;)</code></td>
+<td>&#xB9AC;&#xB2E4;&#xC774;&#xB809;&#xD2B8;&#xD560; &#xC8FC;&#xC18C;&#xC640; &#xC751;&#xB2F5;&#xC744; &#xBCF4;&#xB0B8;&#xB2E4;</td>
+</tr>
+<tr>
+<td><code>res.render(&#xBDF0;, &#xB370;&#xC774;&#xD130;)</code></td>
+<td>&#xD15C;&#xD50C;&#xB9BF; &#xC5D4;&#xC9C4;&#xC744; &#xB80C;&#xB354;&#xB9C1;&#xD574;&#xC11C; &#xC751;&#xB2F5;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;</td>
+</tr>
+<tr>
+<td><code>res.send(&#xB370;&#xC774;&#xD130;)</code></td>
+<td>&#xB370;&#xC774;&#xD130;&#xC640; &#xD568;&#xAED8; &#xC751;&#xB2F5;&#xC744; &#xBCF4;&#xB0B8;&#xB2E4;.<br>&#xB370;&#xC774;&#xD130;&#xC758; &#xC885;&#xB958; : &#xBB38;&#xC790;&#xC5F4;, HTML, &#xBC84;&#xD37C;, &#xAC1D;&#xCCB4;, &#xBC30;&#xC5F4; &#xB4F1;</td>
+</tr>
+<tr>
+<td><code>res.sendFile(&#xACBD;&#xB85C;)</code></td>
+<td>&#xACBD;&#xB85C;&#xC5D0; &#xC704;&#xCE58;&#xD55C; &#xD30C;&#xC77C;&#xC744; &#xC751;&#xB2F5;</td>
+</tr>
+<tr>
+<td><code>res.set(&#xD5E4;&#xB354;, &#xAC12;)</code></td>
+<td>&#xC751;&#xB2F5;&#xC758; &#xD5E4;&#xB354;&#xB97C; &#xC124;&#xC815;</td>
+</tr>
+<tr>
+<td><code>res.status(&#xCF54;&#xB4DC;)</code></td>
+<td>&#xC751;&#xB2F5; &#xC2DC;&#xC758; HTTP. &#xC0C1;&#xD0DC; &#xCF54;&#xB4DC;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#xBA54;&#xC11C;&#xB4DC;-&#xCCB4;&#xC774;&#xB2DD;">&#xBA54;&#xC11C;&#xB4DC; &#xCCB4;&#xC774;&#xB2DD;</h4>
+<pre><code class="lang-javascript">res
+    .status(<span class="hljs-number">201</span>)
+    .cookie(<span class="hljs-string">&apos;test&apos;</span>, <span class="hljs-string">&apos;test&apos;</span>)
+    .redirect(<span class="hljs-string">&apos;/admin&apos;</span>);
+</code></pre>
+<h3 id="65-&#xD15C;&#xD50C;&#xB9BF;-&#xC5D4;&#xC9C4;-&#xC0AC;&#xC6A9;&#xD558;&#xAE30;">6.5 &#xD15C;&#xD50C;&#xB9BF; &#xC5D4;&#xC9C4; &#xC0AC;&#xC6A9;&#xD558;&#xAE30;</h3>
+<p>&#xC815;&#xC801;&#xC778; HTML&#xC744; &#xB300;&#xCCB4;&#xD558;&#xAE30; &#xC704;&#xD574; &#xD0C4;&#xC0DD;.</p>
+<p>&#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB97C; &#xC774;&#xC6A9;&#xD574;&#xC11C; HTML&#xC744; &#xB80C;&#xB354;&#xB9C1;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<h4 id="651-&#xD37C;&#xADF8;&#xC81C;&#xC774;&#xB4DC;">6.5.1 &#xD37C;&#xADF8;(&#xC81C;&#xC774;&#xB4DC;)</h4>
+<p>&#xBB38;&#xBC95;&#xC774; &#xAC04;&#xB2E8;&#xD558;&#xC5EC; &#xCF54;&#xB4DC;&#xC758; &#xC591;&#xC744; &#xC904;&#xC77C; &#xC218; &#xC788;&#xB2E4;. &#xB2E4;&#xB9CC; HTML&#xACFC; &#xBB38;&#xBC95;&#xC774; &#xB9CE;&#xC774; &#xB2E4;&#xB984;.</p>
+<h4 id="652-&#xB10C;&#xC801;&#xC2A4;">6.5.2 &#xB10C;&#xC801;&#xC2A4;</h4>
+<p>&#xD30C;&#xC774;&#xC5B4;&#xD3ED;&#xC2A4;, &#xBAA8;&#xC9C8;&#xB77C;&#xC5D0;&#xC11C; &#xAC1C;&#xBC1C;.</p>
+<p>HTML &#xBB38;&#xBC95;&#xC744; &#xADF8;&#xB300;&#xB85C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xD37C;&#xADF8;&#xC758; &#xBB38;&#xBC95; &#xBCC0;&#xD654;&#xC5D0; &#xC801;&#xC751;&#xD558;&#xAE30; &#xD798;&#xB4E0; &#xACBD;&#xC6B0;&#xC5D0; &#xC801;&#xD569;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6장 익스프레스 웹 서버 만들기","level":"3.3","depth":1,"previous":{"title":"5장 패키지 매니저","level":"3.2","depth":1,"path":"2th/reading_note_5.md","ref":"2th/reading_note_5.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2th/reading_note_6.md","mtime":"2020-12-10T13:59:59.218Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-10T14:02:26.634Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+
