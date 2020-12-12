@@ -1,0 +1,508 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>5장 패키지 매니저 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="reading_note_6.html" />
+    
+    
+    <link rel="prev" href="reading_note_4.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">1주차</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../1th/reading_note_1.html">
+            
+                <a href="../1th/reading_note_1.html">
+            
+                    
+                    1장 노드 시작하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../1th/reading_note_2.html">
+            
+                <a href="../1th/reading_note_2.html">
+            
+                    
+                    2장 알아두어야 할 자바스크립트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../1th/reading_note_3.html">
+            
+                <a href="../1th/reading_note_3.html">
+            
+                    
+                    3장 노드 기능
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">2주차</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="reading_note_4.html">
+            
+                <a href="reading_note_4.html">
+            
+                    
+                    4장 http 모듈로 서버 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2" data-path="reading_note_5.html">
+            
+                <a href="reading_note_5.html">
+            
+                    
+                    5장 패키지 매니저
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="reading_note_6.html">
+            
+                <a href="reading_note_6.html">
+            
+                    
+                    6장 익스프레스 웹 서버 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >5장 패키지 매니저</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="5&#xC7A5;-&#xD328;&#xD0A4;&#xC9C0;-&#xB9E4;&#xB2C8;&#xC800;-&#x1F680;">5&#xC7A5; &#xD328;&#xD0A4;&#xC9C0; &#xB9E4;&#xB2C8;&#xC800; &#x1F680;</h1>
+<h3 id="51-npm-&#xC54C;&#xC544;&#xBCF4;&#xAE30;">5.1 npm &#xC54C;&#xC544;&#xBCF4;&#xAE30;</h3>
+<p><strong>Node Package Manager</strong>&#xC758; &#xC57D;&#xC5B4;.</p>
+<p>&#xB178;&#xB4DC;&#xAC00; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xCEF4;&#xD4E8;&#xD130;&#xC5D0;&#xC11C;&#xB3C4; &#xC2E4;&#xD589;&#xD560; &#xC218; &#xC788;&#xAC8C; &#xD574;&#xC8FC;&#xB294;&#xB370;, &#xC774;&#xB807;&#xAC8C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xB4E4;&#xC740; <strong>&#xD328;&#xD0A4;&#xC9C0;</strong>&#xB77C;&#xB294; &#xC774;&#xB984;&#xC73C;&#xB85C; npm&#xC5D0; &#xB4F1;&#xB85D;&#xB418;&#xC5B4; &#xC788;&#xB2E4;.</p>
+<h4 id="&#xD328;&#xD0A4;&#xC9C0;">&#xD328;&#xD0A4;&#xC9C0;</h4>
+<p>npm&#xC5D0; &#xC5C5;&#xB85C;&#xB4DC;&#xB41C; &#xB178;&#xB4DC; &#xBAA8;&#xB4C8;. &#xD328;&#xD0A4;&#xC9C0;&#xAC00; &#xB2E4;&#xB978; &#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xC758;&#xC874; &#xAD00;&#xACC4;&#xAC00; &#xAC00;&#xB2A5;.</p>
+<h3 id="52-packagejson&#xC73C;&#xB85C;-&#xD328;&#xD0A4;&#xC9C0;-&#xAD00;&#xB9AC;&#xD558;&#xAE30;">5.2 package.json&#xC73C;&#xB85C; &#xD328;&#xD0A4;&#xC9C0; &#xAD00;&#xB9AC;&#xD558;&#xAE30;</h3>
+<h4 id="packagejson">package.json</h4>
+<p>&#xD328;&#xD0A4;&#xC9C0;&#xC758; &#xBC84;&#xC804;&#xC744; &#xAD00;&#xB9AC;&#xD558;&#xB294; &#xD30C;&#xC77C;. &#xB178;&#xB4DC; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xB97C; &#xC2DC;&#xC791;&#xD558;&#xAE30; &#xC804;&#xC5D0;&#xB294; &#xBB34;&#xC870;&#xAC74; &#xB9CC;&#xB4E4;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;.</p>
+<p><code>npm init</code> &#xC73C;&#xB85C; &#xCD94;&#xAC00;.</p>
+<h5 id="npm-init-&#xBA85;&#xB839;&#xC5B4;">npm init &#xBA85;&#xB839;&#xC5B4;</h5>
+<table>
+<thead>
+<tr>
+<th>&#xBA85;&#xB839;&#xC5B4; &#xC885;&#xB958;</th>
+<th>&#xC124;&#xBA85;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>package name</code></td>
+<td>&#xD328;&#xD0A4;&#xC9C0;&#xC758; &#xC774;&#xB984;. <code>package.json</code> &#xC758; <code>name</code> &#xC18D;&#xC131;&#xC5D0; &#xC800;&#xC7A5;.</td>
+</tr>
+<tr>
+<td><code>version</code></td>
+<td>&#xD328;&#xD0A4;&#xC9C0;&#xC758; &#xBC84;&#xC804;.</td>
+</tr>
+<tr>
+<td><code>entry point</code></td>
+<td>&#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xC2E4;&#xD589; &#xD30C;&#xC77C; &#xC9C4;&#xC785;&#xC810;.<br>&#xBCF4;&#xD1B5; &#xB9C8;&#xC9C0;&#xB9C9;&#xC73C;&#xB85C; <code>module.export</code> &#xB97C; &#xD558;&#xB294; &#xD30C;&#xC77C;&#xC744; &#xC9C0;&#xC815; (<code>index.js</code> &#xB4F1;)<br><code>package.json</code> &#xC758; <code>main</code> &#xC18D;&#xC131;&#xC5D0; &#xC800;&#xC7A5;.</td>
+</tr>
+<tr>
+<td><code>test command</code></td>
+<td>&#xCF54;&#xB4DC;&#xB97C; &#xD14C;&#xC2A4;&#xD2B8;&#xD560; &#xB54C; &#xC785;&#xB825;&#xD560; &#xBA85;&#xB839;&#xC5B4;. <br><code>package.json</code> &#xC758; <code>script</code> &#xC18D;&#xC131; &#xC548;&#xC758; <code>test</code> &#xC18D;&#xC131;&#xC5D0; &#xC800;&#xC7A5;.</td>
+</tr>
+<tr>
+<td><code>git repository</code></td>
+<td>&#xCF54;&#xB4DC;&#xB97C; &#xC800;&#xC7A5;&#xD574;&#xB454; git &#xC800;&#xC7A5;&#xC18C; &#xC8FC;&#xC18C;. <code>package.json</code> &#xC758; <code>repository</code> &#xC18D;&#xC131;&#xC5D0; &#xC800;&#xC7A5;.</td>
+</tr>
+<tr>
+<td><code>keywords</code></td>
+<td>npm &#xACF5;&#xC2DD; &#xD648;&#xD398;&#xC774;&#xC9C0;&#xC5D0;&#xC11C; &#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xC27D;&#xAC8C; &#xCC3E;&#xC744; &#xC218; &#xC788;&#xB3C4;&#xB85D; &#xB3D5;&#xB294;&#xB2E4;.<br><code>package.json</code> &#xC758; <code>keyword</code> &#xC18D;&#xC131;&#xC5D0; &#xC800;&#xC7A5;.</td>
+</tr>
+<tr>
+<td><code>license</code></td>
+<td>&#xD574;&#xB2F9; &#xD328;&#xD0A4;&#xC9C0;&#xC758; &#xB77C;&#xC774;&#xC120;&#xC2A4;.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>NOTE: &#xB77C;&#xC774;&#xC120;&#xC2A4;</strong></p>
+<p>ISC, MIT, BSD : &#xC0AC;&#xC6A9;&#xD55C; &#xD328;&#xD0A4;&#xC9C0;&#xC640; &#xB77C;&#xC774;&#xC120;&#xC2A4;&#xB9CC; &#xBC1D;&#xD788;&#xBA74; &#xC790;&#xC720;&#xB86D;&#xAC8C; &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;.</p>
+<p>&#xC544;&#xD30C;&#xCE58; : &#xC0AC;&#xC6A9;&#xC740; &#xC790;&#xC720;&#xB86D;&#xC9C0;&#xB9CC; &#xD2B9;&#xD5C8;&#xAD8C;&#xC5D0; &#xB300;&#xD55C; &#xC81C;&#xD55C;&#xC774; &#xD3EC;&#xD568;.</p>
+<p>GPL : &#xC790;&#xC2E0;&#xC758; &#xD328;&#xD0A4;&#xC9C0;&#xB3C4; GPL&#xB85C; &#xBC30;&#xD3EC;&#xD558;&#xACE0; &#xC18C;&#xC2A4; &#xCF54;&#xB4DC;&#xB3C4; &#xACF5;&#xAC1C;&#xD574;&#xC57C; &#xD568;.</p>
+</blockquote>
+<h5 id="packagejson-&#xC608;&#xC2DC;">package.json &#xC608;&#xC2DC;</h5>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;nodebird&quot;</span>,
+  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;0.0.1&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&#xC775;&#xC2A4;&#xD504;&#xB808;&#xC2A4;&#xB85C; &#xB9CC;&#xB4DC;&#xB294; SNS &#xC11C;&#xBE44;&#xC2A4;&quot;</span>,
+  <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;server.js&quot;</span>,
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;start&quot;</span>: <span class="hljs-string">&quot;cross-env NODE_ENV=production PORT=80 pm2 start server.js -i 0&quot;</span>,
+    <span class="hljs-string">&quot;dev&quot;</span>: <span class="hljs-string">&quot;nodemon server&quot;</span>,
+    <span class="hljs-string">&quot;test&quot;</span>: <span class="hljs-string">&quot;jest&quot;</span>
+  },
+  <span class="hljs-string">&quot;author&quot;</span>: <span class="hljs-string">&quot;ZeroCho&quot;</span>,
+  <span class="hljs-string">&quot;license&quot;</span>: <span class="hljs-string">&quot;MIT&quot;</span>,
+}
+</code></pre>
+<h4 id="packagejson-scripts">package.json scripts</h4>
+<p>npm &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xC800;&#xC7A5;&#xD558;&#xB294; &#xBD80;&#xBD84;. &#xCF58;&#xC194;&#xC5D0;&#xC11C; npm run [&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xBA85;&#xB839;&#xC5B4;] &#xB97C; &#xC785;&#xB825;&#xD558;&#xC5EC; &#xC0AC;&#xC6A9;.</p>
+<p>start&#xB098; test&#xAC19;&#xC740; &#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB294; run&#xC744; &#xBD99;&#xC774;&#xC9C0; &#xC54A;&#xC544;&#xB3C4; &#xC2E4;&#xD589;&#xB41C;&#xB2E4;.</p>
+<blockquote>
+<p><strong>NOTE: npm &#xC124;&#xCE58; &#xC2DC; &#xBA54;&#xC2DC;&#xC9C0;</strong></p>
+<p>WARN : ERROR&#xAC00; &#xC9C4;&#xC9DC; &#xC5D0;&#xB7EC;&#xACE0; WARN&#xC740; &#xB2E8;&#xC21C;&#xD55C; &#xACBD;&#xACE0;.</p>
+<p>audited [&#xC22B;&#xC790;] packages : &#xD328;&#xD0A4;&#xC9C0;&#xC5D0; &#xC788;&#xC744; &#xC218; &#xC788;&#xB294; &#xCDE8;&#xC57D;&#xC810;&#xC744; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xAC80;&#xC0AC;&#xD588;&#xB2E4;&#xB294; &#xC758;&#xBBF8;.</p>
+<p>npm audit&#xC73C;&#xB85C; &#xCDE8;&#xC57D;&#xC810;&#xC744; &#xAC80;&#xC0AC;&#xD560; &#xC218; &#xC788;&#xACE0; npm audit fix&#xC744; &#xC785;&#xB825;&#xD558;&#xBA74; npm&#xC774; &#xC218;&#xC815; &#xAC00;&#xB2A5;&#xD55C; &#xCDE8;&#xC57D;&#xC810;&#xC744; &#xC2A4;&#xC2A4;&#xB85C; &#xC218;&#xC815;&#xD55C;&#xB2E4;.</p>
+</blockquote>
+<h4 id="npm-&#xC124;&#xCE58;&#xD558;&#xAE30;">npm &#xC124;&#xCE58;&#xD558;&#xAE30;</h4>
+<h5 id="&#xC77C;&#xBC18;-&#xD328;&#xD0A4;&#xC9C0;">&#xC77C;&#xBC18; &#xD328;&#xD0A4;&#xC9C0;</h5>
+<p><code>npm install [&#xD328;&#xD0A4;&#xC9C0;] [...]</code> &#xC73C;&#xB85C; &#xC124;&#xCE58;.</p>
+<p> <code>--save</code> &#xC635;&#xC158;&#xC740; npm@5&#xBD80;&#xD130; &#xAE30;&#xBCF8;&#xAC12;&#xC73C;&#xB85C; &#xC124;&#xC815;.</p>
+<h5 id="&#xAC1C;&#xBC1C;&#xC6A9;-&#xD328;&#xD0A4;&#xC9C0;">&#xAC1C;&#xBC1C;&#xC6A9; &#xD328;&#xD0A4;&#xC9C0;</h5>
+<p> <code>npm install --save-dev [&#xD328;&#xD0A4;&#xC9C0;] [...]</code> &#xC73C;&#xB85C; &#xC124;&#xCE58;</p>
+<h5 id="&#xC804;&#xC5ED;-&#xC124;&#xCE58;">&#xC804;&#xC5ED; &#xC124;&#xCE58;</h5>
+<p><code>npm install --global [&#xD328;&#xD0A4;&#xC9C0;] [...]</code> &#xB85C; &#xC124;&#xCE58;.</p>
+<p>&#xB9AC;&#xB205;&#xC2A4;&#xC640; &#xB9E5;&#xC758; &#xACBD;&#xC6B0; &#xAD00;&#xB9AC;&#xC790; &#xAD8C;&#xD55C;&#xC774; &#xD544;&#xC694;&#xD558;&#xBBC0;&#xB85C; &#xC55E;&#xC5D0; <code>sudo</code>&#xB97C; &#xBD99;&#xC778;&#xB2E4;.</p>
+<h5 id="npx-&#xC124;&#xCE58;">npx &#xC124;&#xCE58;</h5>
+<p>&#xC804;&#xC5ED; &#xC124;&#xCE58;&#xD55C; &#xD328;&#xD0A4;&#xC9C0;&#xB294; package.json&#xC5D0; &#xAE30;&#xB85D;&#xB418;&#xC9C0; &#xC54A;&#xC544; &#xBC84;&#xC804; &#xAD00;&#xB9AC;&#xAC00; &#xD798;&#xB4E4;&#xB2E4;.</p>
+<p>&#xC774;&#xB97C; &#xD574;&#xACB0;&#xD558;&#xAE30; &#xC704;&#xD574; npx&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC5EC; &#xC804;&#xC5ED; &#xC124;&#xCE58;&#xC640; &#xAC19;&#xC740; &#xD6A8;&#xACFC;&#xB97C; &#xC5BB;&#xC744; &#xC218; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-bash">$ npm install --save-dev rimraf // &#xBAA8;&#xB4C8;&#xC744; devDependencies&#xC5D0; &#xAE30;&#xB85D;
+$ npx rimraf node_modules // npx &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xBD99;&#xC5EC; &#xC2E4;&#xD589;
+</code></pre>
+<blockquote>
+<p>NOTE: &#xC904;&#xC5EC;&#xC4F0;&#xAE30;</p>
+<p>npm install -&gt; npm i</p>
+<p>--save-dev -&gt; -D</p>
+<p>--global -&gt; -g</p>
+</blockquote>
+<h3 id="53-&#xD328;&#xD0A4;&#xC9C0;-&#xBC84;&#xC804;-&#xC774;&#xD574;&#xD558;&#xAE30;">5.3 &#xD328;&#xD0A4;&#xC9C0; &#xBC84;&#xC804; &#xC774;&#xD574;&#xD558;&#xAE30;</h3>
+<p>&#xBAA8;&#xB4E0; &#xB178;&#xB4DC; &#xD328;&#xD0A4;&#xC9C0;&#xC758; &#xBC84;&#xC804;&#xC740; SemVer &#xBC29;&#xC2DD;&#xC758; &#xBC84;&#xC804; &#xB118;&#xBC84;&#xB9C1;&#xC744; &#xB530;&#xB77C; &#xC138; &#xC790;&#xB9AC;&#xB85C; &#xC774;&#xB8E8;&#xC5B4;&#xC838; &#xC788;&#xB2E4;.</p>
+<h4 id="semver">SemVer</h4>
+<p>Semantic Versioning(&#xC720;&#xC758;&#xC801; &#xBC84;&#xC804;)&#xC758; &#xC57D;&#xC5B4;.</p>
+<p>&#xC0C8; &#xBC84;&#xC804;&#xC744; &#xBC30;&#xD3EC;&#xD55C; &#xD6C4;&#xC5D0;&#xB294; &#xADF8; &#xBC84;&#xC804;&#xC758; &#xB0B4;&#xC6A9;&#xC744; &#xC808;&#xB300; &#xC218;&#xC815;&#xD558;&#xBA74; &#xC548;&#xB41C;&#xB2E4;.</p>
+<ul>
+<li>&#xCCAB; &#xBC88;&#xC9F8; : major. 0&#xC740; &#xCD08;&#xAE30; &#xAC1C;&#xBC1C; &#xC911;&#xC774;&#xBA70; 1&#xBD80;&#xD130; &#xC815;&#xC2DD; &#xBC84;&#xC804;. &#xD558;&#xC704; &#xD638;&#xD658;&#xC774; &#xB418;&#xC9C0; &#xC54A;&#xB294; &#xBCC0;&#xACBD;.</li>
+<li>&#xB450; &#xBC88;&#xC9F8; : minor. &#xD558;&#xC704; &#xD638;&#xD658;&#xC774; &#xB418;&#xB294; &#xAE30;&#xB2A5; &#xC5C5;&#xB370;&#xC774;&#xD2B8;.</li>
+<li>&#xC138; &#xBC88;&#xC9F8; : patch. &#xAE30;&#xC874; &#xAE30;&#xB2A5;&#xC5D0; &#xBB38;&#xC81C;&#xAC00; &#xC788;&#xC5B4; &#xC218;&#xC815;&#xD588;&#xC744; &#xACBD;&#xC6B0;.</li>
+</ul>
+<p><img src="https://blog.kakaocdn.net/dn/qNMai/btqB0fNikDh/jPobL7lF5O4Xc5NOHOUUKK/img.png" style="zoom:50%;"></p>
+<h4 id="packagejson-&#xBC84;&#xC804;-&#xBB38;&#xC790;">package.json &#xBC84;&#xC804; &#xBB38;&#xC790;</h4>
+<ul>
+<li><code>^</code> : minor &#xBC84;&#xC804;&#xAE4C;&#xC9C0;&#xB9CC; &#xC124;&#xCE58;&#xD558;&#xAC70;&#xB098; &#xC5C5;&#xB370;&#xC774;&#xD2B8;&#xD55C;&#xB2E4;.</li>
+<li><code>~</code> : patch &#xBC84;&#xC804;&#xAE4C;&#xC9C0;&#xB9CC; &#xC124;&#xCE58;&#xD558;&#xAC70;&#xB098; &#xC5C5;&#xB370;&#xC774;&#xD2B8;&#xD55C;&#xB2E4;.</li>
+<li><code>&gt;, &lt;, &gt;=, &lt;=, =</code> : &#xBC84;&#xC804;&#xC744; &#xBE44;&#xAD50;&#xD558;&#xC5EC; &#xC124;&#xCE58;&#xD558;&#xAC70;&#xB098; &#xC5C5;&#xB370;&#xC774;&#xD2B8;&#xD55C;&#xB2E4;. <code>npm i express@&gt;1.1.1</code> &#xD615;&#xD0DC;&#xB85C; &#xC0AC;&#xC6A9;.</li>
+<li><code>@latest</code> : &#xC548;&#xC815;&#xB41C; &#xCD5C;&#xC2E0; &#xBC84;&#xC804;&#xC758; &#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xC124;&#xCE58;. <code>x</code> &#xB85C;&#xB3C4; &#xD45C;&#xD604;. <code>npm i express@latest === npm i express@x</code></li>
+<li><code>@next</code> : &#xAC00;&#xC7A5; &#xCD5C;&#xADFC; &#xBC30;&#xD3EC;&#xD310;&#xC744; &#xC0AC;&#xC6A9;. &#xC548;&#xC815;&#xB418;&#xC9C0; &#xC54A;&#xC740; &#xC54C;&#xD30C;&#xB098; &#xBCA0;&#xB2E4; &#xD328;&#xD0A4;&#xC9C0;&#xB3C4; &#xC124;&#xCE58; &#xAC00;&#xB2A5;.</li>
+</ul>
+<h3 id="54-&#xAE30;&#xD0C0;-npm-&#xBA85;&#xB839;&#xC5B4;">5.4 &#xAE30;&#xD0C0; npm &#xBA85;&#xB839;&#xC5B4;</h3>
+<table>
+<thead>
+<tr>
+<th>&#xBA85;&#xB839;&#xC5B4;</th>
+<th>&#xC124;&#xBA85;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>npm outdated</code></td>
+<td>&#xC5C5;&#xB370;&#xC774;&#xD2B8;&#xD560; &#xC218; &#xC788;&#xB294; &#xD328;&#xD0A4;&#xC9C0; &#xD655;&#xC778;</td>
+</tr>
+<tr>
+<td><code>npm update [&#xD328;&#xD0A4;&#xC9C0;&#xBA85;]</code></td>
+<td>&#xD328;&#xD0A4;&#xC9C0; &#xC5C5;&#xB370;&#xC774;&#xD2B8;. outdated&#xC5D0;&#xC11C; wanted&#xC5D0; &#xC801;&#xC778; &#xBC84;&#xC804;&#xC73C;&#xB85C; &#xC5C5;&#xB370;&#xC774;&#xD2B8;&#xD55C;&#xB2E4;.</td>
+</tr>
+<tr>
+<td><code>npm uninstall [&#xD328;&#xD0A4;&#xC9C0;&#xBA85;]</code></td>
+<td>&#xD574;&#xB2F9; &#xD328;&#xD0A4;&#xC9C0; &#xC81C;&#xAC70;. <code>npm rm [&#xD328;&#xD0A4;&#xC9C0;&#xBA85;]</code> &#xACFC; &#xB3D9;&#xC77C;.</td>
+</tr>
+<tr>
+<td><code>npm search [&#xAC80;&#xC0C9;&#xC5B4;]</code></td>
+<td>npm &#xD328;&#xD0A4;&#xC9C0; &#xAC80;&#xC0C9;</td>
+</tr>
+<tr>
+<td><code>npm info [&#xD328;&#xD0A4;&#xC9C0;&#xBA85;]</code></td>
+<td>&#xD328;&#xD0A4;&#xC9C0;&#xC758; &#xC138;&#xBD80; &#xC815;&#xBCF4; &#xD30C;&#xC545;. &#xC758;&#xC874; &#xAD00;&#xACC4;, &#xC124;&#xCE58; &#xAC00;&#xB2A5;&#xD55C; &#xBC84;&#xC804; &#xC815;&#xBCF4; &#xB4F1; &#xD45C;&#xC2DC;.</td>
+</tr>
+<tr>
+<td><code>npm adduser</code></td>
+<td>npm &#xACC4;&#xC815; &#xB85C;&#xADF8;&#xC778;&#xC744; &#xC704;&#xD55C; &#xBA85;&#xB839;&#xC5B4;. &#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xBC30;&#xD3EC;&#xD560; &#xB54C; &#xD544;&#xC694;.</td>
+</tr>
+<tr>
+<td><code>npm whoami</code></td>
+<td>&#xB85C;&#xADF8;&#xC778;&#xD55C; &#xC0AC;&#xC6A9;&#xC790; &#xD45C;&#xC2DC;</td>
+</tr>
+<tr>
+<td><code>npm logout</code></td>
+<td>&#xB85C;&#xADF8;&#xC778;&#xD55C; &#xACC4;&#xC815; &#xB85C;&#xADF8;&#xC544;&#xC6C3;</td>
+</tr>
+<tr>
+<td><code>npm version [&#xBC84;&#xC804;]</code></td>
+<td><code>package.json</code> &#xC758; &#xBC84;&#xC804;&#xC744; &#xC62C;&#xB9B0;&#xB2E4;. <br>ex) <code>npm version 5.3.2, npm version minor</code></td>
+</tr>
+<tr>
+<td><code>npm deprecate [&#xD328;&#xD0A4;&#xC9C0;&#xBA85;][&#xBC84;&#xC804;][&#xBA54;&#xC2DC;&#xC9C0;]</code></td>
+<td>&#xD574;&#xB2F9; &#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xC124;&#xCE58;&#xD560; &#xB54C; &#xACBD;&#xACE0; &#xBA54;&#xC2DC;&#xC9C0;&#xB97C; &#xCD9C;&#xB825;. &#xC790;&#xC2E0;&#xC758; &#xD328;&#xD0A4;&#xC9C0;&#xC5D0;&#xB9CC; &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;.</td>
+</tr>
+<tr>
+<td><code>npm publish</code></td>
+<td>&#xC790;&#xC2E0;&#xC774; &#xB9CC;&#xB4E0; &#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xBC30;&#xD3EC;.</td>
+</tr>
+<tr>
+<td><code>npm unpublish</code></td>
+<td>&#xBC30;&#xD3EC;&#xD55C; &#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xC81C;&#xAC70;.</td>
+</tr>
+<tr>
+<td><code>npm ci</code></td>
+<td><code>package.json</code> &#xB300;&#xC2E0; <code>package-lock.json</code> &#xC5D0; &#xAE30;&#xBC18;&#xD558;&#xC5EC; &#xC5C4;&#xACA9;&#xD558;&#xAC8C; &#xC124;&#xCE58;.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="55-&#xD328;&#xD0A4;&#xC9C0;-&#xBC30;&#xD3EC;&#xD558;&#xAE30;">5.5 &#xD328;&#xD0A4;&#xC9C0; &#xBC30;&#xD3EC;&#xD558;&#xAE30;</h3>
+<ol>
+<li>npm &#xC6F9;&#xC0AC;&#xC774;&#xD2B8;&#xC5D0;&#xC11C; &#xD68C;&#xC6D0;&#xAC00;&#xC785; &#xD6C4; <code>npm adduser</code> &#xB85C; &#xB85C;&#xADF8;&#xC778;.</li>
+<li><code>npm publish</code> &#xB85C; &#xBC30;&#xD3EC;. &#xC774; &#xB54C; package.json <code>name</code> &#xC740; &#xACE0;&#xC720;&#xD574;&#xC57C; &#xD55C;&#xB2E4;.</li>
+<li><code>npm info [&#xD328;&#xD0A4;&#xC9C0;&#xBA85;]</code> &#xC73C;&#xB85C; &#xBC30;&#xD3EC;&#xAC00; &#xC131;&#xACF5;&#xD588;&#xB294;&#xC9C0; &#xD655;&#xC778;&#xD55C;&#xB2E4;.</li>
+<li>&#xC0AD;&#xC81C;&#xB294; <code>npm unpublish [&#xD328;&#xD0A4;&#xC9C0;&#xBA85;] --force</code> &#xC774;&#xBA70;  72&#xC2DC;&#xAC04;&#xC774; &#xC9C0;&#xB098;&#xBA74; &#xC0AD;&#xC81C;&#xD560; &#xC218; &#xC5C6;&#xB2E4;.</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"5장 패키지 매니저","level":"3.2","depth":1,"next":{"title":"6장 익스프레스 웹 서버 만들기","level":"3.3","depth":1,"path":"2th/reading_note_6.md","ref":"2th/reading_note_6.md","articles":[]},"previous":{"title":"4장 http 모듈로 서버 만들기","level":"3.1","depth":1,"path":"2th/reading_note_4.md","ref":"2th/reading_note_4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2th/reading_note_5.md","mtime":"2020-12-08T15:31:53.721Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-12T03:39:57.507Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+
