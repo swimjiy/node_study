@@ -424,7 +424,7 @@ router.post('/join', isNotLoggedIn, async (req, res, next) => {
 });
 
 // 로그인 라우터. 
-router.post('/login', isLoggedIn, (req, res, next) => {
+router.post('/login', isNotLoggedIn, (req, res, next) => {
 	// 로그인 요청이 들어오면 아래 미들웨어가 로컬 로그인 전략 수행.
 	passport.authenticate('local', (authError, user, info) => {
 		if (authError) {
