@@ -17,4 +17,9 @@
 * [6장 익스프레스 웹 서버 만들기](2th/reading_note_6.md)
 
 
+### 3주차
 
+* [7장 MySQL](3th/reading_note_7.md)
+* [8장 MongoDB](3th/reading_note_8.md)
+* [9장 익스프레스로 SNS 서비스 만들기](3th/reading_note_9.md)
+* [10장 웹 API 서버 만들기](3th/reading_note_10.md)
