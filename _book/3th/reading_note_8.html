@@ -1,0 +1,629 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>8장 MongoDB · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="reading_note_9.html" />
+    
+    
+    <link rel="prev" href="reading_note_7.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">1주차</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../1th/reading_note_1.html">
+            
+                <a href="../1th/reading_note_1.html">
+            
+                    
+                    1장 노드 시작하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../1th/reading_note_2.html">
+            
+                <a href="../1th/reading_note_2.html">
+            
+                    
+                    2장 알아두어야 할 자바스크립트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../1th/reading_note_3.html">
+            
+                <a href="../1th/reading_note_3.html">
+            
+                    
+                    3장 노드 기능
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">2주차</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../2th/reading_note_4.html">
+            
+                <a href="../2th/reading_note_4.html">
+            
+                    
+                    4장 http 모듈로 서버 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../2th/reading_note_5.html">
+            
+                <a href="../2th/reading_note_5.html">
+            
+                    
+                    5장 패키지 매니저
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../2th/reading_note_6.html">
+            
+                <a href="../2th/reading_note_6.html">
+            
+                    
+                    6장 익스프레스 웹 서버 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">3주차</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="reading_note_7.html">
+            
+                <a href="reading_note_7.html">
+            
+                    
+                    7장 MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.2" data-path="reading_note_8.html">
+            
+                <a href="reading_note_8.html">
+            
+                    
+                    8장 MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="reading_note_9.html">
+            
+                <a href="reading_note_9.html">
+            
+                    
+                    9장 익스프레스로 SNS 서비스 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="reading_note_10.html">
+            
+                <a href="reading_note_10.html">
+            
+                    
+                    10장 웹 API 서버 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >8장 MongoDB</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="8&#xC7A5;-mongodb-&#x1F680;">8&#xC7A5; MongoDB &#x1F680;</h1>
+<p>[TOC]</p>
+<h3 id="81-nosql-vs-sql">8.1 NoSQL vs SQL</h3>
+<table>
+<thead>
+<tr>
+<th>SQL(MySQL)</th>
+<th>NoSQL(MongoDB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#xADDC;&#xCE59;&#xC5D0; &#xB9DE;&#xB294; &#xB370;&#xC774;&#xD130; &#xC785;&#xB825;</td>
+<td>&#xC790;&#xC720;&#xB85C;&#xC6B4; &#xB370;&#xC774;&#xD130; &#xC785;&#xB825;</td>
+</tr>
+<tr>
+<td>&#xD14C;&#xC774;&#xBE14; &#xAC04; JOIN &#xC9C0;&#xC6D0;</td>
+<td>&#xCEEC;&#xB809;&#xC158; &#xAC04; JOIN &#xBBF8;&#xC9C0;&#xC6D0;</td>
+</tr>
+<tr>
+<td>&#xC548;&#xC815;&#xC131;, &#xC77C;&#xAD00;&#xC131;</td>
+<td>&#xD655;&#xC7A5;&#xC131;, &#xAC00;&#xC6A9;&#xC131;</td>
+</tr>
+<tr>
+<td>&#xC6A9;&#xC5B4;(&#xD14C;&#xC774;&#xBE14;, &#xB85C;&#xC6B0;, &#xCEEC;&#xB7FC;)</td>
+<td>&#xC6A9;&#xC5B4;(&#xCEEC;&#xB809;&#xC158;, &#xB2E4;&#xD050;&#xBA3C;&#xD2B8;, &#xD544;&#xB4DC;)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-&#xBABD;&#xACE0;&#xB514;&#xBE44;-&#xC124;&#xCE58;&#xD558;&#xAE30;">8.2 &#xBABD;&#xACE0;&#xB514;&#xBE44; &#xC124;&#xCE58;&#xD558;&#xAE30;</h3>
+<pre><code class="lang-bash">$ brew tap mongodb/brew
+$ brew install mongodb-community
+
+/* &#xBABD;&#xACE0;&#xB514;&#xBE44; &#xC2E4;&#xD589; */
+$ brew services start mongodb-community
+</code></pre>
+<h4 id="&#xAD00;&#xB9AC;&#xC790;-&#xACC4;&#xC815;&#xC73C;&#xB85C;-&#xC811;&#xC18D;&#xD558;&#xAE30;">&#xAD00;&#xB9AC;&#xC790; &#xACC4;&#xC815;&#xC73C;&#xB85C; &#xC811;&#xC18D;&#xD558;&#xAE30;</h4>
+<pre><code class="lang-bash">&gt; use admin
+&gt; db.createUser({ user: <span class="hljs-string">&apos;&#xC774;&#xB984;&apos;</span>, <span class="hljs-built_in">pwd</span>: <span class="hljs-string">&apos;&#xBE44;&#xBC00;&#xBC88;&#xD638;&apos;</span>, roles: [<span class="hljs-string">&apos;root&apos;</span>] })
+</code></pre>
+<pre><code class="lang-bash">$ mongod --auth // &#xB85C;&#xADF8;&#xC778; &#xD544;&#xC694;
+$ mongo admin -u [&#xC774;&#xB984;] -p [&#xBE44;&#xBC00;&#xBC88;&#xD638;]
+</code></pre>
+<h3 id="83-&#xCEF4;&#xD37C;&#xC2A4;-&#xC124;&#xCE58;&#xD558;&#xAE30;">8.3 &#xCEF4;&#xD37C;&#xC2A4; &#xC124;&#xCE58;&#xD558;&#xAE30;</h3>
+<p>&#xCEF4;&#xD37C;&#xC2A4;: &#xBABD;&#xACE0;&#xB514;&#xBE44; &#xAD00;&#xB9AC; &#xB3C4;&#xAD6C;. GUI&#xB85C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC2DC;&#xAC01;&#xC801;&#xC73C;&#xB85C; &#xAD00;&#xB9AC;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-bash">$ brew cask install mongodb-compass-community
+</code></pre>
+<h3 id="84-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xBC0F;-&#xCEEC;&#xB809;&#xC158;-&#xC0DD;&#xC131;&#xD558;&#xAE30;">8.4 &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xBC0F; &#xCEEC;&#xB809;&#xC158; &#xC0DD;&#xC131;&#xD558;&#xAE30;</h3>
+<pre><code class="lang-bash">/* &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC0DD;&#xC131;: use [&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xBA85;] */
+use nodejs
+
+/* &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xBAA9;&#xB85D; &#xD655;&#xC778; */
+show dbs
+
+/* &#xD604;&#xC7AC; &#xC0AC;&#xC6A9; &#xC911;&#xC778; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xD655;&#xC778; */
+db
+
+/* &#xCEEC;&#xB809;&#xC158; &#xC0DD;&#xC131;&#xD558;&#xAE30; (&#xB2E4;&#xD050;&#xBA3C;&#xD2B8; &#xB123;&#xB294; &#xC21C;&#xAC04; &#xCEEC;&#xB809;&#xC158; &#xC790;&#xB3D9; &#xC0DD;&#xC131;) */
+db.createCollection(<span class="hljs-string">&apos;users&apos;</span>)
+</code></pre>
+<h3 id="85-crud-&#xC791;&#xC5C5;&#xD558;&#xAE30;">8.5 CRUD &#xC791;&#xC5C5;&#xD558;&#xAE30;</h3>
+<p><strong>*&#xC790;&#xB8CC;&#xD615;</strong></p>
+<p>&#xBABD;&#xACE0;&#xB514;&#xBE44;&#xB294; &#xAE30;&#xBCF8;&#xC801;&#xC73C;&#xB85C; JS&#xBB38;&#xBC95;&#xC744; &#xB530;&#xB974;&#xBBC0;&#xB85C; &#xC790;&#xB8CC;&#xD615; &#xB610;&#xD55C; JS&#xB97C; &#xB530;&#xB978;&#xB2E4;. (<code>Date()</code> &#xB4F1;)</p>
+<p>&#xCD94;&#xAC00;&#xC801;&#xC73C;&#xB85C; &#xC4F0;&#xB294; &#xC790;&#xB8CC;&#xD615;&#xC740; <code>ObjectId</code>, <code>Binary Data</code>, <code>Timestamp</code> &#xB4F1;&#xC774; &#xC788;&#xC74C;.</p>
+<h4 id="851-create&#xC0DD;&#xC131;">8.5.1 Create(&#xC0DD;&#xC131;)</h4>
+<p><code>db.&#xCEEC;&#xB809;&#xC158;&#xBA85;.save(&#xB2E4;&#xD050;&#xBA3C;&#xD2B8;)</code> &#xB85C; &#xC0DD;&#xC131;.</p>
+<pre><code class="lang-javascript">db.users.save({ name: <span class="hljs-string">&apos;zero&apos;</span>, age: <span class="hljs-number">24</span>, married: <span class="hljs-literal">false</span>, comment: <span class="hljs-string">&apos;&#xC548;&#xB155;&#xD558;&#xC138;&#xC694;.&apos;</span>, createdAt: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>() });
+db.comments.save({ commenter: ObjectId(<span class="hljs-string">&quot;5fec1beac0dfb10221f22f4a&quot;</span>), comment: <span class="hljs-string">&apos;&#xC548;&#xB155;&#xD558;&#xC138;&#xC694;. &#xB313;&#xAE00;&#xC785;&#xB2C8;&#xB2E4;.&apos;</span>, createdAt: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>() });
+</code></pre>
+<h4 id="852-read&#xC870;&#xD68C;">8.5.2 Read(&#xC870;&#xD68C;)</h4>
+<p><code>db.&#xCEEC;&#xB809;&#xC158;&#xBA85;.find({})</code> &#xB85C; &#xC804;&#xCCB4; &#xC870;&#xD68C;.</p>
+<pre><code class="lang-javascript">db.users.find({}, { _id: <span class="hljs-number">0</span>, name: <span class="hljs-number">1</span>, married: <span class="hljs-number">1</span> });
+<span class="hljs-comment">// _id: 0 &#xB610;&#xB294; false&#xB85C; id &#xD544;&#xB4DC;&#xB294; &#xAC00;&#xC838;&#xC624;&#xC9C0; &#xC54A;&#xB3C4;&#xB85D; &#xD55C;&#xB2E4;.</span>
+
+db.users.find({ age: { $gt: <span class="hljs-number">30</span> } }, { _id: <span class="hljs-number">0</span>, name: <span class="hljs-number">1</span>, married: <span class="hljs-number">1</span> });
+<span class="hljs-comment">// $gt, $gte, $lt, $lte, $ne, $or, $in &#xC5F0;&#xC0B0;&#xC790;&#xB85C; &#xC870;&#xAC74;&#xBD80; &#xC870;&#xD68C;. &#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988;&#xC640; &#xBE44;&#xC2B7;&#xD558;&#xB2E4;.</span>
+
+db.users.find({ $or: [{ age: { $gt: <span class="hljs-number">30</span> }}, { married: <span class="hljs-literal">false</span> }] }, { _id: <span class="hljs-number">0</span>, name: <span class="hljs-number">1</span>, married: <span class="hljs-number">1</span> });
+
+db.users.find({}, { _id: <span class="hljs-number">0</span>, name: <span class="hljs-number">1</span>, married: <span class="hljs-number">1</span> }).sort({ age: <span class="hljs-number">-1</span> }).limit(<span class="hljs-number">1</span>).skip(<span class="hljs-number">1</span>);
+<span class="hljs-comment">// .sort()&#xB85C; &#xC815;&#xB82C;, .limit()&#xB85C; &#xC870;&#xD68C; &#xAC1C;&#xC218;, .skip()&#xC73C;&#xB85C; &#xAC74;&#xB108;&#xB6F8; &#xAC1C;&#xC218; &#xC124;&#xC815;.</span>
+</code></pre>
+<h4 id="853-update&#xC218;&#xC815;">8.5.3 Update(&#xC218;&#xC815;)</h4>
+<p><code>db.users.update([&#xC218;&#xC815;&#xD560; &#xB2E4;&#xD050;&#xBA3C;&#xD2B8; &#xC815;&#xBCF4;], [&#xC218;&#xC815;&#xD560; &#xB0B4;&#xC6A9;])</code> &#xC73C;&#xB85C; &#xC218;&#xC815;</p>
+<p><code>$set{}</code> &#xC5F0;&#xC0B0;&#xC790;&#xB97C; &#xC9C0;&#xC815;&#xD574;&#xC57C;. &#xD2B9;&#xC815; &#xD544;&#xB4DC;&#xB9CC; &#xC218;&#xC815;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xC544;&#xB2C8;&#xBA74; &#xD1B5;&#xC9F8;&#xB85C; &#xC218;&#xC815;&#xB428;.</p>
+<pre><code class="lang-javascript">db.users.update({ name: <span class="hljs-string">&apos;zero&apos;</span> }, { $set: { comment: <span class="hljs-string">&apos;&#xC548;&#xB155;&#xD558;&#xC138;&#xC694; &#xC774; &#xD544;&#xB4DC;&#xB97C; &#xBC14;&#xAFD4;&#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;&apos;</span> } })
+</code></pre>
+<h4 id="854-delete&#xC0AD;&#xC81C;">8.5.4 Delete(&#xC0AD;&#xC81C;)</h4>
+<p><code>db.users.remove([&#xC0AD;&#xC81C;&#xD560; &#xB2E4;&#xD050;&#xBA3C;&#xD2B8; &#xC815;&#xBCF4;])</code> &#xB85C; &#xC0AD;&#xC81C;. &#xC131;&#xACF5; &#xC2DC; &#xC0AD;&#xC81C;&#xB41C; &#xAC1C;&#xC218; &#xBC18;&#xD658;.</p>
+<pre><code class="lang-javascript">db.users.remove({ name: <span class="hljs-string">&apos;nero&apos;</span> });
+</code></pre>
+<h3 id="86-&#xBABD;&#xAD6C;&#xC2A4;-&#xC0AC;&#xC6A9;&#xD558;&#xAE30;">8.6 &#xBABD;&#xAD6C;&#xC2A4; &#xC0AC;&#xC6A9;&#xD558;&#xAE30;</h3>
+<p>&#xB178;&#xB4DC;&#xC640; MongoDB&#xB97C; &#xC5F0;&#xACB0;&#xD574;&#xC8FC;&#xACE0; &#xCFFC;&#xB9AC;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC8FC;&#xB294; <strong>ODM</strong>(Object Document Mapping).</p>
+<h5 id="&#xC7A5;&#xC810;">&#xC7A5;&#xC810;</h5>
+<ul>
+<li>&#xC2A4;&#xD0A4;&#xB9C8;: &#xBABD;&#xACE0;&#xB514;&#xBE44;&#xC5D0; &#xB370;&#xC774;&#xD130;&#xB97C; &#xB123;&#xAE30; &#xC804; &#xC2A4;&#xD0A4;&#xB9C8;&#xB85C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xD55C; &#xBC88; &#xD544;&#xD130;&#xB9C1;&#xD568;&#xC73C;&#xB85C;&#xC368; &#xC2E4;&#xC218;&#xB97C; &#xBC29;&#xC9C0;&#xD560; &#xC218; &#xC788;&#xB2E4;.</li>
+<li><code>populate</code> &#xBA54;&#xC11C;&#xB4DC;: MySQL&#xC758; JOIN &#xAE30;&#xB2A5;&#xACFC; &#xC720;&#xC0AC;. &#xAD00;&#xACC4;&#xAC00; &#xC788;&#xB294; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC27D;&#xAC8C; &#xAC00;&#xC838;&#xC62C; &#xC218; &#xC788;&#xB2E4;.</li>
+<li>ES2015 &#xD504;&#xB85C;&#xBBF8;&#xC2A4; &#xBB38;&#xBC95;&#xACFC; &#xAC00;&#xB3C5;&#xC131; &#xB192;&#xC740; &#xCFFC;&#xB9AC; &#xBE4C;&#xB354; &#xC9C0;&#xC6D0;.</li>
+</ul>
+<h4 id="861-&#xBABD;&#xACE0;&#xB514;&#xBE44;-&#xC5F0;&#xACB0;&#xD558;&#xAE30;">8.6.1 &#xBABD;&#xACE0;&#xB514;&#xBE44; &#xC5F0;&#xACB0;&#xD558;&#xAE30;</h4>
+<pre><code class="lang-json"><span class="hljs-comment">// package.json</span>
+{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;learn-mongoose&quot;</span>,
+  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;0.0.1&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&#xBABD;&#xAD6C;&#xC2A4;&#xB97C; &#xBC30;&#xC6B0;&#xC790;&quot;</span>,
+  <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;app.js&quot;</span>,
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;start&quot;</span>: <span class="hljs-string">&quot;nodemon app&quot;</span>,
+    <span class="hljs-string">&quot;test&quot;</span>: <span class="hljs-string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+  },
+  <span class="hljs-string">&quot;author&quot;</span>: <span class="hljs-string">&quot;jiy&quot;</span>,
+  <span class="hljs-string">&quot;license&quot;</span>: <span class="hljs-string">&quot;MIT&quot;</span>,
+  <span class="hljs-string">&quot;dependencies&quot;</span>: {
+    <span class="hljs-string">&quot;express&quot;</span>: <span class="hljs-string">&quot;^4.17.1&quot;</span>,
+    <span class="hljs-string">&quot;mongoose&quot;</span>: <span class="hljs-string">&quot;^5.11.9&quot;</span>,
+    <span class="hljs-string">&quot;morgan&quot;</span>: <span class="hljs-string">&quot;^1.10.0&quot;</span>,
+    <span class="hljs-string">&quot;nunjucks&quot;</span>: <span class="hljs-string">&quot;^3.2.2&quot;</span>
+  },
+  <span class="hljs-string">&quot;devDependencies&quot;</span>: {
+    <span class="hljs-string">&quot;nodemon&quot;</span>: <span class="hljs-string">&quot;^2.0.6&quot;</span>
+  }
+}
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">// schemas/index.js</span>
+
+<span class="hljs-keyword">const</span> mongoose = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mongoose&apos;</span>);
+
+<span class="hljs-comment">// &#xAC1C;&#xBC1C; &#xD658;&#xACBD;&#xC77C; &#xB54C;&#xB9CC; &#xCF58;&#xC194;&#xC744; &#xD1B5;&#xD574; &#xBABD;&#xAD6C;&#xC2A4;&#xAC00; &#xC0DD;&#xC131;&#xD558;&#xB294; &#xCFFC;&#xB9AC; &#xB0B4;&#xC6A9;&#xC744; &#xD655;&#xC778;</span>
+<span class="hljs-keyword">const</span> connect = () =&gt; {
+    <span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span>) {
+        mongoose.set(<span class="hljs-string">&apos;debug&apos;</span>, <span class="hljs-literal">true</span>);
+    }
+}
+
+<span class="hljs-comment">// &#xBABD;&#xAD6C;&#xC2A4;&#xC640; &#xBABD;&#xACE0;&#xB514;&#xBE44;&#xB97C; &#xC5F0;&#xACB0;</span>
+mongoose.connect(<span class="hljs-string">&apos;mongodb://jiy:0602@localhost:27017/admin&apos;</span>, {
+    dbName: <span class="hljs-string">&apos;nodejs&apos;</span>,
+    useNewUrlParser: <span class="hljs-literal">true</span>, <span class="hljs-comment">// useNewUrlParser, useCreateIndex &#xB294; &#xCF58;&#xC194;&#xC5D0; &#xACBD;&#xACE0; &#xBA54;&#xC2DC;&#xC9C0; &#xB744;&#xC6B0;&#xB294; &#xC6A9;&#xB3C4;</span>
+    useCreateIndex: <span class="hljs-literal">true</span>,
+}, (error) =&gt; {
+    <span class="hljs-keyword">if</span> (error) {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#xBABD;&#xACE0;&#xB514;&#xBE44; &#xC5F0;&#xACB0; &#xC5D0;&#xB7EC;&apos;</span>, error);
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#xBABD;&#xACE0;&#xB514;&#xBE44; &#xC5F0;&#xACB0; &#xC131;&#xACF5;&apos;</span>);
+    }
+})
+
+<span class="hljs-comment">// &#xBABD;&#xAD6C;&#xC2A4; &#xCEE4;&#xB125;&#xC158;&#xC5D0; &#xC774;&#xBCA4;&#xD2B8; &#xB9AC;&#xC2A4;&#xB108; &#xCD94;&#xAC00;. &#xC5D0;&#xB7EC; &#xBC1C;&#xC0DD; &#xC2DC; &#xC5D0;&#xB7EC; &#xB0B4;&#xC6A9; &#xAE30;&#xB85D;&#xD558;&#xACE0; &#xC5F0;&#xACB0; &#xC885;&#xB8CC; &#xC2DC; &#xC7AC;&#xC5F0;&#xACB0; &#xC2DC;&#xB3C4;</span>
+mongoose.connection.on(<span class="hljs-string">&apos;error&apos;</span>, (error) =&gt; {
+    <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;&#xBABD;&#xACE0;&#xB514;&#xBE44; &#xC5F0;&#xACB0; &#xC5D0;&#xB7EC;&apos;</span>, error);
+})
+
+mongoose.connection.on(<span class="hljs-string">&apos;disconnected&apos;</span>, () =&gt; {
+    <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;&#xBABD;&#xACE0;&#xB514;&#xBE44; &#xC5F0;&#xACB0;&#xC774; &#xB04A;&#xC5B4;&#xC84C;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC5F0;&#xACB0;&#xC744; &#xC7AC;&#xC2DC;&#xB3C4;&#xD569;&#xB2C8;&#xB2E4;.&apos;</span>);
+    connect();
+})
+
+<span class="hljs-built_in">module</span>.exports = connect;
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./app.js</span>
+
+<span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">const</span> morgan = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;morgan&apos;</span>);
+<span class="hljs-keyword">const</span> nunjucks = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;nunjucks&apos;</span>);
+
+<span class="hljs-keyword">const</span> connect = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./schemas&apos;</span>);
+
+<span class="hljs-keyword">const</span> app = express();
+app.set(<span class="hljs-string">&apos;port&apos;</span>, process.env.PORT || <span class="hljs-number">3002</span>);
+app.set(<span class="hljs-string">&apos;view engine&apos;</span>, <span class="hljs-string">&apos;html&apos;</span>);
+nunjucks.configure(<span class="hljs-string">&apos;views&apos;</span>, {
+    express: app,
+    watch: <span class="hljs-literal">true</span>,
+});
+connect();
+
+app.use(morgan(<span class="hljs-string">&apos;dev&apos;</span>));
+app.use(express.static(path.join(__dirname, <span class="hljs-string">&apos;public&apos;</span>)));
+app.use(express.json());
+app.use(express.urlencoded({ extended: <span class="hljs-literal">false</span> }));
+
+app.use((req, res, next) =&gt; {
+    <span class="hljs-keyword">const</span> error = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">`<span class="hljs-subst">${req.method}</span> <span class="hljs-subst">${req.url}</span> &#xB77C;&#xC6B0;&#xD130;&#xAC00; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.`</span>);
+    error.status = <span class="hljs-number">404</span>;
+    next(error);
+});
+
+app.use((err, req, res, next) =&gt; {
+    res.locals.message = err.message;
+    res.locals.error = process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span> ? err : {};
+    res.status(err.status || <span class="hljs-number">500</span>);
+    res.render(<span class="hljs-string">&apos;error&apos;</span>);
+});
+
+app.listen(app.get(<span class="hljs-string">&apos;port&apos;</span>), () =&gt; {
+    <span class="hljs-built_in">console</span>.log(app.get(<span class="hljs-string">&apos;port&apos;</span>), <span class="hljs-string">&apos;&#xBC88; &#xD3EC;&#xD2B8;&#xC5D0;&#xC11C; &#xB300;&#xAE30; &#xC911;&apos;</span>);
+});
+</code></pre>
+<h4 id="862-&#xC2A4;&#xD0A4;&#xB9C8;-&#xC815;&#xC758;&#xD558;&#xAE30;">8.6.2 &#xC2A4;&#xD0A4;&#xB9C8; &#xC815;&#xC758;&#xD558;&#xAE30;</h4>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./schemas/user.js</span>
+<span class="hljs-keyword">const</span> mongoose = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mongoose&apos;</span>);
+
+<span class="hljs-keyword">const</span> { Schema } = mongoose;
+<span class="hljs-comment">// _id&#xB97C; &#xAE30;&#xBCF8; &#xD0A4;&#xB85C; &#xC0DD;&#xC131;&#xD558;&#xBBC0;&#xB85C; &#xC120;&#xC5B8;X</span>
+<span class="hljs-keyword">const</span> userSchema = <span class="hljs-keyword">new</span> Schema({
+    name: {
+        type: <span class="hljs-built_in">String</span>,
+        required: <span class="hljs-literal">true</span>,
+        unique: <span class="hljs-literal">true</span>,
+    },
+    age: {
+        type: <span class="hljs-built_in">Number</span>,
+        required: <span class="hljs-literal">true</span>,
+    },
+    comment: <span class="hljs-built_in">String</span>,
+    createdAt: {
+        type: <span class="hljs-built_in">Date</span>,
+        <span class="hljs-keyword">default</span>: <span class="hljs-built_in">Date</span>.now,
+    }
+});
+
+<span class="hljs-comment">// model&#xBA54;&#xC11C;&#xB4DC;&#xB85C; &#xC2A4;&#xD0A4;&#xB9C8;&#xC640; &#xBABD;&#xACE0;&#xB514;&#xBE44; &#xCEEC;&#xB809;&#xC158; &#xC5F0;&#xACB0;</span>
+<span class="hljs-built_in">module</span>.exports = mongoose.model(<span class="hljs-string">&apos;User&apos;</span>, userSchema);
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./schemas/comment.js</span>
+<span class="hljs-keyword">const</span> mongoose = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mongoose&apos;</span>);
+
+<span class="hljs-keyword">const</span> { Schema } = mongoose;
+<span class="hljs-keyword">const</span> { Types: { ObjectId } } = Schema;
+<span class="hljs-keyword">const</span> commentSchema = <span class="hljs-keyword">new</span> Schema({
+    commenter: {
+        type: ObjectId,
+        required: <span class="hljs-literal">true</span>,
+        ref: <span class="hljs-string">&apos;User&apos;</span>,
+    },
+    comment: {
+        type: <span class="hljs-built_in">String</span>,
+        required: <span class="hljs-literal">true</span>,
+    },
+    createdAt: {
+        type: <span class="hljs-built_in">Date</span>,
+        <span class="hljs-keyword">default</span>: <span class="hljs-built_in">Date</span>.now,
+    },
+});
+
+<span class="hljs-comment">// model&#xBA54;&#xC11C;&#xB4DC;&#xB85C; &#xC2A4;&#xD0A4;&#xB9C8;&#xC640; &#xBABD;&#xACE0;&#xB514;&#xBE44; &#xCEEC;&#xB809;&#xC158; &#xC5F0;&#xACB0;</span>
+<span class="hljs-built_in">module</span>.exports = mongoose.model(<span class="hljs-string">&apos;Comment&apos;</span>, commentSchema);
+</code></pre>
+<h4 id="863-&#xCFFC;&#xB9AC;-&#xC218;&#xD589;&#xD558;&#xAE30;">8.6.3 &#xCFFC;&#xB9AC; &#xC218;&#xD589;&#xD558;&#xAE30;</h4>
+<p><a href="https://github.com/ZeroCho/nodejs-book/tree/master/ch8/8.6/learn-mongoose" target="_blank">https://github.com/ZeroCho/nodejs-book/tree/master/ch8/8.6/learn-mongoose</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"8장 MongoDB","level":"4.2","depth":1,"next":{"title":"9장 익스프레스로 SNS 서비스 만들기","level":"4.3","depth":1,"path":"3th/reading_note_9.md","ref":"3th/reading_note_9.md","articles":[]},"previous":{"title":"7장 MySQL","level":"4.1","depth":1,"path":"3th/reading_note_7.md","ref":"3th/reading_note_7.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3th/reading_note_8.md","mtime":"2021-01-02T04:56:31.192Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-02T04:57:47.300Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+

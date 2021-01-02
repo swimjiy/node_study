@@ -1,0 +1,910 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>7장 MySQL · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="reading_note_8.html" />
+    
+    
+    <link rel="prev" href="../2th/reading_note_6.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">1주차</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../1th/reading_note_1.html">
+            
+                <a href="../1th/reading_note_1.html">
+            
+                    
+                    1장 노드 시작하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../1th/reading_note_2.html">
+            
+                <a href="../1th/reading_note_2.html">
+            
+                    
+                    2장 알아두어야 할 자바스크립트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../1th/reading_note_3.html">
+            
+                <a href="../1th/reading_note_3.html">
+            
+                    
+                    3장 노드 기능
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">2주차</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../2th/reading_note_4.html">
+            
+                <a href="../2th/reading_note_4.html">
+            
+                    
+                    4장 http 모듈로 서버 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../2th/reading_note_5.html">
+            
+                <a href="../2th/reading_note_5.html">
+            
+                    
+                    5장 패키지 매니저
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../2th/reading_note_6.html">
+            
+                <a href="../2th/reading_note_6.html">
+            
+                    
+                    6장 익스프레스 웹 서버 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">3주차</li>
+        
+        
+    
+        <li class="chapter active" data-level="4.1" data-path="reading_note_7.html">
+            
+                <a href="reading_note_7.html">
+            
+                    
+                    7장 MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="reading_note_8.html">
+            
+                <a href="reading_note_8.html">
+            
+                    
+                    8장 MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="reading_note_9.html">
+            
+                <a href="reading_note_9.html">
+            
+                    
+                    9장 익스프레스로 SNS 서비스 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="reading_note_10.html">
+            
+                <a href="reading_note_10.html">
+            
+                    
+                    10장 웹 API 서버 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >7장 MySQL</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="7&#xC7A5;-mysql-&#x1F680;">7&#xC7A5; MySQL &#x1F680;</h1>
+<h3 id="71-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xB780;">7.1 &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xB780;?</h3>
+<p>&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;: &#xAD00;&#xB828;&#xC131;&#xC744; &#xAC00;&#xC9C0;&#xBA70; &#xC911;&#xBCF5;&#xC774; &#xC5C6;&#xB294; &#xB370;&#xC774;&#xD130;&#xB4E4;&#xC758; &#xC9D1;&#xD569;.</p>
+<h4 id="dbmsdatabase-management-system">DBMS(DataBase Management System)</h4>
+<p>&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xB97C; &#xAD00;&#xB9AC;&#xD558;&#xB294; &#xC2DC;&#xC2A4;&#xD15C;.</p>
+<p>&#xBCF4;&#xD1B5; &#xC11C;&#xBC84; &#xC885;&#xB8CC; &#xC5EC;&#xBD80;&#xC640; &#xC0C1;&#xAD00; &#xC5C6;&#xC774; &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;&#xD55C; &#xC11C;&#xBC84;&#xC758; &#xD558;&#xB4DC; &#xB514;&#xC2A4;&#xD06C;&#xB098; SSD &#xB4F1;&#xC758; &#xC800;&#xC7A5; &#xB9E4;&#xCCB4;&#xC5D0; &#xC800;&#xC7A5;.</p>
+<h4 id="&#xB370;&#xC774;&#xD130;-&#xBCA0;&#xC774;&#xC2A4;&#xC758;-&#xC7A5;&#xC810;">&#xB370;&#xC774;&#xD130; &#xBCA0;&#xC774;&#xC2A4;&#xC758; &#xC7A5;&#xC810;</h4>
+<p>&#xC5EC;&#xB7EC; &#xC0AC;&#xB78C;&#xC774; &#xB3D9;&#xC2DC;&#xC5D0; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<h4 id="rdbmsrelational-dbms">RDBMS(Relational DBMS)</h4>
+<p>&#xAD00;&#xACC4;&#xD615; DBMS. SQL &#xC5B8;&#xC5B4;&#xB97C; &#xC774;&#xC6A9;&#xD558;&#xC5EC; &#xB370;&#xC774;&#xD130;&#xB97C; &#xAD00;&#xB9AC;&#xD55C;&#xB2E4;.</p>
+<p>ex) Oracle, MySQL, MSSQL</p>
+<h3 id="72-mysql-&#xC124;&#xCE58;&#xD558;&#xAE30;">7.2 MySQL &#xC124;&#xCE58;&#xD558;&#xAE30;</h3>
+<p>Homebrew&#xB97C; &#xC774;&#xC6A9;&#xD574; &#xC124;&#xCE58;</p>
+<pre><code class="lang-bash">$ brew install mysql
+$ brew services start mysql
+$ mysql_secure_installation
+</code></pre>
+<p>mysql&#xC5D0; &#xC811;&#xC18D;</p>
+<pre><code class="lang-bash">$ mysql -h localhost -u root -p
+</code></pre>
+<h3 id="73-&#xC6CC;&#xD06C;&#xBCA4;&#xCE58;-&#xC124;&#xCE58;&#xD558;&#xAE30;">7.3 &#xC6CC;&#xD06C;&#xBCA4;&#xCE58; &#xC124;&#xCE58;&#xD558;&#xAE30;</h3>
+<p>&#xC6CC;&#xD06C;&#xBCA4;&#xCE58;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xBA74; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xB0B4;&#xBD80;&#xC5D0; &#xC800;&#xC7A5;&#xB41C; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC2DC;&#xAC01;&#xC801;&#xC73C;&#xB85C; &#xAD00;&#xB9AC;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-bash">$ brew cask install mysqlworkbench
+</code></pre>
+<h3 id="74-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xBC0F;-&#xD14C;&#xC774;&#xBE14;-&#xC0DD;&#xC131;&#xD558;&#xAE30;">7.4 &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xBC0F; &#xD14C;&#xC774;&#xBE14; &#xC0DD;&#xC131;&#xD558;&#xAE30;</h3>
+<h4 id="741-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xC0DD;&#xC131;&#xD558;&#xAE30;">7.4.1 &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC0DD;&#xC131;&#xD558;&#xAE30;</h4>
+<p>mysql&#xC5D0;&#xC11C;&#xB294; schema = &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;</p>
+<pre><code class="lang-mysql">CREATE SCHEMA `nodejs` DEFAULT CHARACTER SET utf8;
+use nodejs;
+</code></pre>
+<h4 id="742-&#xD14C;&#xC774;&#xBE14;-&#xC0DD;&#xC131;&#xD558;&#xAE30;">7.4.2 &#xD14C;&#xC774;&#xBE14; &#xC0DD;&#xC131;&#xD558;&#xAE30;</h4>
+<p>&#xD14C;&#xC774;&#xBE14;: &#xB370;&#xC774;&#xD130;&#xAC00; &#xB4E4;&#xC5B4;&#xAC08; &#xC218; &#xC788;&#xB294; &#xD2C0;</p>
+<pre><code class="lang-mysql">CREATE TABLE nodejs.users (
+  -&gt; id INT NOT NULL AUTO_INCREMENT,
+  -&gt; name VARCHAR(20) NOT NULL,
+  -&gt; age INT UNSIGNED NOT NULL,
+  -&gt; married TINYINT NOT NULL,
+  -&gt; comment TEXT NULL,
+  -&gt; created_at DATETIME NOT NULL DEFAULT now(),
+  -&gt; PRIMARY KEY(id),
+  -&gt; UNIQUE INDEX name_UNIQUE (name ASC))
+  -&gt; COMMENT = &apos;&#xC0AC;&#xC6A9;&#xC790; &#xC815;&#xBCF4;&apos;
+  -&gt; DEFAULT CHARACTER SET = utf8
+  -&gt; ENGINE = InnoDB;
+</code></pre>
+<h4 id="&#xCEEC;&#xB7FC;&#xC758;-&#xC790;&#xB8CC;&#xD615;">&#xCEEC;&#xB7FC;&#xC758; &#xC790;&#xB8CC;&#xD615;</h4>
+<table>
+<thead>
+<tr>
+<th>&#xC790;&#xB8CC;&#xD615;</th>
+<th>&#xC124;&#xBA85;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INT</td>
+<td>&#xC815;&#xC218;</td>
+</tr>
+<tr>
+<td>VARCHAR(&#xC790;&#xB9BF;&#xC218;)</td>
+<td>CHAR(&#xC790;&#xB9BF;&#xC218;)&#xC640; &#xB2EC;&#xB9AC; &#xC815;&#xD574;&#xC9C4; &#xC790;&#xB9BF;&#xC218;&#xBCF4;&#xB2E4; &#xC9E7;&#xC740; &#xBB38;&#xC790;&#xC5F4;&#xB3C4; &#xB123;&#xC744; &#xC218; &#xC788;&#xB2E4;.<br>CHAR&#xB294; &#xACF5;&#xBC31;&#xC744; &#xC2A4;&#xD398;&#xC774;&#xC2A4;&#xB85C; &#xCC98;&#xB9AC;.</td>
+</tr>
+<tr>
+<td>TEXT</td>
+<td>&#xAE34; &#xAE00;&#xC744; &#xC800;&#xC7A5;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;. &#xC8FC;&#xB85C; &#xC218;&#xBC31; &#xC790; &#xC774;&#xC0C1;&#xC758; &#xBB38;&#xC790;&#xC5F4;&#xC744; &#xCC98;&#xB9AC;.</td>
+</tr>
+<tr>
+<td>TINYINT</td>
+<td>-128&#xBD80;&#xD130; 127&#xAE4C;&#xC9C0;&#xC758; &#xC815;&#xC218;. 1 &#xB610;&#xB294; 0&#xB9CC; &#xC800;&#xC7A5;&#xD55C;&#xB2E4;&#xBA74; &#xBD88; &#xAC12;&#xACFC; &#xAC19;&#xC740; &#xC5ED;&#xD560;</td>
+</tr>
+<tr>
+<td>DATETIME</td>
+<td>&#xB0A0;&#xC9DC;(DATE)&#xC640; &#xC2DC;&#xAC04;(TIME)&#xC5D0; &#xB300;&#xD55C; &#xC815;&#xBCF4;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#xC790;&#xB8CC;&#xD615;-&#xC635;&#xC158;">&#xC790;&#xB8CC;&#xD615; &#xC635;&#xC158;</h4>
+<table>
+<thead>
+<tr>
+<th>&#xC635;&#xC158;&#xBA85;</th>
+<th>&#xC124;&#xBA85;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NULL, NOT NULL</td>
+<td>&#xBE48;&#xCE78;&#xC744; &#xD5C8;&#xC6A9;&#xD560;&#xC9C0; &#xC5EC;&#xBD80;&#xB97C; &#xBB3B;&#xB294; &#xC635;&#xC158;</td>
+</tr>
+<tr>
+<td>AUTO_INCREMENT</td>
+<td>&#xC22B;&#xC790;&#xB97C; &#xC800;&#xC808;&#xB85C; &#xC62C;&#xB9B0;&#xB2E4;. &#xB9E8; &#xCC98;&#xC74C;&#xC740; 1.</td>
+</tr>
+<tr>
+<td>UNSIGNED</td>
+<td>&#xC74C;&#xC218;&#xAC00; &#xB098;&#xC62C; &#xC218; &#xC5C6;&#xB294; &#xCEEC;&#xB7FC;&#xC5D0; &#xC801;&#xC6A9;</td>
+</tr>
+<tr>
+<td>ZEROFILL</td>
+<td>&#xC22B;&#xC790;&#xC758; &#xC790;&#xB9BF;&#xC218;&#xAC00; &#xACE0;&#xC815;&#xB418;&#xC5B4; &#xC788;&#xC744; &#xB54C; &#xC801;&#xC6A9;.<br>e.g., INT(4) -&gt; 1 -&gt; 0001</td>
+</tr>
+<tr>
+<td>DEFAULT (&#xAE30;&#xBCF8;&#xAC12;)</td>
+<td>&#xD574;&#xB2F9; &#xCEEC;&#xB7FC;&#xC5D0; &#xAC12;&#xC774; &#xC5C6;&#xB2E4;&#xBA74; &#xAE30;&#xBCF8;&#xAC12;&#xC744; &#xB300;&#xC2E0; &#xCD94;&#xAC00;.<br>now() == CURRENT_TIMESTAMP</td>
+</tr>
+<tr>
+<td>PRIMARY KEY</td>
+<td>&#xB85C;&#xC6B0;&#xB4E4;&#xC744; &#xAD6C;&#xBCC4;&#xD560; &#xACE0;&#xC720;&#xD55C; &#xC2DD;&#xBCC4;&#xC790;&#xB97C; &#xC124;&#xC815;</td>
+</tr>
+<tr>
+<td>UNIQUE INDEX</td>
+<td>&#xD574;&#xB2F9; &#xAC12;&#xC774; &#xACE0;&#xC720;&#xD574;&#xC57C; &#xD558;&#xB294;&#xC9C0;&#xC5D0; &#xB300;&#xD55C; &#xC635;&#xC158;</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#xD14C;&#xC774;&#xBE14;-&#xC124;&#xC815;">&#xD14C;&#xC774;&#xBE14; &#xC124;&#xC815;</h4>
+<table>
+<thead>
+<tr>
+<th>&#xC124;&#xC815;&#xBA85;</th>
+<th>&#xC124;&#xBA85;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>COMMENT</td>
+<td>&#xD14C;&#xC774;&#xBE14;&#xC5D0; &#xB300;&#xD55C; &#xBCF4;&#xCDA9; &#xC124;&#xBA85;.</td>
+</tr>
+<tr>
+<td>DEFAULT CHARACTER SET</td>
+<td>utf8&#xB85C; &#xC124;&#xC815;&#xD558;&#xBA74; &#xD55C;&#xAE00; &#xC785;&#xB825; &#xAC00;&#xB2A5;.</td>
+</tr>
+<tr>
+<td>ENGINE</td>
+<td>MyISAM&#xACFC; InnoDB&#xAC00; &#xC81C;&#xC77C; &#xB9CE;&#xC774; &#xC0AC;&#xC6A9;.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="&#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4;-&#xD14C;&#xC774;&#xBE14;-&#xD655;&#xC778;">&#xB9CC;&#xB4E4;&#xC5B4;&#xC9C4; &#xD14C;&#xC774;&#xBE14; &#xD655;&#xC778;</h4>
+<pre><code class="lang-mysql">DESC users;
+</code></pre>
+<h4 id="&#xD14C;&#xC774;&#xBE14;-&#xC81C;&#xAC70;">&#xD14C;&#xC774;&#xBE14; &#xC81C;&#xAC70;</h4>
+<pre><code class="lang-mysql">DROP TABLE users;
+</code></pre>
+<h4 id="&#xC0AC;&#xC6A9;&#xC790;&#xC758;-&#xB313;&#xAE00;&#xC744;-&#xC800;&#xC7A5;&#xD558;&#xB294;-&#xD14C;&#xC774;&#xBE14;-&#xB9CC;&#xB4E4;&#xAE30;">&#xC0AC;&#xC6A9;&#xC790;&#xC758; &#xB313;&#xAE00;&#xC744; &#xC800;&#xC7A5;&#xD558;&#xB294; &#xD14C;&#xC774;&#xBE14; &#xB9CC;&#xB4E4;&#xAE30;</h4>
+<pre><code class="lang-mysql">CREATE TABLE nodejs.comments (
+    -&gt; id INT NOT NULL AUTO_INCREMENT,
+  -&gt; commenter INT NOT NULL,
+  -&gt; comment VARCHAR(100) NOT NULL,
+  -&gt; created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  -&gt; PRIMARY KEY(id),
+  -&gt; INDEX commenter_idx (commenter ASC),
+  -&gt; CONSTRAINT commenter
+  -&gt; FOREIGN KEY (commenter)
+  -&gt; REFERENCES nodejs.users (id)
+  -&gt; ON DELETE CASCADE
+  -&gt; ON UPDATE CASCADE)
+  -&gt; COMMENT = &apos;&#xB313;&#xAE00;&apos;
+  -&gt; DEFAULT CHARACTER SET = utf8
+  -&gt; ENGINE = InnoDB;
+</code></pre>
+<h4 id="&#xD14C;&#xC774;&#xBE14;-&#xB9AC;&#xC2A4;&#xD2B8;-&#xD655;&#xC778;">&#xD14C;&#xC774;&#xBE14; &#xB9AC;&#xC2A4;&#xD2B8; &#xD655;&#xC778;</h4>
+<pre><code class="lang-mysql">SHOW TABLES;
+</code></pre>
+<h3 id="75-crud-&#xC791;&#xC5C5;&#xD558;&#xAE30;">7.5 CRUD &#xC791;&#xC5C5;&#xD558;&#xAE30;</h3>
+<p>Create, Read, Update, Delete &#xC758; &#xCCAB; &#xAE00;&#xC790;&#xB97C; &#xBAA8;&#xC740; &#xB450;&#xBB38;&#xC790;&#xC5B4;&#xC774;&#xBA70; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC5D0;&#xC11C; &#xB9CE;&#xC774; &#xC218;&#xD589;&#xD558;&#xB294; &#xB124; &#xAC00;&#xC9C0; &#xC791;&#xC5C5;&#xC744; &#xC77C;&#xCEEB;&#xB294;&#xB2E4;.</p>
+<h4 id="751-create&#xC0DD;&#xC131;">7.5.1 Create(&#xC0DD;&#xC131;)</h4>
+<p>&#xB370;&#xC774;&#xD130;&#xB97C; &#xC0DD;&#xC131;&#xD574;&#xC11C; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC5D0; &#xCD94;&#xAC00;</p>
+<p><code>INSERT INTO [&#xD14C;&#xC774;&#xBE14;&#xBA85;] ([&#xCEEC;&#xB7FC;1], [&#xCEEC;&#xB7FC;2], ...) VALUES ([&#xAC12;1], [&#xAC12;2], ...)</code> &#xD615;&#xD0DC;&#xB85C; &#xCD94;&#xAC00;.</p>
+<pre><code class="lang-mysql">INSERT INTO nodejs.users (name, age, married, comment) VALUES (&apos;zero&apos;, 24, 0, &apos;&#xC790;&#xAE30;&#xC18C;&#xAC1C;1&apos;);
+INSERT INTO nodejs.users (name, age, married, comment) VALUES (&apos;nero&apos;, 32, 1, &apos;&#xC790;&#xAE30;&#xC18C;&#xAC1C;2&apos;);
+</code></pre>
+<pre><code class="lang-mysql">INSERT INTO nodejs.comments (commenter, comment) VALUES (1, &apos;&#xC548;&#xB155;&#xD558;&#xC138;&#xC694;. zero&#xC758; &#xB313;&#xAE00;&#xC785;&#xB2C8;&#xB2E4;.&apos;);
+</code></pre>
+<h4 id="752-read&#xC870;&#xD68C;">7.5.2. Read(&#xC870;&#xD68C;)</h4>
+<p>&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC5D0; &#xC788;&#xB294; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC870;&#xD68C;</p>
+<pre><code class="lang-mysql">SELECT * FROM nodejs.users;
+SELECT name, married FROM nodejs.users;
+SELECT name, age FROM nodejs.users WHERE married = 1 AND age &gt; 30;
+SELECT name, age FROM nodejs.users WHERE married = 0 OR age &gt; 30;
+SELECT id, name FROM nodejs.users ORDER BY age DESC;
+
+/* &#xC870;&#xD68C;&#xD560; &#xB85C;&#xC6B0; &#xAC1C;&#xC218; &#xC124;&#xC815;. &#xD398;&#xC774;&#xC9C0;&#xB124;&#xC774;&#xC158; &#xAE30;&#xB2A5; &#xAD6C;&#xD604;&#xC5D0; &#xC720;&#xC6A9; */
+SELECT id, name FROM nodejs.users ORDER BY age DESC LIMIT 1;
+/* OFFSET&#xC73C;&#xB85C; &#xAC74;&#xB108;&#xB6F8; &#xC22B;&#xC790; &#xC9C0;&#xC815; */
+SELECT id, name FROM nodejs.users ORDER BY age DESC LIMIT 1 OFFSET 1;
+</code></pre>
+<h4 id="753-update&#xC218;&#xC815;">7.5.3 Update(&#xC218;&#xC815;)</h4>
+<p>&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC5D0; &#xC788;&#xB294; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC218;&#xC815;</p>
+<pre><code class="lang-mysql">UPDATE nodejs.users SET comment = &apos;&#xBC14;&#xAFC0; &#xB0B4;&#xC6A9;&apos; WHERE id = 2;
+</code></pre>
+<h4 id="754-delete&#xC0AD;&#xC81C;">7.5.4 Delete(&#xC0AD;&#xC81C;)</h4>
+<p>&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC5D0; &#xC788;&#xB294; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC0AD;&#xC81C;</p>
+<pre><code class="lang-mysql">DELETE FROM nodejs.users WHERE id = 2;
+</code></pre>
+<h3 id="76-&#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988;-&#xC0AC;&#xC6A9;&#xD558;&#xAE30;">7.6 &#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988; &#xC0AC;&#xC6A9;&#xD558;&#xAE30;</h3>
+<p>&#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988;: &#xB178;&#xB4DC;&#xC5D0;&#xC11C; MySQL &#xC791;&#xC5C5;&#xC744; &#xC27D;&#xAC8C; &#xD560; &#xC218; &#xC788;&#xB3C4;&#xB85D; &#xB3C4;&#xC640;&#xC8FC;&#xB294; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;. ORM&#xC73C;&#xB85C; &#xBD84;&#xB958;&#xB41C;&#xB2E4;.</p>
+<p>ORM: &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xAC1D;&#xCCB4;&#xC640; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC758; &#xB9B4;&#xB808;&#xC774;&#xC158;&#xC744; &#xB9E4;&#xD551;&#xD574;&#xC8FC;&#xB294; &#xB3C4;&#xAD6C;.</p>
+<pre><code class="lang-json"><span class="hljs-comment">// ./package.json</span>
+
+{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;learn-sequelize&quot;</span>,
+  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;0.0.1&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988;&#xB97C; &#xBC30;&#xC6B0;&#xC790;&quot;</span>,
+  <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;app.js&quot;</span>,
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;start&quot;</span>: <span class="hljs-string">&quot;nodemon app&quot;</span>,
+    <span class="hljs-string">&quot;test&quot;</span>: <span class="hljs-string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+  },
+  <span class="hljs-string">&quot;author&quot;</span>: <span class="hljs-string">&quot;jiy&quot;</span>,
+  <span class="hljs-string">&quot;license&quot;</span>: <span class="hljs-string">&quot;MIT&quot;</span>,
+  <span class="hljs-string">&quot;dependencies&quot;</span>: {
+    <span class="hljs-string">&quot;express&quot;</span>: <span class="hljs-string">&quot;^4.17.1&quot;</span>,
+    <span class="hljs-string">&quot;morgan&quot;</span>: <span class="hljs-string">&quot;^1.10.0&quot;</span>,
+    <span class="hljs-string">&quot;mysql2&quot;</span>: <span class="hljs-string">&quot;^2.2.5&quot;</span>,
+    <span class="hljs-string">&quot;nunjucks&quot;</span>: <span class="hljs-string">&quot;^3.2.2&quot;</span>,
+    <span class="hljs-string">&quot;sequelize&quot;</span>: <span class="hljs-string">&quot;^6.3.5&quot;</span>,
+    <span class="hljs-string">&quot;sequelize-cli&quot;</span>: <span class="hljs-string">&quot;^6.2.0&quot;</span>
+  },
+  <span class="hljs-string">&quot;devDependencies&quot;</span>: {
+    <span class="hljs-string">&quot;nodemon&quot;</span>: <span class="hljs-string">&quot;^2.0.6&quot;</span>
+  }
+}
+</code></pre>
+<pre><code class="lang-bash">npm i express morgan nunjucks sequelize sequelize-cli mysql
+npx sequelize init
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./models/index.js</span>
+
+<span class="hljs-keyword">const</span> Sequelize = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;sequelize&apos;</span>);
+
+<span class="hljs-keyword">const</span> env = process.env.NODE_ENV || <span class="hljs-string">&apos;development&apos;</span>;
+<span class="hljs-keyword">const</span> config = <span class="hljs-built_in">require</span>(__dirname + <span class="hljs-string">&apos;/../config/config&apos;</span>)[env];
+<span class="hljs-keyword">const</span> db = {};
+
+<span class="hljs-keyword">const</span> sequelize = <span class="hljs-keyword">new</span> Sequelize(config.database, config.username, config.password, config);
+db.sequelize = sequelize;
+
+<span class="hljs-built_in">module</span>.exports = db;
+</code></pre>
+<h4 id="761-mysql-&#xC5F0;&#xACB0;&#xD558;&#xAE30;">7.6.1 MySQL &#xC5F0;&#xACB0;&#xD558;&#xAE30;</h4>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./app.js</span>
+
+<span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">const</span> morgan = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;morgan&apos;</span>);
+<span class="hljs-keyword">const</span> nunjucks = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;nunjucks&apos;</span>);
+
+<span class="hljs-keyword">const</span> { sequelize } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./models&apos;</span>);
+
+<span class="hljs-keyword">const</span> app = express();
+app.set(<span class="hljs-string">&apos;port&apos;</span>, process.env.PORT || <span class="hljs-number">3001</span>);
+app.set(<span class="hljs-string">&apos;view engine&apos;</span>, <span class="hljs-string">&apos;html&apos;</span>);
+nunjucks.configure(<span class="hljs-string">&apos;views&apos;</span>, {
+    express: app,
+    watch: <span class="hljs-literal">true</span>,
+});
+sequelize.sync({ force: <span class="hljs-literal">false</span> }) <span class="hljs-comment">// force: true &#xC124;&#xC815; &#xC2DC; &#xC11C;&#xBC84;&#xB97C; &#xC2E4;&#xD589;&#xD560; &#xB54C;&#xB9C8;&#xB2E4; &#xD14C;&#xC774;&#xBE14; &#xC7AC;&#xC0DD;&#xC131;</span>
+    .then(() =&gt; {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC5F0;&#xACB0; &#xC131;&#xACF5;&apos;</span>)
+    })
+    .catch((err) =&gt; {
+        <span class="hljs-built_in">console</span>.error(err);
+    });
+
+app.use(morgan(<span class="hljs-string">&apos;dev&apos;</span>));
+app.use(express.static(path.join(__dirname, <span class="hljs-string">&apos;public&apos;</span>)));
+app.use(express.json());
+app.use(express.urlencoded({ extended: <span class="hljs-literal">false</span> }));
+
+app.use((req, res, next) =&gt; {
+    <span class="hljs-keyword">const</span> error = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">`<span class="hljs-subst">${req.method}</span> <span class="hljs-subst">${req.url}</span> &#xB77C;&#xC6B0;&#xD130;&#xAC00; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.`</span>);
+    error.status = <span class="hljs-number">404</span>;
+    next(error);
+})
+
+app.use((err, req, res, next) =&gt; {
+    res.locals.message = err.message;
+    res.locals.error = process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span> ? err : {};
+    res.status(err.status || <span class="hljs-number">500</span>);
+    res.render(<span class="hljs-string">&apos;error&apos;</span>);
+})
+
+app.listen(app.get(<span class="hljs-string">&apos;port&apos;</span>), () =&gt; {
+    <span class="hljs-built_in">console</span>.log(app.get(<span class="hljs-string">&apos;port&apos;</span>), <span class="hljs-string">&apos;&#xBC88; &#xD3EC;&#xD2B8;&#xC5D0;&#xC11C; &#xB300;&#xAE30; &#xC911;&apos;</span>);
+})
+</code></pre>
+<h4 id="762-&#xBAA8;&#xB378;-&#xC815;&#xC758;&#xD558;&#xAE30;">7.6.2 &#xBAA8;&#xB378; &#xC815;&#xC758;&#xD558;&#xAE30;</h4>
+<p>MySQL &#xD14C;&#xC774;&#xBE14;&#xC740; &#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988;&#xC758; &#xBAA8;&#xB378;&#xACFC; &#xB300;&#xC751;&#xB41C;&#xB2E4;. &#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988;&#xB294; &#xBAA8;&#xB378;&#xACFC; MySQL&#xC758; &#xD14C;&#xC774;&#xBE14;&#xC744; &#xC5F0;&#xACB0;&#xD574;&#xC8FC;&#xB294; &#xC5ED;&#xD560;.</p>
+<p><em>&#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988; &#xBAA8;&#xB378; &#xC774;&#xB984;&#xC740; &#xB2E8;&#xC218;&#xD615;&#xC73C;&#xB85C;, &#xD14C;&#xC774;&#xBE14; &#xC774;&#xB984;&#xC740; &#xBCF5;&#xC218;&#xD615;&#xC73C;&#xB85C; &#xC0AC;&#xC6A9;</em></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./models/user.js</span>
+
+<span class="hljs-keyword">const</span> Sequelize = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;sequelize&apos;</span>);
+
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Sequelize</span>.<span class="hljs-title">Model</span> </span>{
+    <span class="hljs-keyword">static</span> init(sequelize) { <span class="hljs-comment">// init &#xBA54;&#xC11C;&#xB4DC;: &#xD14C;&#xC774;&#xBE14;&#xC5D0; &#xB300;&#xD55C; &#xC124;&#xC815;</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">super</span>.init({ <span class="hljs-comment">// &#xCCAB; &#xBC88;&#xC9F8; &#xC778;&#xC218;: &#xD14C;&#xC774;&#xBE14; &#xCEEC;&#xB7FC; &#xC124;&#xC815;, &#xB450; &#xBC88;&#xC9F8; &#xC778;&#xC218;: &#xD14C;&#xC774;&#xBE14; &#xC790;&#xCCB4; &#xC124;&#xC815;</span>
+            <span class="hljs-comment">// id&#xB294; &#xC54C;&#xC544;&#xC11C; &#xC124;&#xC815;</span>
+            name: {
+                type: Sequelize.STRING(<span class="hljs-number">20</span>),
+                allowNull: <span class="hljs-literal">false</span>,
+                unique: <span class="hljs-literal">true</span>,
+            },
+            age: {
+                type: Sequelize.INTEGER.UNSIGNED,
+                allowNull: <span class="hljs-literal">false</span>,
+            },
+            married: {
+                type: Sequelize.BOOLEAN,
+                allowNull: <span class="hljs-literal">false</span>,
+            },
+            comment: {
+                type: Sequelize.TEXT,
+                allowNull: <span class="hljs-literal">true</span>,
+            },
+            created_at: {
+                type: Sequelize.DATE,
+                allowNull: <span class="hljs-literal">false</span>,
+                defaultValue: Sequelize.NOW,
+            },
+        }, {
+            sequelize,
+            timestamps: <span class="hljs-literal">false</span>, <span class="hljs-comment">// true&#xBA74; createdAt&#xACFC; updatedAt &#xCEEC;&#xB7FC;&#xC744; &#xC790;&#xB3D9; &#xCD94;&#xAC00;.</span>
+            underscored: <span class="hljs-literal">false</span>, <span class="hljs-comment">// true&#xBA74; &#xCE90;&#xBA40;&#xCF00;&#xC774;&#xC2A4; &#xB300;&#xC2E0; &#xC2A4;&#xB124;&#xC774;&#xD06C; &#xCF00;&#xC774;&#xC2A4;&#xB85C; &#xBCC0;&#xACBD;.</span>
+            modelName: <span class="hljs-string">&apos;User&apos;</span>, <span class="hljs-comment">// &#xBAA8;&#xB378;&#xBA85;</span>
+            tableName: <span class="hljs-string">&apos;users&apos;</span>, <span class="hljs-comment">// &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC758; &#xD14C;&#xC774;&#xBE14; &#xC774;&#xB984;</span>
+            paranoid: <span class="hljs-literal">false</span>, <span class="hljs-comment">// true&#xBA74; deletedAt &#xCEEC;&#xB7FC; &#xCD94;&#xAC00;. &#xB85C;&#xC6B0;&#xB97C; &#xBCF5;&#xC6D0;&#xD574;&#xC57C;&#xD560; &#xB54C; &#xC0AC;&#xC6A9;.</span>
+            charset: <span class="hljs-string">&apos;utf8&apos;</span>,
+            collate: <span class="hljs-string">&apos;utf8_general_ci&apos;</span>,
+      <span class="hljs-comment">// charset, collate &#xB458; &#xB2E4; &#xC124;&#xC815;&#xD574;&#xC57C; &#xD55C;&#xAE00; &#xC785;&#xB825; &#xAC00;&#xB2A5;.</span>
+      <span class="hljs-comment">// &#xC774;&#xBAA8;&#xD2F0;&#xCF58; &#xC0AC;&#xC6A9;&#xC740; utf8mb4, utf8mb4_general_ci</span>
+        });
+    }
+    <span class="hljs-keyword">static</span> associate(db) {} <span class="hljs-comment">// associate &#xBA54;&#xC11C;&#xB4DC;: &#xB2E4;&#xB978; &#xBAA8;&#xB378;&#xACFC;&#xC758; &#xAD00;&#xACC4;</span>
+}
+</code></pre>
+<h4 id="mysql&#xACFC;-&#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988;&#xC758;-&#xBE44;&#xAD50;">MySQL&#xACFC; &#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988;&#xC758; &#xBE44;&#xAD50;</h4>
+<table>
+<thead>
+<tr>
+<th>MySQL</th>
+<th>&#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VARCHAR(100)</td>
+<td>STRING(100)</td>
+</tr>
+<tr>
+<td>INT</td>
+<td>INTEGER</td>
+</tr>
+<tr>
+<td>TINYINT</td>
+<td>BOOLEAN</td>
+</tr>
+<tr>
+<td>DATETIME</td>
+<td>DATE</td>
+</tr>
+<tr>
+<td>INT UNSIGNED</td>
+<td>INTEGER.UNSIGNED</td>
+</tr>
+<tr>
+<td>NOT NULL</td>
+<td>allowNull: false</td>
+</tr>
+<tr>
+<td>UNIQUE</td>
+<td>unique: true</td>
+</tr>
+<tr>
+<td>DEFAULT now()</td>
+<td>defaultValue: Sequelize.NOW</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./models/comment.js</span>
+
+<span class="hljs-keyword">const</span> Sequelize = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;sequelize&apos;</span>);
+
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Comment</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Sequelize</span>.<span class="hljs-title">Model</span> </span>{
+    <span class="hljs-keyword">static</span> init(sequelize) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">super</span>.init({
+            comment: {
+                type: Sequelize.STRING(<span class="hljs-number">100</span>),
+                allowNull: <span class="hljs-literal">false</span>,
+            },
+            created_at: {
+                type: Sequelize.DATE,
+                allowNull: <span class="hljs-literal">true</span>,
+                defaultValue: Sequelize.NOW,
+            },
+        }, {
+            sequelize,
+            timestamps: <span class="hljs-literal">false</span>,
+            modelName: <span class="hljs-string">&apos;Comment&apos;</span>,
+            tableName: <span class="hljs-string">&apos;comments&apos;</span>,
+            paranoid: <span class="hljs-literal">false</span>,
+            charset: <span class="hljs-string">&apos;utf8mb4&apos;</span>,
+            collate: <span class="hljs-string">&apos;utf8mb4_general_ci&apos;</span>,
+        });
+    }
+    <span class="hljs-keyword">static</span> associate(db) {}
+}
+</code></pre>
+<h4 id="763-&#xAD00;&#xACC4;-&#xC815;&#xC758;&#xD558;&#xAE30;">7.6.3 &#xAD00;&#xACC4; &#xC815;&#xC758;&#xD558;&#xAE30;</h4>
+<p>MySQL&#xC5D0;&#xC11C;&#xB294; JOIN &#xAE30;&#xB2A5;&#xC73C;&#xB85C; &#xC5EC;&#xB7EC; &#xD14C;&#xC774;&#xBE14; &#xAC04;&#xC758; &#xAD00;&#xACC4;&#xB97C; &#xD30C;&#xC545;&#xD574; &#xACB0;&#xACFC;&#xB97C; &#xB3C4;&#xCD9C;&#xD55C;&#xB2E4;.</p>
+<p>&#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988;&#xB294; &#xD14C;&#xC774;&#xBE14; &#xAC04;&#xC758; &#xAD00;&#xACC4; &#xC815;&#xBCF4;&#xB97C; &#xC785;&#xB825;&#xD558;&#xBA74; &#xC54C;&#xC544;&#xC11C; JOIN &#xAE30;&#xB2A5;&#xC744; &#xAD6C;&#xD604;&#xD574;&#xC900;&#xB2E4;.</p>
+<h5 id="7631-1n">7.6.3.1 1:N</h5>
+<p><code>hasMany</code> &#xBA54;&#xC11C;&#xB4DC;&#xC640; <code>belongsTo</code> &#xBA54;&#xC11C;&#xB4DC;&#xB85C; 1:N &#xAD00;&#xACC4;&#xB97C; &#xD45C;&#xD604;.</p>
+<p>&#xB2E4;&#xB978; &#xBAA8;&#xB378;&#xC758; &#xC815;&#xBCF4;&#xAC00; &#xB4E4;&#xC5B4;&#xAC00;&#xC788;&#xB294; &#xD14C;&#xC774;&#xBE14;&#xC5D0; <code>belongsTo</code> &#xB97C; &#xC0AC;&#xC6A9;&#xD55C;&#xB2E4;.</p>
+<blockquote>
+<p>User =&gt; <code>hasMany</code> =&gt; Comment</p>
+<p>Comment =&gt; <code>belongsTo</code> =&gt; User</p>
+</blockquote>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./models/user.js</span>
+<span class="hljs-keyword">static</span> associate(db) {
+  db.User.hasMany(db.Comment, { foreignKey: <span class="hljs-string">&apos;commenter&apos;</span>, sourceKey: <span class="hljs-string">&apos;id&apos;</span> });
+}
+
+<span class="hljs-comment">// ./models/comment.js</span>
+<span class="hljs-keyword">static</span> associate(db) {
+  db.Comment.belongsTo(db.User, { foreignKey: <span class="hljs-string">&apos;commenter&apos;</span>, targetKey: <span class="hljs-string">&apos;id&apos;</span>, <span class="hljs-keyword">as</span>: <span class="hljs-string">&apos;Answers&apos;</span> }); <span class="hljs-comment">// as&#xB85C; &#xBAA8;&#xB378; &#xC774;&#xB984;&#xC744; &#xBC14;&#xAFC0; &#xC218; &#xC788;&#xB2E4;. 7.6.4.1&#xC5D0;&#xC11C; &#xC0AC;&#xC6A9;&#xD568;.</span>
+}
+
+<span class="hljs-comment">// foreignKey&#xB97C; &#xB530;&#xB85C; &#xC815;&#xD574;&#xC8FC;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xBAA8;&#xB378;&#xBA85; + &#xAE30;&#xBCF8; &#xD0A4; &#xAC00; &#xD569;&#xCCD0;&#xC9C4; &#xCEEC;&#xB7FC;&#xC774; &#xBAA8;&#xB378;&#xC5D0; &#xC0DD;&#xC131;. i.e., UserId</span>
+</code></pre>
+<h5 id="7632-11">7.6.3.2 1:1</h5>
+<p><code>hasOne</code> &#xBA54;&#xC11C;&#xB4DC;&#xC640;  <code>belongsTo</code> &#xBA54;&#xC11C;&#xB4DC;&#xB85C; 1:1 &#xAD00;&#xACC4;&#xB97C; &#xD45C;&#xD604;</p>
+<pre><code class="lang-javascript">db.User.hasOne(db.Info, { foreignKey: <span class="hljs-string">&apos;userId&apos;</span>, sourceKey: <span class="hljs-string">&apos;id&apos;</span> });
+db.Info.belongsTo(db.User, { foreignKey: <span class="hljs-string">&apos;userId&apos;</span>, targetKey: <span class="hljs-string">&apos;id&apos;</span> });
+</code></pre>
+<h5 id="7633-nm">7.6.3.3 N:M</h5>
+<p><code>belongsToMany</code> &#xBA54;&#xC11C;&#xB4DC;&#xB85C; N:M &#xAD00;&#xACC4;&#xB97C; &#xD45C;&#xD604;</p>
+<p>N:M &#xD2B9;&#xC131;&#xC0C1; &#xC0C8;&#xB85C;&#xC6B4; &#xBAA8;&#xB378;&#xC774; &#xC0DD;&#xC131;&#xB418;&#xB294;&#xB370; <code>through</code> &#xC18D;&#xC131;&#xC5D0; &#xADF8; &#xC774;&#xB984;&#xC744; &#xC801;&#xB294;&#xB2E4;.</p>
+<pre><code class="lang-javascript">db.Post.belongsToMany(db.Hashtag, { through: <span class="hljs-string">&apos;PostHashtag&apos;</span> });
+db.Hashtag.belongsToMany(db.Post, { through: <span class="hljs-string">&apos;PostHashtag&apos;</span> });
+</code></pre>
+<h4 id="764-&#xCFFC;&#xB9AC;-&#xC54C;&#xC544;&#xBCF4;&#xAE30;">7.6.4 &#xCFFC;&#xB9AC; &#xC54C;&#xC544;&#xBCF4;&#xAE30;</h4>
+<h5 id="create">Create</h5>
+<pre><code class="lang-javascript">INSERT INTO nodejs.users (name, age, married, comment) VALUES (<span class="hljs-string">&apos;zero&apos;</span>, <span class="hljs-number">24</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&apos;&#xC790;&#xAE30;&#xC18C;&#xAC1C;1&apos;</span>);
+
+<span class="hljs-keyword">const</span> { User } required(<span class="hljs-string">&apos;../models&apos;</span>);
+User.create({
+  name: <span class="hljs-string">&apos;zero&apos;</span>,
+  age: <span class="hljs-number">24</span>,
+  married: <span class="hljs-literal">false</span>, <span class="hljs-comment">// &#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988;&#xC758; &#xBB38;&#xBC95;&#xC5D0; &#xB9DE;&#xAC8C; 0&#xC774; &#xC544;&#xB2CC; false&#xB85C; &#xCD94;&#xAC00;</span>
+  comment: <span class="hljs-string">&apos;&#xC790;&#xAE30;&#xC18C;&#xAC1C;1&apos;</span>,
+});
+</code></pre>
+<h5 id="read">Read</h5>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* SELECT * FROM nodejs.users; */</span>
+User.findAll({});
+
+<span class="hljs-comment">/* SELECT * FROM nodejs.users LIMIT 1; */</span>
+User.findOne({});
+
+<span class="hljs-comment">/* SELECT name, age FROM nodejs.users WHERE married = 1 AND age &gt; 30; */</span>
+<span class="hljs-keyword">const</span> { Op } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;sequelize&apos;</span>);
+<span class="hljs-keyword">const</span> { User } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../models&apos;</span>);
+User.findAll({
+  attributes: [<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>],
+  where: {
+    married: <span class="hljs-literal">true</span>,
+    age: { [Op.gt]:<span class="hljs-number">30</span> },
+  },
+});
+
+<span class="hljs-comment">/* &#xC790;&#xC8FC; &#xC4F0;&#xC774;&#xB294; &#xC5F0;&#xC0B0;&#xC790; */</span>
+<span class="hljs-comment">// Op.gt(&#xCD08;&#xACFC;), Op.gte(&#xC774;&#xC0C1;), Op.lt(&#xBBF8;&#xB9CC;), Op.lte(&#xC774;&#xD558;), Op.ne(&#xAC19;&#xC774; &#xC54A;&#xC74C;), Op.or(&#xB610;&#xB294;), Op.in(&#xBC30;&#xC5F4; &#xC694;&#xC18C; &#xC911; &#xD558;&#xB098;), Op.notIn(&#xBC30;&#xC5F4; &#xC694;&#xC18C;&#xC640; &#xBAA8;&#xB450; &#xB2E4;&#xB984;)</span>
+
+<span class="hljs-comment">/* SELECT name, age FROM nodejs.users WHERE married = 0 OR age &gt; 30; */</span>
+<span class="hljs-keyword">const</span> { Op } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;sequelize&apos;</span>);
+<span class="hljs-keyword">const</span> { User } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../models&apos;</span>);
+User.findAll({
+  attributes: [<span class="hljs-string">&apos;name&apos;</span>, <span class="hljs-string">&apos;age&apos;</span>],
+  where: {
+    [Op.or]: [{ married: <span class="hljs-literal">false</span> }, { age: { [Op.gt]:<span class="hljs-number">30</span> }}], <span class="hljs-comment">// Op.or &#xC18D;&#xC131;&#xC5D0; &#xBC30;&#xC5F4;&#xB85C; &#xB098;&#xC5F4;.</span>
+  },
+});
+
+<span class="hljs-comment">/* SELECT id, name FROM nodejs.users ORDER BY age DESC LIMIT 1 OFFSET 1; */</span>
+User.findAll({
+  attributes: [<span class="hljs-string">&apos;id&apos;</span>, <span class="hljs-string">&apos;name&apos;</span>],
+  order: [[<span class="hljs-string">&apos;age&apos;</span>, <span class="hljs-string">&apos;DESC&apos;</span>]], <span class="hljs-comment">// &#xC815;&#xB82C;&#xC740; &#xAF2D; &#xCEEC;&#xB7FC; &#xD558;&#xB098;&#xB85C;&#xB9CC; &#xD558;&#xB294; &#xAC8C; &#xC544;&#xB2C8;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC774;&#xC911;&#xBC30;&#xC5F4;.</span>
+  limit: <span class="hljs-number">1</span>,
+  offset: <span class="hljs-number">1</span>,
+})
+</code></pre>
+<h5 id="update">Update</h5>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* UPDATE nodejs.users SET comment = &apos;&#xBC14;&#xAFC0; &#xB0B4;&#xC6A9;&apos; WHERE id = 2; */</span>
+User.update({
+  comment: <span class="hljs-string">&apos;&#xBC14;&#xAFC0; &#xB0B4;&#xC6A9;&apos;</span>,
+}, {
+  where: { id: <span class="hljs-number">2</span> },
+})
+</code></pre>
+<h5 id="delete">Delete</h5>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* DELETE FROM nodejs.users WHERE id = 2; */</span>
+User.destroy({
+  where: { id: <span class="hljs-number">2</span> },
+})
+</code></pre>
+<h5 id="7641-&#xAD00;&#xACC4;-&#xCFFC;&#xB9AC;">7.6.4.1 &#xAD00;&#xACC4; &#xCFFC;&#xB9AC;</h5>
+<p><code>include</code> &#xC18D;&#xC131;&#xC73C;&#xB85C; MySQL&#xC758; JOIN &#xAE30;&#xB2A5;&#xCC98;&#xB7FC; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#xD2B9;&#xC815; &#xC0AC;&#xC6A9;&#xC790;&#xC640; &#xB313;&#xAE00;&#xAE4C;&#xC9C0; &#xAC00;&#xC838;&#xC624;&#xB294; &#xB85C;&#xC9C1;</span>
+<span class="hljs-keyword">const</span> user = <span class="hljs-keyword">await</span> User.findOne({
+  include: [{
+    model: Comment,
+    where: {
+      id: <span class="hljs-number">1</span>,
+    },
+    attributes: [<span class="hljs-string">&apos;id&apos;</span>],
+  }]
+});
+<span class="hljs-built_in">console</span>.log(user.Comments); <span class="hljs-comment">// &#xC0AC;&#xC6A9;&#xC790; &#xB313;&#xAE00;</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#xAD00;&#xACC4;&#xAC00; &#xC124;&#xC815;&#xB418;&#xC5B4;&#xC788;&#xB2E4;&#xBA74; getComments, setComments, addComment, addComments, removeComments &#xB4F1; &#xBA54;&#xC11C;&#xB4DC; &#xC9C0;&#xC6D0;.</span>
+<span class="hljs-keyword">const</span> user = <span class="hljs-keyword">await</span> User.findOne({});
+<span class="hljs-keyword">const</span> comments = <span class="hljs-keyword">await</span> user.getComments();
+<span class="hljs-built_in">console</span>.log(comments); <span class="hljs-comment">// &#xC0AC;&#xC6A9;&#xC790; &#xB313;&#xAE00;</span>
+</code></pre>
+<h5 id="7642-sql-&#xCFFC;&#xB9AC;&#xD558;&#xAE30;">7.6.4.2 SQL &#xCFFC;&#xB9AC;&#xD558;&#xAE30;</h5>
+<p>&#xC9C1;&#xC811; SQL&#xBB38;&#xC744; &#xD1B5;&#xD574; &#xCFFC;&#xB9AC;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> [result, metadata] = <span class="hljs-keyword">await</span> sequelize.query(<span class="hljs-string">&apos;SELECT * from comments&apos;</span>);
+<span class="hljs-built_in">console</span>.log(result);
+</code></pre>
+<h4 id="765-&#xCFFC;&#xB9AC;-&#xC218;&#xD589;&#xD558;&#xAE30;">7.6.5 &#xCFFC;&#xB9AC; &#xC218;&#xD589;&#xD558;&#xAE30;</h4>
+<p><a href="https://github.com/ZeroCho/nodejs-book/tree/master/ch7/7.6/learn-sequelize" target="_blank">https://github.com/ZeroCho/nodejs-book/tree/master/ch7/7.6/learn-sequelize</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"7장 MySQL","level":"4.1","depth":1,"next":{"title":"8장 MongoDB","level":"4.2","depth":1,"path":"3th/reading_note_8.md","ref":"3th/reading_note_8.md","articles":[]},"previous":{"title":"6장 익스프레스 웹 서버 만들기","level":"3.3","depth":1,"path":"2th/reading_note_6.md","ref":"2th/reading_note_6.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3th/reading_note_7.md","mtime":"2021-01-02T04:56:31.192Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-02T04:57:47.300Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+
