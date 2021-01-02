@@ -1,0 +1,1167 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>9장 익스프레스로 SNS 서비스 만들기 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-api/theme-api.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="reading_note_10.html" />
+    
+    
+    <link rel="prev" href="reading_note_8.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">1주차</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../1th/reading_note_1.html">
+            
+                <a href="../1th/reading_note_1.html">
+            
+                    
+                    1장 노드 시작하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../1th/reading_note_2.html">
+            
+                <a href="../1th/reading_note_2.html">
+            
+                    
+                    2장 알아두어야 할 자바스크립트
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../1th/reading_note_3.html">
+            
+                <a href="../1th/reading_note_3.html">
+            
+                    
+                    3장 노드 기능
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">2주차</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../2th/reading_note_4.html">
+            
+                <a href="../2th/reading_note_4.html">
+            
+                    
+                    4장 http 모듈로 서버 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../2th/reading_note_5.html">
+            
+                <a href="../2th/reading_note_5.html">
+            
+                    
+                    5장 패키지 매니저
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../2th/reading_note_6.html">
+            
+                <a href="../2th/reading_note_6.html">
+            
+                    
+                    6장 익스프레스 웹 서버 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">3주차</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="reading_note_7.html">
+            
+                <a href="reading_note_7.html">
+            
+                    
+                    7장 MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="reading_note_8.html">
+            
+                <a href="reading_note_8.html">
+            
+                    
+                    8장 MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.3" data-path="reading_note_9.html">
+            
+                <a href="reading_note_9.html">
+            
+                    
+                    9장 익스프레스로 SNS 서비스 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="reading_note_10.html">
+            
+                <a href="reading_note_10.html">
+            
+                    
+                    10장 웹 API 서버 만들기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >9장 익스프레스로 SNS 서비스 만들기</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="9&#xC7A5;-&#xC775;&#xC2A4;&#xD504;&#xB808;&#xC2A4;&#xB85C;-sns-&#xC11C;&#xBE44;&#xC2A4;-&#xB9CC;&#xB4E4;&#xAE30;-&#x1F680;">9&#xC7A5; &#xC775;&#xC2A4;&#xD504;&#xB808;&#xC2A4;&#xB85C; SNS &#xC11C;&#xBE44;&#xC2A4; &#xB9CC;&#xB4E4;&#xAE30; &#x1F680;</h1>
+<p>[TOC]</p>
+<h3 id="91-&#xD504;&#xB85C;&#xC81D;&#xD2B8;-&#xAD6C;&#xC870;-&#xAC16;&#xCD94;&#xAE30;">9.1 &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xAD6C;&#xC870; &#xAC16;&#xCD94;&#xAE30;</h3>
+<p>&#xCD08;&#xAE30; &#xC138;&#xD305;&#xD558;&#xAE30;</p>
+<pre><code class="lang-json"><span class="hljs-comment">// ./package.json</span>
+
+{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;nodebird&quot;</span>,
+  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;0.0.1&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&#xC775;&#xC2A4;&#xD504;&#xB808;&#xC2A4;&#xB85C; &#xB9CC;&#xB4DC;&#xB294; SNS &#xC11C;&#xBE44;&#xC2A4;&quot;</span>,
+  <span class="hljs-string">&quot;main&quot;</span>: <span class="hljs-string">&quot;app.js&quot;</span>,
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;start&quot;</span>: <span class="hljs-string">&quot;nodemon app&quot;</span>,
+    <span class="hljs-string">&quot;test&quot;</span>: <span class="hljs-string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>
+  },
+  <span class="hljs-string">&quot;author&quot;</span>: <span class="hljs-string">&quot;jiy&quot;</span>,
+  <span class="hljs-string">&quot;license&quot;</span>: <span class="hljs-string">&quot;MIT&quot;</span>,
+  <span class="hljs-string">&quot;dependencies&quot;</span>: {
+    <span class="hljs-string">&quot;cookie-parser&quot;</span>: <span class="hljs-string">&quot;^1.4.5&quot;</span>,
+    <span class="hljs-string">&quot;dotenv&quot;</span>: <span class="hljs-string">&quot;^8.2.0&quot;</span>,
+    <span class="hljs-string">&quot;express&quot;</span>: <span class="hljs-string">&quot;^4.17.1&quot;</span>,
+    <span class="hljs-string">&quot;express-session&quot;</span>: <span class="hljs-string">&quot;^1.17.1&quot;</span>,
+    <span class="hljs-string">&quot;morgan&quot;</span>: <span class="hljs-string">&quot;^1.10.0&quot;</span>,
+    <span class="hljs-string">&quot;multer&quot;</span>: <span class="hljs-string">&quot;^1.4.2&quot;</span>,
+    <span class="hljs-string">&quot;mysql2&quot;</span>: <span class="hljs-string">&quot;^2.2.5&quot;</span>,
+    <span class="hljs-string">&quot;nunjucks&quot;</span>: <span class="hljs-string">&quot;^3.2.2&quot;</span>,
+    <span class="hljs-string">&quot;sequelize&quot;</span>: <span class="hljs-string">&quot;^6.3.5&quot;</span>,
+    <span class="hljs-string">&quot;sequelize-cli&quot;</span>: <span class="hljs-string">&quot;^6.2.0&quot;</span>
+  },
+  <span class="hljs-string">&quot;devDependencies&quot;</span>: {
+    <span class="hljs-string">&quot;nodemon&quot;</span>: <span class="hljs-string">&quot;^2.0.6&quot;</span>
+  }
+}
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./app.js</span>
+
+<span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">const</span> cookieParser = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;cookie-parser&apos;</span>);
+<span class="hljs-keyword">const</span> morgan = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;morgan&apos;</span>);
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">const</span> session = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express-session&apos;</span>);
+<span class="hljs-keyword">const</span> nunjucks = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;nunjucks&apos;</span>);
+<span class="hljs-keyword">const</span> dotenv = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;dotenv&apos;</span>);
+
+dotenv.config();
+<span class="hljs-keyword">const</span> pageRouter = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./routes/page&apos;</span>);
+
+<span class="hljs-keyword">const</span> app = express();
+app.set(<span class="hljs-string">&apos;port&apos;</span>, process.env.PORT || <span class="hljs-number">8001</span>);
+app.set(<span class="hljs-string">&apos;view engine&apos;</span>, <span class="hljs-string">&apos;html&apos;</span>);
+nunjucks.configure(<span class="hljs-string">&apos;views&apos;</span>, {
+    express: app,
+    watch: <span class="hljs-literal">true</span>,
+});
+
+app.use(morgan(<span class="hljs-string">&apos;dev&apos;</span>));
+app.use(express.static(path.join(__dirname, <span class="hljs-string">&apos;public&apos;</span>)));
+app.use(express.json());
+app.use(express.urlencoded({ extended: <span class="hljs-literal">false</span> }));
+app.use(cookieParser(process.env.COOKIE_SECRET));
+app.use(session({
+    resave: <span class="hljs-literal">false</span>,
+    saveUninitialized: <span class="hljs-literal">false</span>,
+    secret: process.env.COOKIE_SECRET,
+    cookie: {
+        httpOnly: <span class="hljs-literal">true</span>,
+        secure: <span class="hljs-literal">false</span>,
+    },
+}));
+
+app.use(<span class="hljs-string">&apos;/&apos;</span>, pageRouter);
+
+app.use((req, res, next) =&gt; {
+    <span class="hljs-keyword">const</span> error = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">`<span class="hljs-subst">${req.method}</span> <span class="hljs-subst">${req.url}</span> &#xB77C;&#xC6B0;&#xD130;&#xAC00; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.`</span>);
+    error.status = <span class="hljs-number">404</span>;
+    next(error);
+});
+
+app.use((err, req, res, next) =&gt; {
+    res.locals.message = err.message;
+    res.locals.error = process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span> ? err : {};
+    res.status(err.status || <span class="hljs-number">500</span>);
+    res.render(<span class="hljs-string">&apos;error&apos;</span>);
+});
+
+app.listen(app.get(<span class="hljs-string">&apos;port&apos;</span>), () =&gt; {
+    <span class="hljs-built_in">console</span>.log(app.get(<span class="hljs-string">&apos;port&apos;</span>), <span class="hljs-string">&apos;&#xBC88; &#xD3EC;&#xD2B8;&#xC5D0;&#xC11C; &#xB300;&#xAE30; &#xC911;&apos;</span>);
+});
+</code></pre>
+<h3 id="92-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xC138;&#xD305;&#xD558;&#xAE30;">9.2 &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC138;&#xD305;&#xD558;&#xAE30;</h3>
+<p>MySQL&#xACFC; &#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988;&#xB85C; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC124;&#xC815;&#xD558;&#xAE30;</p>
+<h4 id="1-&#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988;-&#xC124;&#xC815;&#xD558;&#xAE30;">1) &#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988; &#xC124;&#xC815;&#xD558;&#xAE30;</h4>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./models/index.js</span>
+
+<span class="hljs-keyword">const</span> Sequelize = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;sequelize&apos;</span>);
+<span class="hljs-keyword">const</span> env = process.env.NODE_ENV || <span class="hljs-string">&apos;development&apos;</span>;
+<span class="hljs-keyword">const</span> config = <span class="hljs-built_in">require</span>(__dirname + <span class="hljs-string">&apos;/../config/config.json&apos;</span>)[env];
+<span class="hljs-keyword">const</span> User = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./user&apos;</span>);
+<span class="hljs-keyword">const</span> Hashtag = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./hashtag&apos;</span>);
+<span class="hljs-keyword">const</span> Post = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./post&apos;</span>);
+
+<span class="hljs-keyword">const</span> db = {};
+<span class="hljs-keyword">const</span> sequelize = <span class="hljs-keyword">new</span> Sequelize(config.database, config.username, config.password, config);
+
+db.sequelize = sequelize;
+db.User = User;
+db.Hashtag = Hashtag;
+db.Post = Post;
+
+User.init(sequelize);
+Post.init(sequelize);
+Hashtag.init(sequelize);
+
+<span class="hljs-comment">// &#xAC01;&#xAC01;&#xC758; &#xBAA8;&#xB378;&#xB4E4;&#xC744; &#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988; &#xAC1D;&#xCCB4;&#xC5D0; &#xC5F0;&#xACB0;.</span>
+User.associate(db);
+Post.associate(db);
+Hashtag.associate(db);
+
+<span class="hljs-built_in">module</span>.exports = db;
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./models/user.js</span>
+
+<span class="hljs-keyword">const</span> Sequelize = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;sequelize&apos;</span>);
+
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">User</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Sequelize</span>.<span class="hljs-title">Model</span> </span>{
+    <span class="hljs-keyword">static</span> init(sequelize) {
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">super</span>.init({
+            email: {
+                type: Sequelize.STRING(<span class="hljs-number">40</span>),
+                allowNull: <span class="hljs-literal">true</span>,
+                unique: <span class="hljs-literal">true</span>,
+            },
+            nick: {
+                type: Sequelize.STRING(<span class="hljs-number">15</span>),
+                allowNull: <span class="hljs-literal">false</span>,
+            },
+            password: {
+                type: Sequelize.STRING(<span class="hljs-number">100</span>),
+                allowNull: <span class="hljs-literal">true</span>,
+            },
+            provider: { <span class="hljs-comment">// local: &#xB85C;&#xCEEC; &#xB85C;&#xADF8;&#xC778;, kakao: &#xCE74;&#xCE74;&#xC624; &#xB85C;&#xADF8;&#xC778;</span>
+                type: Sequelize.STRING(<span class="hljs-number">10</span>),
+                allowNull: <span class="hljs-literal">false</span>,
+                defaultValue: <span class="hljs-string">&apos;local&apos;</span>,
+            },
+            snsId: { <span class="hljs-comment">// sns &#xB85C;&#xADF8;&#xC778; &#xC2DC; &#xC800;&#xC7A5;</span>
+                type: Sequelize.STRING(<span class="hljs-number">30</span>),
+                allowNull: <span class="hljs-literal">true</span>,
+            },
+        }, {
+            sequelize,
+            timestamps: <span class="hljs-literal">true</span>, <span class="hljs-comment">// Set a createdAt and a updatedAt</span>
+            underscored: <span class="hljs-literal">false</span>,
+            modelName: <span class="hljs-string">&apos;User&apos;</span>,
+            tableName: <span class="hljs-string">&apos;users&apos;</span>,
+            paranoid: <span class="hljs-literal">true</span>, <span class="hljs-comment">// Set a deletedAt</span>
+            charset: <span class="hljs-string">&apos;uft8&apos;</span>,
+            collate: <span class="hljs-string">&apos;utf8_general_ci&apos;</span>,
+        });
+    }
+
+    <span class="hljs-comment">// &#xAC01; &#xBAA8;&#xB378; &#xAC04;&#xC758; &#xAD00;&#xACC4;&#xB97C; associate &#xD568;&#xC218; &#xC548;&#xC5D0; &#xC815;&#xC758;</span>
+    <span class="hljs-keyword">static</span> associate(db) {
+        db.User.hasMany(db.Post);
+        <span class="hljs-comment">// &#xAC19;&#xC740; &#xBAA8;&#xB378;&#xB07C;&#xB9AC; N:M &#xAD00;&#xACC4;&#xB97C; &#xAC16;&#xB294;&#xB2E4;.</span>
+        <span class="hljs-comment">// &#xC0AC;&#xC6A9;&#xC790; &#xD55C; &#xBA85;&#xC774; &#xD314;&#xB85C;&#xC6CC;&#xB97C; &#xC5EC;&#xB7EC; &#xBA85; &#xAC00;&#xC9C8; &#xC218;&#xB3C4; &#xC788;&#xACE0;, &#xD55C; &#xC0AC;&#xB78C;&#xC774; &#xC5EC;&#xB7EC; &#xBA85;&#xC744; &#xD314;&#xB85C;&#xC6B0;&#xD560; &#xC218; &#xC788;&#xC74C;.</span>
+        db.User.belongsToMany(db.User, {
+            foreignKey: <span class="hljs-string">&apos;followingId&apos;</span>, <span class="hljs-comment">// foreignKey&#xB85C; UserId &#xAD6C;&#xBCC4;</span>
+            <span class="hljs-keyword">as</span>: <span class="hljs-string">&apos;Followers&apos;</span>, <span class="hljs-comment">// foreignKey&#xC640; &#xBC18;&#xB300;&#xB418;&#xB294; &#xBAA8;&#xB378;&#xC744; &#xAC00;&#xB9AC;&#xD0A8;&#xB2E4;.</span>
+            through: <span class="hljs-string">&apos;Follow&apos;</span>, <span class="hljs-comment">// &#xC0DD;&#xC131;&#xD560; &#xBAA8;&#xB378;&#xBA85;.</span>
+        });
+        db.User.belongsToMany(db.User, {
+            foreignKey: <span class="hljs-string">&apos;followerId&apos;</span>,
+            <span class="hljs-keyword">as</span>: <span class="hljs-string">&apos;Followings&apos;</span>,
+            through: <span class="hljs-string">&apos;Follow&apos;</span>,
+        });
+        <span class="hljs-comment">// &#xAD00;&#xACC4; &#xBA54;&#xC11C;&#xB4DC;: user.getFollowers, user.getFollowings</span>
+    }
+}
+</code></pre>
+<h4 id="2-&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;-&#xB9CC;&#xB4E4;&#xAE30;">2) &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xB9CC;&#xB4E4;&#xAE30;</h4>
+<p> config &#xC124;&#xC815; &#xD6C4; DB &#xC0DD;&#xC131;&#xD558;&#xAE30; (DB&#xBA85;: nodebird)</p>
+<pre><code class="lang-json"><span class="hljs-comment">// ./config/config.json</span>
+
+{
+  <span class="hljs-string">&quot;development&quot;</span>: {
+    <span class="hljs-string">&quot;username&quot;</span>: <span class="hljs-string">&quot;root&quot;</span>,
+    <span class="hljs-string">&quot;password&quot;</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-string">&quot;database&quot;</span>: <span class="hljs-string">&quot;nodebird&quot;</span>,
+    <span class="hljs-string">&quot;host&quot;</span>: <span class="hljs-string">&quot;127.0.0.1&quot;</span>,
+    <span class="hljs-string">&quot;dialect&quot;</span>: <span class="hljs-string">&quot;mysql&quot;</span>
+  }
+}
+</code></pre>
+<pre><code class="lang-bash">$ npx sequelize db:create
+</code></pre>
+<p>&#xBAA8;&#xB378;&#xACFC; &#xC11C;&#xBC84; &#xC5F0;&#xACB0;&#xD558;&#xAE30;: &#xCF58;&#xC194;&#xC5D0; &#xC544;&#xB798; &#xB85C;&#xADF8; &#xCC0D;&#xD788;&#xBA74; &#xC131;&#xACF5;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./app.js</span>
+
+...
+const { sequelize } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./models&apos;</span>);
+sequelize.sync({ force: <span class="hljs-literal">false</span> })
+    .then(() =&gt; {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC5F0;&#xACB0; &#xC131;&#xACF5;&apos;</span>);
+    })
+    .catch((err) =&gt; {
+        <span class="hljs-built_in">console</span>.error(err);
+    });
+...
+</code></pre>
+<h3 id="93-passport-&#xBAA8;&#xB4C8;&#xB85C;-&#xB85C;&#xADF8;&#xC778;-&#xAD6C;&#xD604;&#xD558;&#xAE30;">9.3. Passport &#xBAA8;&#xB4C8;&#xB85C; &#xB85C;&#xADF8;&#xC778; &#xAD6C;&#xD604;&#xD558;&#xAE30;</h3>
+<p>&#xC9C1;&#xC811; &#xB85C;&#xADF8;&#xC778;&#xC744; &#xAD6C;&#xD604;&#xD558;&#xB294; &#xAC83;&#xC740; &#xC138;&#xC158;&#xACFC; &#xCFE0;&#xD0A4; &#xCC98;&#xB9AC; &#xB4F1; &#xBCF5;&#xC7A1;&#xD55C; &#xC791;&#xC5C5;&#xC774; &#xB9CE;&#xC73C;&#xBBC0;&#xB85C; &#xAC80;&#xC99D;&#xB41C; &#xBAA8;&#xB4C8;&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xB2E4;.</p>
+<p>passport: &#xC774;&#xB984;&#xCC98;&#xB7FC; &#xC6B0;&#xB9AC;&#xC758; &#xC11C;&#xBE44;&#xC2A4;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xAC8C; &#xD574;&#xC8FC;&#xB294; &#xC5EC;&#xAD8C; &#xAC19;&#xC740; &#xC5ED;&#xD560;.</p>
+<h4 id="1-passport-&#xC124;&#xCE58;-&#xD6C4;-appjs&#xC640;-&#xC5F0;&#xACB0;">1) passport &#xC124;&#xCE58; &#xD6C4; app.js&#xC640; &#xC5F0;&#xACB0;</h4>
+<pre><code class="lang-bash">$ npm i passport passport-local passport-kakao bcrypt
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./app.js</span>
+
+...
+const passport = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;passport&apos;</span>);
+<span class="hljs-keyword">const</span> passportConfig = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./passport&apos;</span>);
+
+passportConfig();
+
+app.use(passport.initialize()); <span class="hljs-comment">// req&#xAC1D;&#xCCB4;&#xC5D0; passport &#xC124;&#xC815;&#xC744; &#xCD94;&#xAC00;</span>
+app.use(passport.session()); <span class="hljs-comment">// req.session&#xAC1D;&#xCCB4;&#xC5D0; passport &#xC815;&#xBCF4;&#xB97C; &#xC800;&#xC7A5;</span>
+<span class="hljs-comment">// req.session&#xAC1D;&#xCCB4;&#xB294; express-session&#xC5D0;&#xC11C; &#xC0DD;&#xC131;&#xD558;&#xBBC0;&#xB85C; express-session &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4; &#xB4A4;&#xC5D0; &#xC5F0;&#xACB0;.</span>
+...
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./passport/index.js</span>
+
+<span class="hljs-keyword">const</span> passport = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;passport&apos;</span>);
+<span class="hljs-keyword">const</span> local = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./localStrategy&apos;</span>);
+<span class="hljs-keyword">const</span> kakao = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./kakaoStrategy&apos;</span>);
+<span class="hljs-keyword">const</span> User = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../models/user&apos;</span>);
+
+<span class="hljs-built_in">module</span>.exports = () =&gt; {
+    <span class="hljs-comment">// serializeUser: &#xB85C;&#xADF8;&#xC778; &#xC2DC; &#xC2E4;&#xD589;. req.session(&#xC138;&#xC158;) &#xAC1D;&#xCCB4;&#xC5D0; &#xC5B4;&#xB5A4; &#xB370;&#xC774;&#xD130;&#xB97C; &#xC800;&#xC7A5;&#xD560; &#xC9C0; &#xC815;&#xD558;&#xB294; &#xBA54;&#xC11C;&#xB4DC;.</span>
+    <span class="hljs-comment">// done(&#xC5D0;&#xB7EC; &#xBC1C; &#xC0DD; &#xC2DC; &#xC0AC;&#xC6A9; &#xC778;&#xC218;, &#xC800;&#xC7A5;&#xD558;&#xACE0; &#xC2F6;&#xC740; &#xB370;&#xC774;&#xD130; &#xC778;&#xC218;);</span>
+    passport.serializeUser((user, done) =&gt; {
+        done(<span class="hljs-literal">null</span>, user.id); <span class="hljs-comment">// user &#xC804;&#xBD80;&#xB97C; &#xC800;&#xC7A5;&#xD558;&#xBA74; &#xC138;&#xC158;&#xC758; &#xC6A9;&#xB7C9;&#xC774; &#xCEE4;&#xC9C0;&#xACE0; &#xB370;&#xC774;&#xD130; &#xC77C;&#xAD00;&#xC131;&#xC5D0; &#xBB38;&#xC81C;.</span>
+    });
+
+    <span class="hljs-comment">// deserializeUser: &#xB9E4; &#xC694;&#xCCAD; &#xC2DC; &#xC2E4;&#xD589;. serializeUser done&#xC758; &#xCCAB; &#xBC88;&#xC9F8; &#xC778;&#xC218;&#xAC00; deserializeUser&#xC758; &#xCCAB; &#xBC88;&#xC9F8; &#xB9E4;&#xAC1C;&#xBCC0;&#xC218;&#xAC00; &#xB428;.</span>
+    passport.deserializeUser((id, done) =&gt; {
+        User.findOne({ where: { id } })
+            .then(user =&gt; done(<span class="hljs-literal">null</span>, user))
+            .catch(err =&gt; done(err));
+    });
+
+    local();
+    kakao();
+};
+</code></pre>
+<h4 id="&#xB85C;&#xADF8;&#xC778;-&#xACFC;&#xC815;">&#xB85C;&#xADF8;&#xC778; &#xACFC;&#xC815;</h4>
+<ol>
+<li>&#xB77C;&#xC6B0;&#xD130;&#xB97C; &#xD1B5;&#xD574; &#xB85C;&#xADF8;&#xC778; &#xC694;&#xCCAD;&#xC774; &#xB4E4;&#xC5B4;&#xC634;</li>
+<li>&#xB77C;&#xC6B0;&#xD130;&#xC5D0;&#xC11C; passport.authenticate &#xBA54;&#xC11C;&#xB4DC; &#xD638;&#xCD9C;</li>
+<li>&#xB85C;&#xADF8;&#xC778; &#xC804;&#xB7B5; &#xC218;&#xD589;</li>
+<li>&#xB85C;&#xADF8;&#xC778; &#xC131;&#xACF5; &#xC2DC; &#xC0AC;&#xC6A9;&#xC790; &#xC815;&#xBCF4; &#xAC1D;&#xCCB4;&#xC640; &#xD568;&#xAED8; req.login &#xD638;&#xCD9C;</li>
+<li>req.login &#xBA54;&#xC11C;&#xB4DC;&#xAC00; passport.serializeUser &#xD638;&#xCD9C;</li>
+<li>req.session&#xC5D0; &#xC0AC;&#xC6A9;&#xC790; &#xC544;&#xC774;&#xB514;&#xB9CC; &#xC800;&#xC7A5;</li>
+<li>&#xB85C;&#xADF8;&#xC778; &#xC644;&#xB8CC;</li>
+</ol>
+<h4 id="&#xB85C;&#xADF8;&#xC778;-&#xC774;&#xD6C4;-&#xACFC;&#xC815;">&#xB85C;&#xADF8;&#xC778; &#xC774;&#xD6C4; &#xACFC;&#xC815;</h4>
+<ol>
+<li>&#xC694;&#xCCAD;&#xC774; &#xB4E4;&#xC5B4;&#xC634;</li>
+<li>&#xB77C;&#xC6B0;&#xD130;&#xC5D0; &#xC694;&#xCCAD;&#xC774; &#xB3C4;&#xB2EC;&#xD558;&#xAE30; &#xC804;&#xC5D0; passport.session &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xAC00; passport.deserializeUser &#xBA54;&#xC11C;&#xB4DC; &#xD638;&#xCD9C;</li>
+<li>req.session&#xC5D0; &#xC800;&#xC7A5;&#xB41C; &#xC544;&#xC774;&#xB514;&#xB85C; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC0AC;&#xC6A9;&#xC790; &#xC870;&#xD68C;</li>
+<li>&#xC870;&#xD68C;&#xB41C; &#xC0AC;&#xC6A9;&#xC790; &#xC815;&#xBCF4;&#xB97C; req.user&#xC5D0; &#xC800;&#xC7A5;</li>
+<li>&#xB77C;&#xC6B0;&#xD130;&#xC5D0;&#xC11C; req.user &#xAC1D;&#xCCB4; &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;</li>
+</ol>
+<h4 id="931-&#xB85C;&#xCEEC;-&#xB85C;&#xADF8;&#xC778;-&#xAD6C;&#xD604;&#xD558;&#xAE30;">9.3.1 &#xB85C;&#xCEEC; &#xB85C;&#xADF8;&#xC778; &#xAD6C;&#xD604;&#xD558;&#xAE30;</h4>
+<p>&#xC790;&#xCCB4;&#xC801;&#xC73C;&#xB85C; &#xD68C;&#xC6D0;&#xAC00;&#xC785; &#xD6C4; &#xB85C;&#xADF8;&#xC778;&#xD558;&#xB294; &#xAC83;. &#xC544;&#xC774;&#xB514;/&#xBE44;&#xBC00;&#xBC88;&#xD638; &#xB610;&#xB294; &#xC774;&#xBA54;&#xC77C;/&#xBE44;&#xBC00;&#xBC88;&#xD638; &#xC774;&#xC6A9;</p>
+<p>passport-local &#xBAA8;&#xB4C8; &#xC0AC;&#xC6A9;.</p>
+<h5 id="1-&#xB85C;&#xADF8;&#xC778;-&#xB77C;&#xC6B0;&#xD130;-&#xCD94;&#xAC00;-&#xD6C4;-&#xC811;&#xADFC;-&#xAD8C;&#xD55C;-&#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;-&#xCD94;&#xAC00;">1) &#xB85C;&#xADF8;&#xC778; &#xB77C;&#xC6B0;&#xD130; &#xCD94;&#xAC00; &#xD6C4; &#xC811;&#xADFC; &#xAD8C;&#xD55C; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4; &#xCD94;&#xAC00;</h5>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./routes/middlewares.js</span>
+
+exports.isLoggedIn = (req, res, next) =&gt; {
+    <span class="hljs-keyword">if</span> (req.isAuthenticated()) {
+        next();
+    } <span class="hljs-keyword">else</span> {
+        res.status(<span class="hljs-number">403</span>).send(<span class="hljs-string">&apos;&#xB85C;&#xADF8;&#xC778; &#xD544;&#xC694;&apos;</span>);
+    }
+};
+
+exports.isNotLoggedIn = (req, res, next) =&gt; {
+    <span class="hljs-keyword">if</span> (!req.isAuthenticated()) {
+        next();
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">const</span> message = <span class="hljs-built_in">encodeURIComponent</span>(<span class="hljs-string">&apos;&#xB85C;&#xADF8;&#xC778;&#xD55C; &#xC0C1;&#xD0DC;&#xC785;&#xB2C8;&#xB2E4;.&apos;</span>);
+        res.redirect(<span class="hljs-string">`/?error=<span class="hljs-subst">${message}</span>`</span>);
+    }
+};
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./routes/page.js</span>
+
+...
+const { isLoggedIn, isNotLoggedIn } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./middlewares&apos;</span>);
+...
+router.use((req, res, next) =&gt; {
+    res.locals.user = req.user;
+    res.locals.followerCount = <span class="hljs-number">0</span>;
+    res.locals.followingCount = <span class="hljs-number">0</span>;
+    res.locals.followerIdList = [];
+    next();
+});
+
+router.get(<span class="hljs-string">&apos;/profile&apos;</span>, isLoggedIn, (req, res) =&gt; {
+    <span class="hljs-comment">// req.isAuthenticated()&#xAC00; true&#xB77C;&#xBA74; &#xC815;&#xC0C1; &#xC791;&#xB3D9;, false&#xBA74; &#xBA54;&#xC778; &#xD398;&#xC774;&#xC9C0;&#xB85C; &#xB9AC;&#xB2E4;&#xC774;&#xB809;&#xD2B8;</span>
+    res.render(<span class="hljs-string">&apos;profile&apos;</span>, { title: <span class="hljs-string">&apos;&#xB0B4; &#xC815;&#xBCF4; - NodeBird&apos;</span> });
+});
+
+router.get(<span class="hljs-string">&apos;/join&apos;</span>, isNotLoggedIn, (req, res) =&gt; {
+    <span class="hljs-comment">// req.isAuthenticated()&#xAC00; false&#xC77C; &#xB54C; &#xC815;&#xC0C1; &#xC791;&#xB3D9;.</span>
+    res.render(<span class="hljs-string">&apos;join&apos;</span>, { title: <span class="hljs-string">&apos;&#xD68C;&#xC6D0;&#xAC00;&#xC785; - NodeBird&apos;</span> });
+});
+
+...
+</code></pre>
+<h5 id="2-&#xD68C;&#xC6D0;&#xAC00;&#xC785;-&#xB85C;&#xADF8;&#xC778;-&#xB85C;&#xADF8;&#xC544;&#xC6C3;-&#xB77C;&#xC6B0;&#xD130;-&#xC791;&#xC131;">2) &#xD68C;&#xC6D0;&#xAC00;&#xC785;, &#xB85C;&#xADF8;&#xC778;, &#xB85C;&#xADF8;&#xC544;&#xC6C3; &#xB77C;&#xC6B0;&#xD130; &#xC791;&#xC131;</h5>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./routes/auth.js</span>
+
+<span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">const</span> passport = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;passport&apos;</span>);
+<span class="hljs-keyword">const</span> bcrypt = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;bcrypt&apos;</span>);
+<span class="hljs-keyword">const</span> { isLoggedIn, isNotLoggedIn } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./middlewares&apos;</span>);
+<span class="hljs-keyword">const</span> User = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../models/user&apos;</span>);
+
+<span class="hljs-keyword">const</span> router = express.Router();
+
+<span class="hljs-comment">// &#xD68C;&#xC6D0;&#xAC00;&#xC785; &#xB77C;&#xC6B0;&#xD130;. </span>
+router.post(<span class="hljs-string">&apos;/join&apos;</span>, isNotLoggedIn, <span class="hljs-keyword">async</span> (req, res, next) =&gt; {
+    <span class="hljs-keyword">const</span> { email, nick, password } = req.body;
+    <span class="hljs-keyword">try</span> {
+        <span class="hljs-comment">// &#xAE30;&#xC874;&#xC5D0; &#xAC19;&#xC740; &#xC774;&#xBA54;&#xC77C;&#xB85C; &#xAC00;&#xC785;&#xD55C; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC788;&#xB2E4;&#xBA74; &#xD68C;&#xC6D0;&#xAC00;&#xC785; &#xD398;&#xC774;&#xC9C0;&#xB85C; &#xC774;&#xB3D9;</span>
+        <span class="hljs-keyword">const</span> exUser = <span class="hljs-keyword">await</span> User.findOne({ where: { email } });
+        <span class="hljs-keyword">if</span> (exUser) {
+            <span class="hljs-keyword">return</span> res.redirect(<span class="hljs-string">&apos;/join?error=exist&apos;</span>);
+        }
+        <span class="hljs-comment">// &#xC5C6;&#xB2E4;&#xBA74; &#xBE44;&#xBC00;&#xBC88;&#xD638;&#xB97C; &#xC554;&#xD638;&#xD654;&#xD558;&#xACE0; &#xC0AC;&#xC6A9;&#xC790; &#xC815;&#xBCF4; &#xC0DD;&#xC131;</span>
+        <span class="hljs-keyword">const</span> hash = <span class="hljs-keyword">await</span> bcrypt.hash(password, <span class="hljs-number">12</span>); <span class="hljs-comment">// &#xB450; &#xBC88;&#xC9F8; &#xC778;&#xC218;&#xB294; pbkdf2&#xC758; &#xBC18;&#xBCF5; &#xD69F;&#xC218;. 12~31 &#xCD94;&#xCC9C;. </span>
+        <span class="hljs-keyword">await</span> User.create({
+            email,
+            nick,
+            password: hash,
+        });
+        <span class="hljs-keyword">return</span> res.redirect(<span class="hljs-string">&apos;/&apos;</span>);
+    } <span class="hljs-keyword">catch</span> (error) {
+        <span class="hljs-built_in">console</span>.error(error);
+        <span class="hljs-keyword">return</span> next(error);
+    }
+});
+
+<span class="hljs-comment">// &#xB85C;&#xADF8;&#xC778; &#xB77C;&#xC6B0;&#xD130;. </span>
+router.post(<span class="hljs-string">&apos;/login&apos;</span>, isNotLoggedIn, (req, res, next) =&gt; {
+    <span class="hljs-comment">// &#xB85C;&#xADF8;&#xC778; &#xC694;&#xCCAD;&#xC774; &#xB4E4;&#xC5B4;&#xC624;&#xBA74; &#xC544;&#xB798; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xAC00; &#xB85C;&#xCEEC; &#xB85C;&#xADF8;&#xC778; &#xC804;&#xB7B5; &#xC218;&#xD589;.</span>
+    passport.authenticate(<span class="hljs-string">&apos;local&apos;</span>, (authError, user, info) =&gt; {
+        <span class="hljs-keyword">if</span> (authError) {
+            <span class="hljs-built_in">console</span>.error(authError);
+            <span class="hljs-keyword">return</span> next(authError);
+        }
+        <span class="hljs-keyword">if</span> (!user) {
+            <span class="hljs-keyword">return</span> res.redirect(<span class="hljs-string">`/?loginError=<span class="hljs-subst">${info.message}</span>`</span>)
+        }
+        <span class="hljs-keyword">return</span> req.login(user, (loginError) =&gt; {
+            <span class="hljs-keyword">if</span> (loginError) {
+                <span class="hljs-built_in">console</span>.error(loginError);
+                <span class="hljs-keyword">return</span> next(loginError);
+            }
+            <span class="hljs-keyword">return</span> res.redirect(<span class="hljs-string">&apos;/&apos;</span>);
+        });
+    })(req, res, next); <span class="hljs-comment">// &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4; &#xB0B4;&#xC758; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xB294; (req, res, next) &#xB97C; &#xBD99;&#xC778;&#xB2E4;.</span>
+});
+
+<span class="hljs-comment">// &#xB85C;&#xADF8;&#xC544;&#xC6C3; &#xB77C;&#xC6B0;&#xD130;</span>
+router.get(<span class="hljs-string">&apos;/logout&apos;</span>, isLoggedIn, (req, res) =&gt; {
+    req.logout(); <span class="hljs-comment">// req.user &#xAC1D;&#xCCB4; &#xC81C;&#xAC70;</span>
+    req.session.destroy(); <span class="hljs-comment">// req.session &#xAC1D;&#xCCB4; &#xB0B4;&#xC6A9; &#xC81C;&#xAC70;</span>
+    res.redirect(<span class="hljs-string">&apos;/&apos;</span>);
+});
+
+<span class="hljs-built_in">module</span>.exports = router;
+</code></pre>
+<h5 id="3-passport-&#xC804;&#xB7B5;-&#xCD94;&#xAC00;">3) passport &#xC804;&#xB7B5; &#xCD94;&#xAC00;</h5>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./passport/localStrategy.js</span>
+
+<span class="hljs-keyword">const</span> passport = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;passport&apos;</span>);
+<span class="hljs-keyword">const</span> LocalStrategy = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;passport-local&apos;</span>).Strategy;
+<span class="hljs-keyword">const</span> bcrypt = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;bcrypt&apos;</span>);
+
+<span class="hljs-keyword">const</span> User = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../models/user&apos;</span>);
+
+<span class="hljs-built_in">module</span>.exports = () =&gt; {
+    <span class="hljs-comment">// LocalStrategy&#xC758; &#xCCAB; &#xBC88;&#xC9F8; &#xC778;&#xC218;: &#xC804;&#xB7B5;&#xC5D0; &#xAD00;&#xD55C; &#xC124;&#xC815;.</span>
+    <span class="hljs-comment">// usernameField&#xC640; passwordField&#xC5D0; &#xC77C;&#xCE58;&#xD558;&#xB294; &#xB85C;&#xADF8;&#xC778; &#xB77C;&#xC6B0;&#xD130;&#xC758; req.body &#xC18D;&#xC131; &#xCD94;&#xAC00;.</span>
+    passport.use(<span class="hljs-keyword">new</span> LocalStrategy({
+        usernameField: <span class="hljs-string">&apos;email&apos;</span>,
+        passwordField: <span class="hljs-string">&apos;password&apos;</span>,
+    }, <span class="hljs-keyword">async</span> (email, password, done) =&gt; {
+    <span class="hljs-comment">// &#xC2E4;&#xC81C; &#xC804;&#xB7B5;&#xC744; &#xC218;&#xD589;&#xD558;&#xB294; &#xD568;&#xC218;.</span>
+    <span class="hljs-comment">// done&#xC758; &#xC778;&#xC218;&#xB294; routes/auth.js&#xC758; passport.authenticate(&apos;local&apos;, (authError, user, info) =&gt; { &#xC640; &#xB300;&#xCE58;</span>
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-keyword">const</span> exUser = <span class="hljs-keyword">await</span> User.findOne({ where: { email } });
+            <span class="hljs-comment">// 1. User db&#xC5D0; &#xC77C;&#xCE58;&#xD558;&#xB294; &#xC774;&#xBA54;&#xC77C;&#xC744; &#xCC3E;&#xACE0;, &#xC788;&#xB2E4;&#xBA74; compare()&#xB85C; &#xBE44;&#xBC00;&#xBC88;&#xD638; &#xBE44;&#xAD50;</span>
+            <span class="hljs-keyword">if</span> (exUser) {
+                <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> bcrypt.compare(password, exUser.password);
+                <span class="hljs-keyword">if</span> (result) {
+                    <span class="hljs-comment">// 2. &#xBE44;&#xBC00;&#xBC88;&#xD638;&#xAC00; &#xC77C;&#xCE58;&#xD558;&#xBA74; &#xB450; &#xBC88;&#xC9F8; &#xC778;&#xC218;&#xB85C; &#xC0AC;&#xC6A9;&#xC790; &#xC815;&#xBCF4;&#xB97C; &#xB123;&#xC5B4; &#xBCF4;&#xB0C4;.</span>
+                    done(<span class="hljs-literal">null</span>, exUser);
+                } <span class="hljs-keyword">else</span> {
+                    <span class="hljs-comment">// 3. &#xBE44;&#xBC00;&#xBC88;&#xD638;&#xAC00; &#xC77C;&#xCE58;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xC138; &#xBC88;&#xC9F8; &#xC778;&#xC218;&#xB85C; &#xC5D0;&#xB7EC;&#xBA54;&#xC2DC;&#xC9C0;&#xB97C; &#xBCF4;&#xB0C4;.</span>
+                    done(<span class="hljs-literal">null</span>, <span class="hljs-literal">false</span>, { message: <span class="hljs-string">&apos;&#xBE44;&#xBC00;&#xBC88;&#xD638;&#xAC00; &#xC77C;&#xCE58;&#xD558;&#xC9C0; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;.&apos;</span> });
+                }
+            } <span class="hljs-keyword">else</span> {
+                done(<span class="hljs-literal">null</span>, <span class="hljs-literal">false</span>, { message: <span class="hljs-string">&apos;&#xAC00;&#xC785;&#xB418;&#xC9C0; &#xC54A;&#xC740; &#xD68C;&#xC6D0;&#xC785;&#xB2C8;&#xB2E4;.&apos;</span> });
+            }
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.error(error);
+            done(error);
+        } 
+    }));
+};
+</code></pre>
+<h4 id="932-&#xCE74;&#xCE74;&#xC624;-&#xB85C;&#xADF8;&#xC778;-&#xAD6C;&#xD604;&#xD558;&#xAE30;">9.3.2 &#xCE74;&#xCE74;&#xC624; &#xB85C;&#xADF8;&#xC778; &#xAD6C;&#xD604;&#xD558;&#xAE30;</h4>
+<p>&#xB85C;&#xADF8;&#xC778; &#xC778;&#xC99D; &#xACFC;&#xC815;&#xC744; &#xCE74;&#xCE74;&#xC624;&#xC5D0; &#xB9E1;&#xAE30;&#xB294; &#xAC83;.</p>
+<p>SNS &#xB85C;&#xADF8;&#xC778;&#xC740; &#xD68C;&#xC6D0;&#xAC00;&#xC785; &#xC808;&#xCC28;&#xAC00; &#xB530;&#xB85C; &#xC5C6;&#xC73C;&#xBBC0;&#xB85C; &#xCC98;&#xC74C; &#xB85C;&#xADF8;&#xC778;&#xD560; &#xB54C;&#xB294; &#xD68C;&#xC6D0;&#xAC00;&#xC785;&#xC744;, &#xB450; &#xBC88;&#xC9F8; &#xB85C;&#xADF8;&#xC778;&#xBD80;&#xD130;&#xB294; &#xB85C;&#xADF8;&#xC778; &#xCC98;&#xB9AC;&#xB97C; &#xD574;&#xC57C; &#xD568;.</p>
+<h5 id="1-kakao-passport-&#xC804;&#xB7B5;-&#xCD94;&#xAC00;">1) kakao passport &#xC804;&#xB7B5; &#xCD94;&#xAC00;</h5>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./passport/kakaoStrategy.js</span>
+
+<span class="hljs-keyword">const</span> passport = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;passport&apos;</span>);
+<span class="hljs-keyword">const</span> LocalStrategy = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;passport-local&apos;</span>).Strategy;
+<span class="hljs-keyword">const</span> passport = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;passport&apos;</span>);
+<span class="hljs-keyword">const</span> KakaoStrategy = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;passport-kakao&apos;</span>).Strategy;
+
+<span class="hljs-keyword">const</span> User = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../models/user&apos;</span>);
+
+<span class="hljs-built_in">module</span>.exports = () =&gt; {
+    <span class="hljs-comment">// &#xCE74;&#xCE74;&#xC624; &#xB85C;&#xADF8;&#xC778;&#xC5D0; &#xB300;&#xD55C; &#xC124;&#xC815;.</span>
+    passport.use(<span class="hljs-keyword">new</span> KakaoStrategy({
+        clientID: process.env.KAKAO_ID, <span class="hljs-comment">// &#xCE74;&#xCE74;&#xC624;&#xC5D0;&#xC11C; &#xBC1C;&#xAE09;&#xD558;&#xB294; &#xC544;&#xC774;&#xB514;. &#xB178;&#xCD9C;&#xB418;&#xC9C0; &#xC54A;&#xC544;&#xC57C; &#xD558;&#xBBC0;&#xB85C; env&#xB85C; &#xC124;&#xC815;.</span>
+        callbackURL: <span class="hljs-string">&apos;/auth/kakao/callback&apos;</span>, <span class="hljs-comment">// &#xCE74;&#xCE74;&#xC624;&#xB85C;&#xBD80;&#xD130; &#xC778;&#xC99D; &#xACB0;&#xACFC;&#xB97C; &#xBC1B;&#xC744; &#xB77C;&#xC6B0;&#xD130; &#xC8FC;&#xC18C;.</span>
+    }, <span class="hljs-keyword">async</span> (accessToken, refreshToken, profile, done) =&gt; {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;kakao profile&apos;</span>, profile);
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-keyword">const</span> exUser = <span class="hljs-keyword">await</span> User.findOne({ where: { snsId: profile.id, provider: <span class="hljs-string">&apos;kakao&apos;</span> } });
+            <span class="hljs-comment">// 1. &#xAE30;&#xC874;&#xC5D0; &#xCE74;&#xCE74;&#xC624;&#xB85C; &#xD68C;&#xC6D0;&#xAC00;&#xC785;&#xD55C; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xC788;&#xB294;&#xC9C0; &#xC870;&#xD68C;&#xD558;&#xACE0;, &#xC788;&#xB2E4;&#xBA74; done &#xD638;&#xCD9C; &#xD6C4; &#xC885;&#xB8CC;.</span>
+            <span class="hljs-keyword">if</span> (exUser) {
+                done(<span class="hljs-literal">null</span>, exUser);
+            } <span class="hljs-keyword">else</span> {
+            <span class="hljs-comment">// 2. &#xC5C6;&#xB2E4;&#xBA74; &#xD68C;&#xC6D0;&#xAC00;&#xC785; &#xC9C4;&#xD589;. &#xCE74;&#xCE74;&#xC624;&#xC5D0;&#xC11C; &#xC804;&#xB2EC;&#xD558;&#xB294; profile &#xAC1D;&#xCCB4;&#xC5D0;&#xC11C; &#xC6D0;&#xD558;&#xB294; &#xC815;&#xBCF4;&#xB97C; &#xAEBC;&#xB0B4; &#xAC00;&#xC785;&#xD55C;&#xB2E4;.</span>
+                <span class="hljs-keyword">const</span> newUser = <span class="hljs-keyword">await</span> User.create({
+                    email: profile._json &amp;&amp; profile._json.kakao_account_email,
+                    nick: profile.displayName,
+                    snsId: profile.id,
+                    provider: <span class="hljs-string">&apos;kakao&apos;</span>,
+                });
+                done(<span class="hljs-literal">null</span>, newUser);
+            }
+        } <span class="hljs-keyword">catch</span> (error) {
+            <span class="hljs-built_in">console</span>.error(error);
+            done(error);
+        }
+    }));
+};
+</code></pre>
+<h5 id="2-kakao-&#xB85C;&#xADF8;&#xC778;-&#xB77C;&#xC6B0;&#xD130;-&#xCD94;&#xAC00;">2) kakao &#xB85C;&#xADF8;&#xC778; &#xB77C;&#xC6B0;&#xD130; &#xCD94;&#xAC00;</h5>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./routes/auth.js</span>
+
+...
+<span class="hljs-comment">// /auth/kakao&#xC5D0;&#xC11C; &#xB85C;&#xADF8;&#xC778; &#xC804;&#xB7B5;&#xC744; &#xC218;&#xD589;&#xD558;&#xB294;&#xB370; &#xCC98;&#xC74C;&#xC5D0;&#xB294; 1. &#xCE74;&#xCE74;&#xC624; &#xB85C;&#xADF8;&#xC778; &#xCC3D;&#xC73C;&#xB85C; &#xB9AC;&#xB2E4;&#xC774;&#xB809;&#xD2B8;&#xD558;&#xACE0;</span>
+router.get(<span class="hljs-string">&apos;/kakao&apos;</span>, passport.authenticate(<span class="hljs-string">&apos;kakao&apos;</span>));
+
+<span class="hljs-comment">// 2. &#xB85C;&#xADF8;&#xC778; &#xD6C4; &#xC131;&#xACF5; &#xC5EC;&#xBD80; &#xACB0;&#xACFC;&#xB97C; /auth/kakao/callback&#xC73C;&#xB85C;  &#xBC1B;&#xB294;&#xB2E4;.</span>
+router.get(<span class="hljs-string">&apos;/kakao/callback&apos;</span>, passport.authenticate(<span class="hljs-string">&apos;kakao&apos;</span>, { failureRedirect: <span class="hljs-string">&apos;/&apos;</span>, }), (req, res) =&gt; {
+        res.redirect(<span class="hljs-string">&apos;/&apos;</span>);
+});
+...
+</code></pre>
+<h5 id="3-kakao-clientid-&#xBC1C;&#xAE09;&#xBC1B;&#xAE30;">3) kakao clientID &#xBC1C;&#xAE09;&#xBC1B;&#xAE30;</h5>
+<p><a href="https://developers.kakao.com/" target="_blank">https://developers.kakao.com/</a></p>
+<p>&#xD560; &#xC77C;</p>
+<ul>
+<li>&apos;&apos;&#xC560;&#xD50C;&#xB9AC;&#xCF00;&#xC774;&#xC158; &#xCD94;&#xAC00;&#xD558;&#xAE30;&apos; &#xD558;&#xACE0; REST API &#xD0A4; .env &#xC5D0; <code>KAKAO_ID=</code> &#xB85C; &#xB123;&#xAE30;</li>
+<li>&#xC571; &#xC124;&#xC815; &gt; &#xD50C;&#xB7AB;&#xD3FC; &gt; Web &#xD50C;&#xB7AB;&#xD3FC; &#xB4F1;&#xB85D; &#xC5D0;&#xC11C; &#xB3C4;&#xBA54;&#xC778; <code>http://localhost:8001</code> &#xCD94;&#xAC00;&#xD558;&#xAE30;</li>
+<li>&#xC81C;&#xD488; &#xC124;&#xC815; &gt; &#xCE74;&#xCE74;&#xC624; &#xB85C;&#xADF8;&#xC778; &#xC5D0;&#xC11C; &#xD65C;&#xC131;&#xD654; &#xC124;&#xC815; ON</li>
+<li>redirect URL <code>http://localhost:8001/auth/kakao/callback</code>  &#xC800;&#xC7A5;</li>
+<li>&#xCE74;&#xCE74;&#xC624; &#xB85C;&#xADF8;&#xC778; &gt; &#xB3D9;&#xC758;&#xD56D;&#xBAA9; &#xC5D0;&#xC11C; &#xCE74;&#xCE74;&#xC624; &#xACC4;&#xC815;&#xC73C;&#xB85C; &#xC815;&#xBCF4; &#xC218;&#xC9D1; &#xD6C4; &#xC81C;&#xACF5; &#xCCB4;&#xD06C; &#xD6C4; &#xC800;&#xC7A5;</li>
+</ul>
+<h3 id="94-multer-&#xD328;&#xD0A4;&#xC9C0;&#xB85C;-&#xC774;&#xBBF8;&#xC9C0;-&#xC5C5;&#xB85C;&#xB4DC;-&#xAD6C;&#xD604;&#xD558;&#xAE30;">9.4 multer &#xD328;&#xD0A4;&#xC9C0;&#xB85C; &#xC774;&#xBBF8;&#xC9C0; &#xC5C5;&#xB85C;&#xB4DC; &#xAD6C;&#xD604;&#xD558;&#xAE30;</h3>
+<p>multer&#xB85C; &#xBA40;&#xD2F0;&#xD30C;&#xD2B8; &#xD615;&#xC2DD;&#xC758; &#xC774;&#xBBF8;&#xC9C0; &#xC5C5;&#xB85C;&#xB4DC;</p>
+<pre><code class="lang-bash">$ npm i multer
+</code></pre>
+<p>&#xC774;&#xBBF8;&#xC9C0; &#xC800;&#xC7A5; &#xBC29;&#xBC95;</p>
+<ul>
+<li><code>input</code> &#xD0DC;&#xADF8;&#xB85C; &#xC774;&#xBBF8;&#xC9C0;&#xB97C; &#xC120;&#xD0DD;&#xD560; &#xB54C; &#xBC14;&#xB85C; &#xC5C5;&#xB85C;&#xB4DC;&#xB97C; &#xC9C4;&#xD589;&#xD558;&#xACE0;, &#xC5C5;&#xB85C;&#xB4DC;&#xB41C; &#xC0AC;&#xC9C4; &#xC8FC;&#xC18C;&#xB97C; &#xB2E4;&#xC2DC; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xC5D0; &#xC54C;&#xB9B0;&#xB2E4;.</li>
+<li>&#xAC8C;&#xC2DC;&#xAE00;&#xC744; &#xC800;&#xC7A5;&#xD560; &#xB54C;&#xB294; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xC5D0; &#xC9C1;&#xC811; &#xC774;&#xBBF8;&#xC9C0; &#xB370;&#xC774;&#xD130;&#xB97C; &#xB123;&#xB294; &#xB300;&#xC2E0; &#xC774;&#xBBF8;&#xC9C0; &#xACBD;&#xB85C;&#xB9CC; &#xC800;&#xC7A5;.</li>
+<li>&#xC774;&#xBBF8;&#xC9C0;&#xB294; &#xC11C;&#xBC84; &#xB514;&#xC2A4;&#xD06C;&#xC5D0; &#xC800;&#xC7A5;.</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./routes/post.js</span>
+
+<span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">const</span> multer = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;multer&apos;</span>);
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+
+<span class="hljs-keyword">const</span> { Post, Hashtag } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../models&apos;</span>);
+<span class="hljs-keyword">const</span> { isLoggedIn } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./middlewares&apos;</span>);
+
+<span class="hljs-keyword">const</span> router = express.Router();
+
+<span class="hljs-keyword">try</span> {
+    fs.readdirSync(<span class="hljs-string">&apos;uploads&apos;</span>);
+} <span class="hljs-keyword">catch</span> (error) {
+    <span class="hljs-built_in">console</span>.error(<span class="hljs-string">&apos;uploads &#xD3F4;&#xB354;&#xAC00; &#xC5C6;&#xC5B4; uploads &#xD3F4;&#xB354;&#xB97C; &#xC0DD;&#xC131;&#xD569;&#xB2C8;&#xB2E4;.&apos;</span>);
+    fs.mkdirSync(<span class="hljs-string">&apos;uploads&apos;</span>);
+}
+
+<span class="hljs-keyword">const</span> uploads = multer({
+    storage: multer.diskStorage({
+        destination(req, file, cb) {
+            cb(<span class="hljs-literal">null</span>, <span class="hljs-string">&apos;uploads/&apos;</span>);
+        }, filename(req, file, cb) {
+            <span class="hljs-keyword">const</span> ext = path.extname(file.originalname);
+            cb(<span class="hljs-literal">null</span>, path.basename(file.originalname, ext) + <span class="hljs-built_in">Date</span>.now() + ext);
+        },
+    }),
+    limits: { fileSize: <span class="hljs-number">5</span> * <span class="hljs-number">1024</span> * <span class="hljs-number">1024</span> },
+});
+
+<span class="hljs-comment">// &#xC774;&#xBBF8;&#xC9C0; &#xD558;&#xB098;&#xB97C; &#xC5C5;&#xB85C;&#xB4DC;&#xBC1B;&#xC740; &#xB4A4; &#xC774;&#xBBF8;&#xC9C0;&#xC758; &#xC800;&#xC7A5; &#xACBD;&#xB85C;&#xB97C; &#xD074;&#xB77C;&#xC774;&#xC5B8;&#xD2B8;&#xB85C; &#xC751;&#xB2F5;</span>
+router.post(<span class="hljs-string">&apos;/img&apos;</span>, isLoggedIn, uploads.single(<span class="hljs-string">&apos;img&apos;</span>), (req, res) =&gt; {
+    <span class="hljs-built_in">console</span>.log(req.file);
+    res.json({ url: <span class="hljs-string">`/img/<span class="hljs-subst">${req.file.filename}</span>`</span> });
+});
+
+<span class="hljs-keyword">const</span> upload2 = multer();
+<span class="hljs-comment">// &#xAC8C;&#xC2DC;&#xAE00; &#xC5C5;&#xB85C;&#xB4DC;&#xB97C; &#xCC98;&#xB9AC;&#xD558;&#xB294; &#xB77C;&#xC6B0;&#xD130;.</span>
+router.post(<span class="hljs-string">&apos;/&apos;</span>, isLoggedIn, upload2.none(), <span class="hljs-keyword">async</span> (req, res, next) =&gt; {
+    <span class="hljs-keyword">try</span> {
+        <span class="hljs-keyword">const</span> post = <span class="hljs-keyword">await</span> Post.create({
+            content: req.body.content,
+            img: req.body.url, <span class="hljs-comment">// /post/img &#xC5D0;&#xC11C; &#xC800;&#xC7A5;&#xD55C; &#xC774;&#xBBF8;&#xC9C0; &#xC8FC;&#xC18C;&#xAC00; &#xC800;&#xC7A5;.</span>
+            UserId: req.user.id,
+        });
+        <span class="hljs-keyword">const</span> hashtags = req.body.content.match(<span class="hljs-regexp">/#[^\s#]*/g</span>); <span class="hljs-comment">// &#xD574;&#xC2DC;&#xD0DC;&#xADF8;&#xB97C; &#xC815;&#xADDC;&#xC2DD;&#xC73C;&#xB85C; &#xCD94;&#xCD9C; &#xD6C4; DB&#xC5D0; &#xC800;&#xC7A5;</span>
+        <span class="hljs-keyword">if</span> (hashtags) {
+            <span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> <span class="hljs-built_in">Promise</span>.all(
+                hashtags.map(tag =&gt; {
+                    <span class="hljs-keyword">return</span> Hashtag.findOrCreate({ <span class="hljs-comment">// findOrCreate &#xBA54;&#xC11C;&#xB4DC;&#xB85C; DB&#xC5D0; &#xC788;&#xC73C;&#xBA74; &#xAC00;&#xC838;&#xC624;&#xACE0;, &#xC5C6;&#xC73C;&#xBA74; &#xC0DD;&#xC131;&#xD558;&#xACE0; &#xAC00;&#xC838;&#xC628;&#xB2E4;.</span>
+                        where: { title: tag.slice(<span class="hljs-number">1</span>).toLowerCase() },
+                    })
+                }),
+            );
+            <span class="hljs-keyword">await</span> post.addHashtags(result.map(r =&gt; r[<span class="hljs-number">0</span>])); <span class="hljs-comment">// r&#xC774; [&#xBAA8;&#xB378;, &#xC0DD;&#xC131; &#xC5EC;&#xBD80;] &#xB97C; &#xBC18;&#xD658;.</span>
+        }
+        res.redirect(<span class="hljs-string">&apos;/&apos;</span>);
+    } <span class="hljs-keyword">catch</span> (error) {
+        <span class="hljs-built_in">console</span>.error(error);
+        next(error);
+    }
+});
+
+<span class="hljs-built_in">module</span>.exports = router;
+</code></pre>
+<blockquote>
+<p>NOTE: &#xC2E4;&#xC81C; &#xC11C;&#xBC84; &#xC6B4;&#xC601; &#xC2DC;</p>
+<p>multer &#xD328;&#xD0A4;&#xC9C0;&#xB294; &#xC774;&#xBBF8;&#xC9C0;&#xB97C; &#xC11C;&#xBC84; &#xB514;&#xC2A4;&#xD06C;&#xC5D0; &#xC800;&#xC7A5;&#xD558;&#xB294;&#xB370; &#xAC04;&#xB2E8;&#xD558;&#xC9C0;&#xB9CC; &#xC11C;&#xBC84;&#xC5D0; &#xBB38;&#xC81C;&#xAC00; &#xC0DD;&#xACBC;&#xC744; &#xB54C; &#xC81C;&#xACF5;&#xB418;&#xC9C0; &#xC54A;&#xAC70;&#xB098; &#xC190;&#xC2E4; &#xC6B0;&#xB824; O.</p>
+<p>AWS S3&#xC774;&#xB098; &#xD074;&#xB77C;&#xC6B0;&#xB4DC; &#xC2A4;&#xD1A0;&#xB9AC;&#xC9C0;&#xAC19;&#xC740; &#xC815;&#xC801; &#xD30C;&#xC77C; &#xC81C;&#xACF5; &#xC11C;&#xBE44;&#xC2A4;&#xB85C; &#xC774;&#xBBF8;&#xC9C0; &#xB530;&#xB85C; &#xC800;&#xC7A5;/&#xC81C;&#xACF5; &#xCD94;&#xCC9C;.</p>
+<p>i.e., multer-s3, multer-google-storage</p>
+</blockquote>
+<h5 id="&#xBA54;&#xC778;-&#xD398;&#xC774;&#xC9C0;-&#xB85C;&#xB529;-&#xC2DC;-&#xBA54;&#xC778;-&#xD398;&#xC774;&#xC9C0;&#xC640;-&#xAC8C;&#xC2DC;&#xAE00;&#xC744;-&#xD568;&#xAED8;-&#xB85C;&#xB529;">&#xBA54;&#xC778; &#xD398;&#xC774;&#xC9C0; &#xB85C;&#xB529; &#xC2DC; &#xBA54;&#xC778; &#xD398;&#xC774;&#xC9C0;&#xC640; &#xAC8C;&#xC2DC;&#xAE00;&#xC744; &#xD568;&#xAED8; &#xB85C;&#xB529;</h5>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./routes/page.js</span>
+
+...
+const { Post, User } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../models&apos;</span>);
+
+router.get(<span class="hljs-string">&apos;/&apos;</span>, <span class="hljs-keyword">async</span> (req, res, next) =&gt; {
+    <span class="hljs-keyword">try</span> {
+    <span class="hljs-comment">// DB&#xC5D0;&#xC11C; &#xAC8C;&#xC2DC;&#xAE00;&#xC744; &#xC870;&#xD68C;&#xD558;&#xACE0; &#xACB0;&#xACFC;&#xB97C; twits&#xC5D0; &#xB123;&#xC5B4; &#xB80C;&#xB354;&#xB9C1;.</span>
+        <span class="hljs-keyword">const</span> posts = <span class="hljs-keyword">await</span> Post.findAll({
+            include: {
+                model: User,
+                attributes: [<span class="hljs-string">&apos;id&apos;</span>, <span class="hljs-string">&apos;nick&apos;</span>], <span class="hljs-comment">// &#xC870;&#xD68C; &#xC870;&#xAC74;1: &#xC544;&#xC774;&#xB514;&#xC640; &#xB2C9;&#xB124;&#xC784;&#xC744; JOIN&#xD558;&#xC5EC; &#xC81C;&#xACF5;</span>
+            },
+            order: [[<span class="hljs-string">&apos;createdAt&apos;</span>, <span class="hljs-string">&apos;DESC&apos;</span>]], <span class="hljs-comment">// &#xC870;&#xD68C; &#xC870;&#xAC74;2: &#xCD5C;&#xC2E0;&#xC21C; &#xC815;&#xB82C;</span>
+        });
+        res.render(<span class="hljs-string">&apos;main&apos;</span>, {
+            title: <span class="hljs-string">&apos;NodeBird&apos;</span>,
+            twits: posts,
+        });
+    } <span class="hljs-keyword">catch</span> (err) {
+        <span class="hljs-built_in">console</span>.error(err);
+        next(err);
+    }
+});
+...
+</code></pre>
+<h3 id="95-&#xD504;&#xB85C;&#xC81D;&#xD2B8;-&#xB9C8;&#xBB34;&#xB9AC;&#xD558;&#xAE30;">9.5 &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xB9C8;&#xBB34;&#xB9AC;&#xD558;&#xAE30;</h3>
+<h4 id="&#xD314;&#xB85C;&#xC789;-&#xAE30;&#xB2A5;">&#xD314;&#xB85C;&#xC789; &#xAE30;&#xB2A5;</h4>
+<h5 id="1-&#xD314;&#xB85C;&#xC6B0;-&#xAE30;&#xB2A5;-&#xCD94;&#xAC00;">1) &#xD314;&#xB85C;&#xC6B0; &#xAE30;&#xB2A5; &#xCD94;&#xAC00;</h5>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./routes/user.js</span>
+
+<span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+
+<span class="hljs-keyword">const</span> { isLoggedIn } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./middlewares&apos;</span>);
+<span class="hljs-keyword">const</span> User = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../models/user&apos;</span>);
+
+<span class="hljs-keyword">const</span> router = express.Router();
+
+<span class="hljs-comment">// :id = req.params.id</span>
+router.post(<span class="hljs-string">&apos;/:id/follow&apos;</span>, isLoggedIn, <span class="hljs-keyword">async</span> (req, res, next) =&gt; {
+    <span class="hljs-keyword">try</span> {
+        <span class="hljs-comment">// &#xD314;&#xB85C;&#xC6B0;&#xD560; &#xC0AC;&#xC6A9;&#xC790;&#xB97C; &#xC870;&#xD68C;&#xD558;&#xACE0;, &#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988;&#xC758; addFollowing &#xBA54;&#xC11C;&#xB4DC;&#xB85C; &#xAD00;&#xACC4; &#xC9C0;&#xC815;</span>
+        <span class="hljs-keyword">const</span> user = <span class="hljs-keyword">await</span> User.findOne({ where: { id: req.user.id } });
+        <span class="hljs-keyword">if</span> (user) {
+            <span class="hljs-keyword">await</span> user.addFollowing(<span class="hljs-built_in">parseInt</span>(req.params.id, <span class="hljs-number">10</span>));
+            res.send(<span class="hljs-string">&apos;success&apos;</span>);
+        } <span class="hljs-keyword">else</span> {
+            res.status(<span class="hljs-number">404</span>).send(<span class="hljs-string">&apos;no user&apos;</span>);
+        }
+    } <span class="hljs-keyword">catch</span> (error) {
+        <span class="hljs-built_in">console</span>.error(error);
+        next(error);
+    }
+});
+
+<span class="hljs-built_in">module</span>.exports = router;
+</code></pre>
+<h5 id="2-requser&#xC5D0;-&#xD314;&#xB85C;&#xC6CC;&#xC640;-&#xD314;&#xB85C;&#xC789;-&#xBAA9;&#xB85D;-&#xC800;&#xC7A5;">2) req.user&#xC5D0; &#xD314;&#xB85C;&#xC6CC;&#xC640; &#xD314;&#xB85C;&#xC789; &#xBAA9;&#xB85D; &#xC800;&#xC7A5;</h5>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./passport/index.js</span>
+...
+passport.deserializeUser((id, done) =&gt; {
+  User.findOne({
+    where: { id },
+    include: [{
+      model: User,
+      attributes: [<span class="hljs-string">&apos;id&apos;</span>, <span class="hljs-string">&apos;nick&apos;</span>], <span class="hljs-comment">// &#xC2E4;&#xC218;&#xB85C; &#xBE44;&#xBC00;&#xBC88;&#xD638;&#xB97C; &#xC870;&#xD68C;&#xD558;&#xB294; &#xAC83;&#xC744; &#xB9C9;&#xAE30; &#xC704;&#xD574; attributes &#xC9C0;&#xC815;</span>
+      <span class="hljs-keyword">as</span>: <span class="hljs-string">&apos;Followers&apos;</span>,
+    }, {
+      model: User,
+      attributes: [<span class="hljs-string">&apos;id&apos;</span>, <span class="hljs-string">&apos;nick&apos;</span>],
+      <span class="hljs-keyword">as</span>: <span class="hljs-string">&apos;Followings&apos;</span>,
+    }],
+  })
+    .then(user =&gt; done(<span class="hljs-literal">null</span>, user))
+    .catch(err =&gt; done(err));
+});
+...
+</code></pre>
+<h4 id="&#xD574;&#xC2DC;&#xD0DC;&#xADF8;-&#xAC80;&#xC0C9;-&#xAE30;&#xB2A5;">&#xD574;&#xC2DC;&#xD0DC;&#xADF8; &#xAC80;&#xC0C9; &#xAE30;&#xB2A5;</h4>
+<h5 id="3-&#xD314;&#xB85C;&#xC789;&#xD314;&#xB85C;&#xC6CC;-&#xC22B;&#xC790;&#xC640;-&#xD314;&#xB85C;&#xC6B0;-&#xBC84;&#xD2BC;-&#xD45C;&#xC2DC;">3) &#xD314;&#xB85C;&#xC789;/&#xD314;&#xB85C;&#xC6CC; &#xC22B;&#xC790;&#xC640; &#xD314;&#xB85C;&#xC6B0; &#xBC84;&#xD2BC; &#xD45C;&#xC2DC;</h5>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ./routes/page.js</span>
+
+...
+router.use((req, res, next) =&gt; {
+    res.locals.user = req.user;
+    res.locals.followerCount = req.user ? req.user.Followers.length : <span class="hljs-number">0</span>;
+    res.locals.followingCount = req.user ? req.user.Followings.length : <span class="hljs-number">0</span>;
+  <span class="hljs-comment">// followerIdList&#xB294; &#xAC8C;&#xC2DC;&#xAE00; &#xC791;&#xC131;&#xC790;&#xC758; &#xC544;&#xC774;&#xB514;&#xAC00; &#xC874;&#xC7AC;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xBA74; &#xD314;&#xB85C;&#xC6B0; &#xBC84;&#xD2BC;&#xC744; &#xBCF4;&#xC5EC;&#xC8FC;&#xAE30; &#xC704;&#xD574;&#xC11C;.</span>
+    res.locals.followerIdList = req.user ? req.user.Followings.map(f =&gt; f.id) : [];
+    next();
+});
+
+...
+
+<span class="hljs-comment">// &#xD574;&#xC2DC;&#xD0DC;&#xADF8; &#xC870;&#xD68C; &#xB77C;&#xC6B0;&#xD130;</span>
+router.get(<span class="hljs-string">&apos;/hashtag&apos;</span>, <span class="hljs-keyword">async</span> (req, res, next) =&gt; {
+  <span class="hljs-comment">// &#xCFFC;&#xB9AC;&#xC2A4;&#xD2B8;&#xB9C1;&#xC73C;&#xB85C; &#xD574;&#xC2DC;&#xD0DC;&#xADF8; &#xC774;&#xB984;&#xC744; &#xBC1B;&#xACE0;, &#xC5C6;&#xC73C;&#xBA74; &#xBA54;&#xC778; &#xD398;&#xC774;&#xC9C0;&#xB85C; &#xB9AC;&#xB2E4;&#xC774;&#xB809;&#xD2B8;.</span>
+    <span class="hljs-keyword">const</span> query = req.query.hashtag;
+    <span class="hljs-keyword">if</span> (!query) {
+        <span class="hljs-keyword">return</span> res.redirect(<span class="hljs-string">&apos;/&apos;</span>);
+    }
+    <span class="hljs-keyword">try</span> {
+    <span class="hljs-comment">// DB&#xC5D0;&#xC11C; &#xD574;&#xC2DC;&#xD0DC;&#xADF8;&#xB97C; &#xAC80;&#xC0C9;&#xD558;&#xACE0; &#xC788;&#xB2E4;&#xBA74; &#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988; getPosts &#xBA54;&#xC11C;&#xB4DC;&#xB85C; &#xBAA8;&#xB4E0; &#xAC8C;&#xC2DC;&#xAE00; &#xC870;&#xD68C;.</span>
+        <span class="hljs-keyword">const</span> hashtag = <span class="hljs-keyword">await</span> Hashtag.findOne({ where: { title: query } });
+        <span class="hljs-keyword">let</span> posts = [];
+        <span class="hljs-keyword">if</span> (hashtag) {
+            posts = <span class="hljs-keyword">await</span> hashtag.getPosts({ include: [{ model: User }] });
+        }
+    <span class="hljs-comment">// &#xC870;&#xD68C; &#xD6C4; &#xBA54;&#xC778; &#xD398;&#xC774;&#xC9C0; &#xB80C;&#xB354; &#xC2DC; twits&#xC5D0; &#xC870;&#xD68C;&#xB41C; &#xAC8C;&#xC2DC;&#xAE00;&#xB9CC; &#xCD94;&#xAC00;.</span>
+        <span class="hljs-keyword">return</span> res.render(<span class="hljs-string">&apos;main&apos;</span>, {
+            title: <span class="hljs-string">`<span class="hljs-subst">${query}</span> | NodeBird`</span>,
+            twits: posts,
+        });
+    } <span class="hljs-keyword">catch</span> (error) {
+        <span class="hljs-built_in">console</span>.error(error);
+        next(error);
+    }
+});
+...
+</code></pre>
+<h4 id="&#xCD5C;&#xC885;-appjs">&#xCD5C;&#xC885; app.js</h4>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>);
+<span class="hljs-keyword">const</span> cookieParser = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;cookie-parser&apos;</span>);
+<span class="hljs-keyword">const</span> morgan = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;morgan&apos;</span>);
+<span class="hljs-keyword">const</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;path&apos;</span>);
+<span class="hljs-keyword">const</span> session = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express-session&apos;</span>);
+<span class="hljs-keyword">const</span> nunjucks = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;nunjucks&apos;</span>);
+<span class="hljs-keyword">const</span> dotenv = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;dotenv&apos;</span>);
+<span class="hljs-keyword">const</span> passport = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;passport&apos;</span>);
+
+dotenv.config();
+<span class="hljs-keyword">const</span> pageRouter = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./routes/page&apos;</span>);
+<span class="hljs-keyword">const</span> authRouter = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./routes/auth&apos;</span>);
+<span class="hljs-keyword">const</span> postRouter = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./routes/post&apos;</span>);
+<span class="hljs-keyword">const</span> userRouter = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./routes/user&apos;</span>);
+<span class="hljs-keyword">const</span> { sequelize } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./models&apos;</span>);
+<span class="hljs-keyword">const</span> passportConfig = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./passport&apos;</span>);
+
+<span class="hljs-keyword">const</span> app = express();
+app.set(<span class="hljs-string">&apos;port&apos;</span>, process.env.PORT || <span class="hljs-number">8001</span>);
+passportConfig();
+app.set(<span class="hljs-string">&apos;view engine&apos;</span>, <span class="hljs-string">&apos;html&apos;</span>);
+nunjucks.configure(<span class="hljs-string">&apos;views&apos;</span>, {
+    express: app,
+    watch: <span class="hljs-literal">true</span>,
+});
+
+sequelize.sync({ force: <span class="hljs-literal">false</span> })
+    .then(() =&gt; {
+        <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4; &#xC5F0;&#xACB0; &#xC131;&#xACF5;&apos;</span>);
+    })
+    .catch((err) =&gt; {
+        <span class="hljs-built_in">console</span>.error(err);
+    });
+
+app.use(morgan(<span class="hljs-string">&apos;dev&apos;</span>));
+app.use(express.static(path.join(__dirname, <span class="hljs-string">&apos;public&apos;</span>)));
+<span class="hljs-comment">// uploads &#xD3F4;&#xB354; &#xB0B4; &#xC0AC;&#xC9C4;&#xB4E4;&#xC774; /img &#xC8FC;&#xC18C;&#xB85C; &#xC81C;&#xACF5;&#xB41C;&#xB2E4;.</span>
+app.use(<span class="hljs-string">&apos;/img&apos;</span>, express.static(path.join(__dirname, <span class="hljs-string">&apos;uploads&apos;</span>)));
+app.use(express.json());
+app.use(express.urlencoded({ extended: <span class="hljs-literal">false</span> }));
+app.use(cookieParser(process.env.COOKIE_SECRET));
+app.use(session({
+    resave: <span class="hljs-literal">false</span>,
+    saveUninitialized: <span class="hljs-literal">false</span>,
+    secret: process.env.COOKIE_SECRET,
+    cookie: {
+        httpOnly: <span class="hljs-literal">true</span>,
+        secure: <span class="hljs-literal">false</span>,
+    },
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(<span class="hljs-string">&apos;/&apos;</span>, pageRouter);
+app.use(<span class="hljs-string">&apos;/auth&apos;</span>, authRouter);
+app.use(<span class="hljs-string">&apos;/post&apos;</span>, postRouter);
+app.use(<span class="hljs-string">&apos;/user&apos;</span>, userRouter);
+
+app.use((req, res, next) =&gt; {
+    <span class="hljs-keyword">const</span> error = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">`<span class="hljs-subst">${req.method}</span> <span class="hljs-subst">${req.url}</span> &#xB77C;&#xC6B0;&#xD130;&#xAC00; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;.`</span>);
+    error.status = <span class="hljs-number">404</span>;
+    next(error);
+});
+
+app.use((err, req, res, next) =&gt; {
+    res.locals.message = err.message;
+    res.locals.error = process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span> ? err : {};
+    res.status(err.status || <span class="hljs-number">500</span>);
+    res.render(<span class="hljs-string">&apos;error&apos;</span>);
+});
+
+app.listen(app.get(<span class="hljs-string">&apos;port&apos;</span>), () =&gt; {
+    <span class="hljs-built_in">console</span>.log(app.get(<span class="hljs-string">&apos;port&apos;</span>), <span class="hljs-string">&apos;&#xBC88; &#xD3EC;&#xD2B8;&#xC5D0;&#xC11C; &#xB300;&#xAE30; &#xC911;&apos;</span>);
+});
+</code></pre>
+<h4 id="951-&#xC2A4;&#xC2A4;&#xB85C;-&#xD574;&#xBCF4;&#xAE30;">9.5.1 &#xC2A4;&#xC2A4;&#xB85C; &#xD574;&#xBCF4;&#xAE30;</h4>
+<ul>
+<li>&#xD314;&#xB85C;&#xC789; &#xB04A;&#xAE30;(&#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988;&#xC758; <code>destroy</code> &#xBA54;&#xC11C;&#xB4DC;&#xC640; &#xB77C;&#xC6B0;&#xD130; &#xD65C;&#xC6A9;)</li>
+<li>&#xD504;&#xB85C;&#xD544; &#xC815;&#xBCF4; &#xBCC0;&#xACBD;&#xD558;&#xAE30;(&#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988;&#xC758; <code>update</code> &#xBA54;&#xC11C;&#xB4DC;&#xC640; &#xB77C;&#xC6B0;&#xD130; &#xD65C;&#xC6A9;)</li>
+<li>&#xAC8C;&#xC2DC;&#xAE00; &#xC88B;&#xC544;&#xC694; &#xB204;&#xB974;&#xAE30; &#xBC0F; &#xC88B;&#xC544;&#xC694; &#xCDE8;&#xC18C;&#xD558;&#xAE30;(&#xC0AC;&#xC6A9;&#xC790;-&#xAC8C;&#xC2DC;&#xAE00; &#xBAA8;&#xB378; &#xAC04; N:M &#xAD00;&#xACC4; &#xC815;&#xB9BD; &#xD6C4; &#xB77C;&#xC6B0;&#xD130; &#xD65C;&#xC6A9;)</li>
+<li>&#xAC8C;&#xC2DC;&#xAE00; &#xC0AD;&#xC81C;&#xD558;&#xAE30;(&#xB4F1;&#xB85D;&#xC790;&#xC640; &#xD604;&#xC7AC; &#xB85C;&#xADF8;&#xC778;&#xD55C; &#xC0AC;&#xC6A9;&#xC790;&#xAC00; &#xAC19;&#xC744; &#xB54C;, &#xC2DC;&#xD004;&#xB77C;&#xC774;&#xC988;&#xC758; <code>destroy</code> &#xBA54;&#xC11C;&#xB4DC;&#xC640; &#xB77C;&#xC6B0;&#xD130; &#xD65C;&#xC6A9;)</li>
+<li>&#xB9E4;&#xBC88; &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xB97C; &#xC870;&#xD68C;&#xD558;&#xC9C0; &#xC54A;&#xB3C4;&#xB85D; <code>deserializeUser</code> &#xCE90;&#xC2F1;&#xD558;&#xAE30;(&#xAC1D;&#xCCB4; &#xC120;&#xC5B8; &#xD6C4; &#xAC1D;&#xCCB4;&#xC5D0; &#xC0AC;&#xC6A9;&#xC790; &#xC815;&#xBCF4; &#xC800;&#xC7A5;, &#xAC1D;&#xCCB4; &#xC548;&#xC5D0; &#xCE90;&#xC2F1;&#xB41C; &#xAC12;&#xC774; &#xC788;&#xC73C;&#xBA74; &#xC870;&#xD68C;)</li>
+</ul>
+<h4 id=""> </h4>
+<h4 id="952-&#xD575;&#xC2EC;-&#xC815;&#xB9AC;">9.5.2 &#xD575;&#xC2EC; &#xC815;&#xB9AC;</h4>
+<ul>
+<li>&#xC11C;&#xBC84;&#xB294; &#xC694;&#xCCAD;&#xC5D0; &#xC751;&#xB2F5;&#xD558;&#xB294; &#xAC83;&#xC774; &#xD575;&#xC2EC; &#xC758;&#xBB34;&#xC774;&#xBBC0;&#xB85C; &#xC694;&#xCCAD;&#xC744; &#xC218;&#xB77D;&#xD558;&#xB4E0; &#xAC70;&#xC808;&#xD558;&#xB4E0; &#xC0C1;&#xAD00;&#xC5C6;&#xC774; &#xBC18;&#xB4DC;&#xC2DC; &#xC751;&#xB2F5;&#xD574;&#xC57C; &#xD55C;&#xB2E4;. &#xC774;&#xB54C; &#xD55C; &#xBC88;&#xB9CC; &#xC751;&#xB2F5;&#xD574;&#xC57C; &#xC5D0;&#xB7EC;&#xAC00; &#xBC1C;&#xC0DD;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;.</li>
+<li>&#xAC1C;&#xBC1C; &#xC2DC; &#xC11C;&#xBC84;&#xB97C; &#xB9E4;&#xBC88; &#xC218;&#xB3D9;&#xC73C;&#xB85C; &#xC7AC;&#xC2DC;&#xC791;&#xD558;&#xC9C0; &#xC54A;&#xC73C;&#xB824;&#xBA74; <code>nodemon</code>&#xC744; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xB2E4;.</li>
+<li><code>dotenv</code> &#xD328;&#xD0A4;&#xC9C0;&#xC640; <code>.env</code> &#xD30C;&#xC77C;&#xB85C; &#xC720;&#xCD9C;&#xB418;&#xBA74; &#xC548;&#xB418;&#xB294; &#xBE44;&#xBC00; &#xD0A4;&#xB97C; &#xAD00;&#xB9AC;&#xD55C;&#xB2E4;.</li>
+<li>&#xB77C;&#xC6B0;&#xD130;&#xB294; <code>routes</code> &#xD3F4;&#xB354;&#xC5D0;, &#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xB294; <code>models</code> &#xD3F4;&#xB354;&#xC5D0;, html &#xD30C;&#xC77C;&#xC740; <code>views</code> &#xD3F4;&#xB354;&#xC5D0; &#xAD6C;&#xBD84;&#xD558;&#xC5EC; &#xC800;&#xC7A5;&#xD558;&#xBA74; &#xD504;&#xB85C;&#xC81D;&#xD2B8; &#xADDC;&#xBAA8;&#xAC00; &#xCEE4;&#xC838;&#xB3C4; &#xAD00;&#xB9AC;&#xD558;&#xAE30; &#xC27D;&#xB2E4;.</li>
+<li>&#xB370;&#xC774;&#xD130;&#xBCA0;&#xC774;&#xC2A4;&#xB97C; &#xAD6C;&#xC131;&#xD558;&#xAE30; &#xC804;&#xC5D0; &#xB370;&#xC774;&#xD130; &#xAC04; 1:1, 1:N, N:M &#xAD00;&#xACC4;&#xB97C; &#xC798; &#xD30C;&#xC545;&#xD558;&#xC790;.</li>
+<li><code>routes/middlewares.js</code> &#xCC98;&#xB7FC; &#xB77C;&#xC6B0;&#xD130; &#xB0B4;&#xC5D0; &#xBBF8;&#xB4E4;&#xC6E8;&#xC5B4;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB2E4;.</li>
+<li>Passport&#xC758; &#xC778;&#xC99D; &#xACFC;&#xC815;&#xC744; &#xAE30;&#xC5B5;&#xD574;&#xB450;&#xC790;. &#xD2B9;&#xD788; <code>serializeUser&#xC640;</code> <code>deserializeUser&#xAC00;</code> &#xC5B8;&#xC81C; &#xD638;&#xCD9C;&#xB418;&#xB294;&#xC9C0; &#xD30C;&#xC545;&#xD558;&#xACE0; &#xC788;&#xC5B4;&#xC57C; &#xD55C;&#xB2E4;.</li>
+<li>&#xD504;&#xB7F0;&#xD2B8;&#xC5D4;&#xB4DC; form&#xD0DC;&#xADF8;&#xC758; &#xC778;&#xCF54;&#xB529; &#xBC29;&#xC2DD;&#xC774; multipart&#xC77C; &#xB54C;&#xB294; <code>multer</code>&#xAC19;&#xC740; multipart &#xCC98;&#xB9AC;&#xC6A9; &#xD328;&#xD0A4;&#xC9C0;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC774; &#xC88B;&#xB2E4;.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"9장 익스프레스로 SNS 서비스 만들기","level":"4.3","depth":1,"next":{"title":"10장 웹 API 서버 만들기","level":"4.4","depth":1,"path":"3th/reading_note_10.md","ref":"3th/reading_note_10.md","articles":[]},"previous":{"title":"8장 MongoDB","level":"4.2","depth":1,"path":"3th/reading_note_8.md","ref":"3th/reading_note_8.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-api"],"pluginsConfig":{"theme-api":{"languages":[],"split":true,"theme":"dark"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"3th/reading_note_9.md","mtime":"2021-01-02T04:56:31.192Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-02T04:57:47.300Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-api/theme-api.js"></script>
+        
+    
+
+    </body>
+</html>
+
