@@ -23,3 +23,7 @@
 * [8장 MongoDB](3th/reading_note_8.md)
 * [9장 익스프레스로 SNS 서비스 만들기](3th/reading_note_9.md)
 * [10장 웹 API 서버 만들기](3th/reading_note_10.md)
+
+### 4주차
+
+* [16장 서버리스 노드 개발](4th/reading_note_16.md)
